@@ -9,7 +9,6 @@
 | --- | ---
 | Profesores | 1. Juan Carlos Muñoz (juan.munozc@udea.edu.co)
 | | 2. Esteban Silva Villa (esteban.silvav@udea.edu.co)
-| Evaluación | Proyecto mensual (4x10%)
 | Aula | 6-426
 | Horario | L 8-10AM
 
