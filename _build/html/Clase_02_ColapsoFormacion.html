@@ -1,0 +1,989 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Clase 2: Colapso y Formación &#8212; Tópicos Avanzados Cúmulos y Formación Estelar</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Clase_02_ColapsoFormacion';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Clase 1: Nube estática" href="Clase_01_NubeEstatica.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/UdeA.png" class="logo__image only-light" alt="Tópicos Avanzados Cúmulos y Formación Estelar - Home"/>
+    <img src="_static/UdeA.png" class="logo__image only-dark pst-js-only" alt="Tópicos Avanzados Cúmulos y Formación Estelar - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Formación y Evolución de Cúmulos Estelares
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Clase_01_NubeEstatica.html">Clase 1: Nube estática</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Clase 2: Colapso y Formación</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FClase_02_ColapsoFormacion.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Clase_02_ColapsoFormacion.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Clase 2: Colapso y Formación</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objetivos">Objetivos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formalizacion-y-solucieon-de-la-esfera-de-bonnor-ebert">Formalización y Solucieon de la Esfera de Bonnor-Ebert</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#la-solucion-completa-de-la-esfera-de-bonnor-ebert">1.1 La Solución Completa de la Esfera de Bonnor-Ebert:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#el-limite-de-estabilidad-y-la-masa-critica">1.2 El Límite de Estabilidad y la Masa Crítica</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clasificacion-observacional-de-objetos-estelares-jovenes-ysos">2. Clasificación Observacional de Objetos Estelares Jóvenes (YSOs)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#el-colapso-de-adentro-hacia-afuera-inside-out-collapse-de-frank-shu-1977">3. El Colapso de “Adentro hacia Afuera” (Inside-Out Collapse) de Frank Shu (1977).</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#el-perfil-inicial-de-la-sis">3.1 El Perfil Inicial de la SIS.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#la-onda-de-rarefaccion-y-el-colapso-dinamico">3.2 La Onda de Rarefacción y el Colapso Dinámico.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tasa-de-acrecion-constante">3.3 Tasa de Acreción Constante.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evolucion-en-la-pre-secuencia-principal-pms">4. Evolución en la Pre-Secuencia Principal (PMS).</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#la-escala-de-tiempo-de-kelvin-helmholtz-t-kh">4.1 La Escala de Tiempo de Kelvin-Helmholtz (<span class="math notranslate nohighlight">\(t_{KH}\)</span>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#trazas-de-hayashi-y-henyey-en-el-diagrama-hr">4.2 Trazas de Hayashi y Henyey en el Diagrama HR</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecturas-recomendadas-de-la-semana">Lecturas recomendadas de la semana</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicios-para-los-estudiantes">Ejercicios para los estudiantes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicio-1-limite-de-estabilidad-de-bonnor-ebert-analitico">Ejercicio 1: Límite de Estabilidad de Bonnor-Ebert (Analítico)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicio-2-tasa-de-acrecion-de-shu-y-masa-acumulada-analitico">Ejercicio 2: Tasa de Acreción de Shu y Masa Acumulada (Analítico)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicio-3-calculo-numerico-de-la-masa-de-bonnor-ebert-computacional-python">Ejercicio 3: Cálculo Numérico de la Masa de Bonnor-Ebert (Computacional - Python)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicio-4-simulacion-de-crecimiento-de-masa-protoestelar-por-acrecion-computacional-python">Ejercicio 4: Simulación de Crecimiento de Masa Protoestelar por Acreción (Computacional - Python)</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="clase-2-colapso-y-formacion">
+<h1>Clase 2: Colapso y Formación<a class="headerlink" href="#clase-2-colapso-y-formacion" title="Link to this heading">#</a></h1>
+<section id="objetivos">
+<h2>Objetivos<a class="headerlink" href="#objetivos" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Formalización y Solución de la Esfera de Bonnor-Ebert.</p></li>
+<li><p>Clasificación Observacional de Objetos Estelares Jóvenes (YSOs).</p></li>
+<li><p>El Colapso de “Adentro hacia Afuera” (Inside-Out Collapse) de Frank Shu.</p></li>
+<li><p>Evolución en la Pre-Secuencia Principal (PMS).</p></li>
+</ol>
+</section>
+<section id="formalizacion-y-solucieon-de-la-esfera-de-bonnor-ebert">
+<h2>Formalización y Solucieon de la Esfera de Bonnor-Ebert<a class="headerlink" href="#formalizacion-y-solucieon-de-la-esfera-de-bonnor-ebert" title="Link to this heading">#</a></h2>
+<section id="la-solucion-completa-de-la-esfera-de-bonnor-ebert">
+<h3>1.1 La Solución Completa de la Esfera de Bonnor-Ebert:<a class="headerlink" href="#la-solucion-completa-de-la-esfera-de-bonnor-ebert" title="Link to this heading">#</a></h3>
+<p>Como vimos en la clase anterior, la aproximación de Jeans asume un medio infinito homogéneo, lo cual genera paradojas físicas. La Esfera de Bonnor-Ebert (BE) resuelve esto modelando un núcleo de gas isotérmico finito confinado por la presión externa del medio interestelar (<span class="math notranslate nohighlight">\(P_{ext}\)</span>).</p>
+<p>1.1 Formulación Matemática Rigurosa
+Partimos del equilibrio hidrostático esférico y la ecuación de Poisson para un gas isotérmico ideal (<span class="math notranslate nohighlight">\(P=\rho c^2_s\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{1}{r^2}\frac{d}{dr}\left( \frac{r^2}{\rho} \frac{d\rho}{dr} \right) = \frac{4\pi G}{c^2_s}ρ
+\]</div>
+<p>Definimos el potencial adimensional <span class="math notranslate nohighlight">\(\psi=−ln(\frac{\rho}{\rho_c})\)</span> y el radio adimensional <span class="math notranslate nohighlight">\(\xi=\frac{r}{r_0}\)</span>, donde la escala de longitud característica es:</p>
+<div class="math notranslate nohighlight">
+\[
+r_0=\left(\frac{c^2_s}{4\pi G \rho_c} \right)^{1/2}
+\]</div>
+<p>Sustituyendo esto, llegamos a la Ecuación de Lane-Emden Isotérmica:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{1}{\xi^2}\frac{d}{d\xi}\left( \xi^2 \frac{d\psi}{d\xi} \right) = e^{-\psi}
+\]</div>
+<p>con condiciones de frontera en el centro: <span class="math notranslate nohighlight">\(\psi(0)=0\)</span> y <span class="math notranslate nohighlight">\(\psi'(0)=0\)</span>.</p>
+</section>
+<section id="el-limite-de-estabilidad-y-la-masa-critica">
+<h3>1.2 El Límite de Estabilidad y la Masa Crítica<a class="headerlink" href="#el-limite-de-estabilidad-y-la-masa-critica" title="Link to this heading">#</a></h3>
+<p>Integrando la densidad desde el centro hasta el radio adimensional del borde (<span class="math notranslate nohighlight">\(\xi_R\)</span>), la masa total de la esfera se expresa como:</p>
+<div class="math notranslate nohighlight">
+\[
+M=m(\xi_R)\frac{c^4_s}{G^{3/2}P_{ext}^{1/2}}
+\]</div>
+<p>donde <span class="math notranslate nohighlight">\(m(\xi_R)=\frac{1}{\sqrt(4\pi)}e^{-\psi_R/2}\left( \xi^2\frac{d\psi}{d\xi} \right)_{\xi_R}\)</span> es la función de masa adimensional.</p>
+<ul class="simple">
+<li><p>A medida que el núcleo se contrae y aumenta su concentración central, (<span class="math notranslate nohighlight">\(m(\xi_R)\)</span>) crece hasta alcanzar un máximo estricto en:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\xi_{crit}\approx6.451
+\]</div>
+<ul class="simple">
+<li><p>En este punto crítico, la función de masa adimensional toma el valor <span class="math notranslate nohighlight">\(m(6.451)\approx1.18\)</span>, y el contraste de densidad central frente al borde es:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\left( \frac{\rho_c}{\rho_R} \right)_{crit}=e^{\psi(6.451)}\approx14.04
+\]</div>
+<ul class="simple">
+<li><p>Criterio Físico: Si <span class="math notranslate nohighlight">\(\rho_c / \rho_R&gt;14.04\)</span>, no existe ninguna solución estática de equilibrio hidrostático. La gravedad supera por completo la presión térmica y el núcleo experimenta un colapso gravitacional incontrolado.</p></li>
+<li><p>Por lo tanto, la Masa Crítica de Bonnor-Ebert que marca el umbral de estabilidad es:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+M_{BE} = 1.18\frac{c^4_s}{G^{3/2}P_{ext}^{1/2}}
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">scipy.integrate</span> <span class="kn">import</span> <span class="n">solve_ivp</span>
+
+<span class="c1"># Definir la Ecuación de Lane-Emden Isotérmica</span>
+<span class="k">def</span> <span class="nf">lane_emden_isothermal</span><span class="p">(</span><span class="n">xi</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="n">psi</span><span class="p">,</span> <span class="n">dpsi_dxi</span> <span class="o">=</span> <span class="n">y</span>
+    <span class="k">if</span> <span class="n">xi</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="c1"># Evitar división por cero</span>
+    <span class="n">d2psi_dxi2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">psi</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="mf">2.0</span> <span class="o">/</span> <span class="n">xi</span><span class="p">)</span> <span class="o">*</span> <span class="n">dpsi_dxi</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">dpsi_dxi</span><span class="p">,</span> <span class="n">d2psi_dxi2</span><span class="p">]</span>
+
+<span class="c1"># Condiciones iniciales cerca del centro (usando expansión de Taylor)</span>
+<span class="n">xi_0</span> <span class="o">=</span> <span class="mf">1e-4</span>
+<span class="n">psi_0</span> <span class="o">=</span> <span class="p">(</span><span class="n">xi_0</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="mf">6.0</span>
+<span class="n">dpsi_0</span> <span class="o">=</span> <span class="n">xi_0</span> <span class="o">/</span> <span class="mf">3.0</span>
+<span class="n">y0</span> <span class="o">=</span> <span class="p">[</span><span class="n">psi_0</span><span class="p">,</span> <span class="n">dpsi_0</span><span class="p">]</span>
+
+<span class="c1"># Integración numérica</span>
+<span class="n">xi_eval</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">xi_0</span><span class="p">,</span> <span class="mf">20.0</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+<span class="n">sol</span> <span class="o">=</span> <span class="n">solve_ivp</span><span class="p">(</span><span class="n">lane_emden_isothermal</span><span class="p">,</span> <span class="p">(</span><span class="n">xi_0</span><span class="p">,</span> <span class="mf">20.0</span><span class="p">),</span> <span class="n">y0</span><span class="p">,</span> <span class="n">t_eval</span><span class="o">=</span><span class="n">xi_eval</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;RK45&#39;</span><span class="p">)</span>
+
+<span class="n">xi</span> <span class="o">=</span> <span class="n">sol</span><span class="o">.</span><span class="n">t</span>
+<span class="n">psi</span> <span class="o">=</span> <span class="n">sol</span><span class="o">.</span><span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">dpsi</span> <span class="o">=</span> <span class="n">sol</span><span class="o">.</span><span class="n">y</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="c1"># Calcular la Masa Adimensional m(xi)</span>
+<span class="n">m_xi</span> <span class="o">=</span> <span class="p">(</span><span class="mf">1.0</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">))</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">psi</span> <span class="o">/</span> <span class="mf">2.0</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">xi</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">dpsi</span>
+
+<span class="c1"># Encontrar el punto crítico (Máximo)</span>
+<span class="n">max_idx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">m_xi</span><span class="p">)</span>
+<span class="n">xi_crit</span> <span class="o">=</span> <span class="n">xi</span><span class="p">[</span><span class="n">max_idx</span><span class="p">]</span>
+<span class="n">m_crit</span> <span class="o">=</span> <span class="n">m_xi</span><span class="p">[</span><span class="n">max_idx</span><span class="p">]</span>
+
+<span class="c1"># Visualización</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xi</span><span class="p">,</span> <span class="n">m_xi</span><span class="p">,</span> <span class="s1">&#39;b-&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Masa Adimensional $m(</span><span class="se">\\</span><span class="s1">xi_R)$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xi_crit</span><span class="p">,</span> <span class="n">m_crit</span><span class="p">,</span> <span class="s1">&#39;ro&#39;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Límite Crítico: $</span><span class="se">\\</span><span class="s1">xi </span><span class="se">\\</span><span class="s1">approx </span><span class="si">{</span><span class="n">xi_crit</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">, m </span><span class="se">\\</span><span class="s1">approx </span><span class="si">{</span><span class="n">m_crit</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">$&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">xi_crit</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">m_crit</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">xi</span><span class="p">,</span> <span class="n">m_xi</span><span class="p">,</span> <span class="n">where</span><span class="o">=</span><span class="p">(</span><span class="n">xi</span> <span class="o">&lt;=</span> <span class="n">xi_crit</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;lightblue&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Estable (Equilibrio)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">xi</span><span class="p">,</span> <span class="n">m_xi</span><span class="p">,</span> <span class="n">where</span><span class="o">=</span><span class="p">(</span><span class="n">xi</span> <span class="o">&gt;</span> <span class="n">xi_crit</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;lightcoral&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Inestable (Colapso)&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Solución de la Esfera de Bonnor-Ebert&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Radio Adimensional $</span><span class="se">\\</span><span class="s1">xi_R$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Masa Adimensional $m(</span><span class="se">\\</span><span class="s1">xi_R)$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1.3</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/a01e3357ca052bb1e23ce4df4c391135b3c140438f5a91e0200ac574d7e43bd5.png" src="_images/a01e3357ca052bb1e23ce4df4c391135b3c140438f5a91e0200ac574d7e43bd5.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="clasificacion-observacional-de-objetos-estelares-jovenes-ysos">
+<h2>2. Clasificación Observacional de Objetos Estelares Jóvenes (YSOs)<a class="headerlink" href="#clasificacion-observacional-de-objetos-estelares-jovenes-ysos" title="Link to this heading">#</a></h2>
+<p>Una vez que el núcleo colapsa, pasamos a la fase protoestelar. La clasificación estándar de las YSOs se basa en la pendiente del Espectro de Energía Distribuida (SED) en el infrarrojo, parametrizada por el índice espectral infrarrojo <span class="math notranslate nohighlight">\(\alpha_{IR}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\alpha_{IR} = \frac{dlog_{10}(\lambda F_λ)}{d log_{10}(\lambda)}
+\]</div>
+<p>Este valor se mide típicamente entre 2.2 y 20 <span class="math notranslate nohighlight">\(μ\)</span>m.</p>
+<ul class="simple">
+<li><p>Clase 0 (<span class="math notranslate nohighlight">\(\alpha_{IR}\)</span> muy pronunciado)</p>
+<ul>
+<li><p>Características: Objeto extremadamente joven (<span class="math notranslate nohighlight">\(t&lt;10^4\)</span>yrs). La masa de la envoltura circundante es mayor que la masa de la protoestrella central (<span class="math notranslate nohighlight">\(M_{env} &gt; M_\star\)</span>).</p></li>
+<li><p>Observación: No emiten en longitudes de onda ópticas ni cercanas al infrarrojo debido a la enorme extinción del polvo; se detectan en submilimétrico y milimétrico (ej. ALMA).</p></li>
+</ul>
+</li>
+<li><p>Clase I (<span class="math notranslate nohighlight">\(\alpha_{IR}&gt;0\)</span>):</p>
+<ul>
+<li><p>Características: La estrella central ya se ha condensado parcialmente, pero sigue rodeada por una densa envoltura de polvo y gas con flujos de acreción activos (<span class="math notranslate nohighlight">\(M_{env} \sim M_\star\)</span>). El espectro muestra un exceso térmico infrarrojo notable.</p></li>
+</ul>
+</li>
+<li><p>Clase II (Espectros T Tauri clásicos, <span class="math notranslate nohighlight">\(-1.5&lt;\alpha_{IR}&lt;0\)</span>):</p>
+<ul>
+<li><p>Características: La envoltura principal se ha disipado o dispersado. Queda la estrella pre-secuencia principal flanqueada por un disco circumestelar protoplanetario masivo y líneas de emisión prominentes por acreción magnética.</p></li>
+</ul>
+</li>
+<li><p>Clase III (Estrellas T Tauri de líneas débiles / Post-T Tauri, <span class="math notranslate nohighlight">\(\alpha_{IR}&lt;−1.5\)</span>):</p>
+<ul>
+<li><p>Características: El gas y el polvo del disco primordial se han consumido, acumulado en planetesimales, o disipado por fotoevaporación. El espectro se aproxima al de una estrella normal con un débil exceso en infrarrojo lejano.</p></li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Definir la función de cuerpo negro (Planck) en términos de lambda * F_lambda</span>
+<span class="k">def</span> <span class="nf">planck_lambda_flambda</span><span class="p">(</span><span class="n">lam_um</span><span class="p">,</span> <span class="n">T</span><span class="p">):</span>
+    <span class="n">h</span> <span class="o">=</span> <span class="mf">6.626e-34</span>    <span class="c1"># J*s</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="mf">3.0e8</span>        <span class="c1"># m/s</span>
+    <span class="n">kB</span> <span class="o">=</span> <span class="mf">1.38e-23</span>    <span class="c1"># J/K</span>
+    <span class="n">lam_m</span> <span class="o">=</span> <span class="n">lam_um</span> <span class="o">*</span> <span class="mf">1e-6</span>
+    <span class="c1"># F_lambda proporcional a B_lambda</span>
+    <span class="n">B_lam</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">h</span> <span class="o">*</span> <span class="n">c</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="n">lam_m</span><span class="o">**</span><span class="mi">5</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">h</span> <span class="o">*</span> <span class="n">c</span> <span class="o">/</span> <span class="p">(</span><span class="n">lam_m</span> <span class="o">*</span> <span class="n">kB</span> <span class="o">*</span> <span class="n">T</span><span class="p">))</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">lam_um</span> <span class="o">*</span> <span class="n">B_lam</span>
+
+<span class="c1"># Crear un array de longitudes de onda desde 0.3 hasta 1000 micrómetros</span>
+<span class="n">lam</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
+
+<span class="c1"># Modelos simplificados de YSOs (Superposición de Cuerpos Negros)</span>
+<span class="c1"># Clase 0: Solo vemos la envoltura muy fría</span>
+<span class="n">flux_class0</span> <span class="o">=</span> <span class="n">planck_lambda_flambda</span><span class="p">(</span><span class="n">lam</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
+
+<span class="c1"># Clase I: Protoestrella oculta (T_eff disipada) + Envoltura caliente + Disco</span>
+<span class="n">flux_class1</span> <span class="o">=</span> <span class="p">(</span><span class="mf">1e-6</span> <span class="o">*</span> <span class="n">planck_lambda_flambda</span><span class="p">(</span><span class="n">lam</span><span class="p">,</span> <span class="mi">3000</span><span class="p">))</span> <span class="o">+</span> <span class="p">(</span><span class="mf">2e-4</span> <span class="o">*</span> <span class="n">planck_lambda_flambda</span><span class="p">(</span><span class="n">lam</span><span class="p">,</span> <span class="mi">300</span><span class="p">))</span> <span class="o">+</span> <span class="n">planck_lambda_flambda</span><span class="p">(</span><span class="n">lam</span><span class="p">,</span> <span class="mi">70</span><span class="p">)</span>
+
+<span class="c1"># Clase II (T Tauri Clásica): Estrella visible + Exceso infrarrojo del disco</span>
+<span class="n">flux_class2</span> <span class="o">=</span> <span class="n">planck_lambda_flambda</span><span class="p">(</span><span class="n">lam</span><span class="p">,</span> <span class="mi">4000</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mf">1.5e-3</span> <span class="o">*</span> <span class="n">planck_lambda_flambda</span><span class="p">(</span><span class="n">lam</span><span class="p">,</span> <span class="mi">300</span><span class="p">))</span>
+
+<span class="c1"># Clase III (T Tauri de Líneas Débiles): Solo la estrella (cuerpo negro casi puro)</span>
+<span class="n">flux_class3</span> <span class="o">=</span> <span class="n">planck_lambda_flambda</span><span class="p">(</span><span class="n">lam</span><span class="p">,</span> <span class="mi">4000</span><span class="p">)</span>
+
+<span class="c1"># Normalización visual para la gráfica</span>
+<span class="k">def</span> <span class="nf">normalize</span><span class="p">(</span><span class="n">flux</span><span class="p">):</span> <span class="k">return</span> <span class="n">flux</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">flux</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">lam</span><span class="p">,</span> <span class="n">normalize</span><span class="p">(</span><span class="n">flux_class0</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Clase 0 (Envoltura profunda)&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;:&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">lam</span><span class="p">,</span> <span class="n">normalize</span><span class="p">(</span><span class="n">flux_class1</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Clase I (Estrella + Envoltura + Disco)&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-.&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">lam</span><span class="p">,</span> <span class="n">normalize</span><span class="p">(</span><span class="n">flux_class2</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Clase II (Estrella + Disco / T Tauri)&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">lam</span><span class="p">,</span> <span class="n">normalize</span><span class="p">(</span><span class="n">flux_class3</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Clase III (Solo Estrella)&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">)</span>
+
+<span class="c1"># Resaltar la zona de medición del índice espectral (2.2 a ~20 um)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvspan</span><span class="p">(</span><span class="mf">2.2</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;yellow&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.15</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Región de medición $</span><span class="se">\\</span><span class="s1">alpha_</span><span class="si">{IR}</span><span class="s1">$&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mf">0.3</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mf">1e-4</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Longitud de onda $</span><span class="se">\\</span><span class="s1">lambda$ ($</span><span class="se">\\</span><span class="s1">mu m$)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Flujo Relativo $</span><span class="se">\\</span><span class="s1">lambda F_</span><span class="se">\\</span><span class="s1">lambda$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Evolución del Espectro de Energía Distribuida (SED) en YSOs&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">which</span><span class="o">=</span><span class="s2">&quot;both&quot;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/q2/bqj89jbx5rgb58jm21hskzzm0000gn/T/ipykernel_91174/1262835751.py:11: RuntimeWarning: overflow encountered in exp
+  B_lam = (2 * h * c**2 / lam_m**5) / (np.exp(h * c / (lam_m * kB * T)) - 1)
+</pre></div>
+</div>
+<img alt="_images/ca77cfd03d905e923cb5e65a88eb73b6d561b259e0625a6c4b697b7f488c8b7c.png" src="_images/ca77cfd03d905e923cb5e65a88eb73b6d561b259e0625a6c4b697b7f488c8b7c.png" />
+</div>
+</div>
+</section>
+<section id="el-colapso-de-adentro-hacia-afuera-inside-out-collapse-de-frank-shu-1977">
+<h2>3. El Colapso de “Adentro hacia Afuera” (Inside-Out Collapse) de Frank Shu (1977).<a class="headerlink" href="#el-colapso-de-adentro-hacia-afuera-inside-out-collapse-de-frank-shu-1977" title="Link to this heading">#</a></h2>
+<p>El modelo analítico clásico para describir cómo un núcleo pre-estelar estable comienza a colapsar es la Esfera Isoterma Singular (SIS) desarrollada por Frank Shu.</p>
+<section id="el-perfil-inicial-de-la-sis">
+<h3>3.1 El Perfil Inicial de la SIS.<a class="headerlink" href="#el-perfil-inicial-de-la-sis" title="Link to this heading">#</a></h3>
+<p>Antes del colapso, un núcleo crítico maduro desarrolla un perfil de densidad muy característico gobernado puramente por la gravedad auto-sostenida isothermal:</p>
+<div class="math notranslate nohighlight">
+\[
+\rho(r) = \frac{c_s^2}{2\pi Gr^2}
+\]</div>
+<p>Notar que en el centro (<span class="math notranslate nohighlight">\(r→0\)</span>), la densidad tiende a infinito (por eso se denomina “singular”).</p>
+</section>
+<section id="la-onda-de-rarefaccion-y-el-colapso-dinamico">
+<h3>3.2 La Onda de Rarefacción y el Colapso Dinámico.<a class="headerlink" href="#la-onda-de-rarefaccion-y-el-colapso-dinamico" title="Link to this heading">#</a></h3>
+<p>Cuando el centro del núcleo pierde el equilibrio, el colapso no ocurre simultáneamente en toda la nube.</p>
+<ol class="arabic simple">
+<li><p>Se forma un colapso puntual en el centro absoluto (<span class="math notranslate nohighlight">\(r=0\)</span>).</p></li>
+<li><p>Una perturbación de presión (una onda de rarefacción o frente de onda sónica) se propaga hacia afuera a la velocidad del sonido <span class="math notranslate nohighlight">\(c_s\)</span>.</p></li>
+<li><p>El radio de esta onda en un tiempo <span class="math notranslate nohighlight">\(t\)</span> es el radio sónico:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[
+r_s=c_st
+\]</div>
+<ul class="simple">
+<li><p>Región Exterior (<span class="math notranslate nohighlight">\(r&gt;r_s\)</span>): El gas permanece casi estático, manteniendo el perfil inicial de la esfera singular (<span class="math notranslate nohighlight">\(\rho\propto r^{-2}\)</span>).</p></li>
+<li><p>Región Interior (<span class="math notranslate nohighlight">\(r&lt;r_s\)</span>): El gas ha sentido la pérdida de presión y cae libremente hacia el centro, adoptando un perfil de velocidad en caída libre y un perfil de densidad:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\rho(r)\propto r^{-3/2}
+\]</div>
+</section>
+<section id="tasa-de-acrecion-constante">
+<h3>3.3 Tasa de Acreción Constante.<a class="headerlink" href="#tasa-de-acrecion-constante" title="Link to this heading">#</a></h3>
+<p>Una de las predicciones más potentes y elegantes del modelo de Shu es que, a medida que la onda expansiva avanza hacia las capas externas de la nube, la tasa a la cual la masa cae hacia la protoestrella central (<span class="math notranslate nohighlight">\(\dot{M}\)</span>) permanece estrictamente constante en el tiempo:</p>
+<div class="math notranslate nohighlight">
+\[
+\dot{M}= m_0\frac{c_s^3}{G}
+\]</div>
+<p>donde <span class="math notranslate nohighlight">\(m_0\)</span> es un parámetro numérico adimensional derivado de la solución de autosemejanza de Shu (<span class="math notranslate nohighlight">\(m_0\approx0.975\)</span>).</p>
+<p>Para una nube típica con <span class="math notranslate nohighlight">\(T=10\)</span>K (<span class="math notranslate nohighlight">\(c_s\approx0.2\)</span>km/s), esta tasa predice un valor característico de:</p>
+<div class="math notranslate nohighlight">
+\[
+\dot{M}\sim2\times10^{-5}M_\odot/yr
+\]</div>
+<p>Este flujo constante alimenta la protoestrella central y construye el disco circumestelar durante la fase de Clase 0 y Clase I.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">scipy.integrate</span> <span class="kn">import</span> <span class="n">solve_ivp</span>
+
+<span class="c1"># Ecuaciones de Shu corregidas en el dominio s = -ln(x)</span>
+<span class="k">def</span> <span class="nf">shu_odes_s</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="n">u</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>       <span class="c1"># u es la velocidad de caída HACIA ADENTRO (positiva)</span>
+    <span class="n">alpha</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>   <span class="c1"># Densidad adimensional</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">s</span><span class="p">)</span> <span class="c1"># Recuperamos el radio adimensional x</span>
+
+    <span class="n">xpu</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">u</span>
+    <span class="n">D</span> <span class="o">=</span> <span class="n">xpu</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mf">1.0</span>  <span class="c1"># El denominador correcto de Shu. Siempre es &gt; 0 para x &lt; 1.</span>
+
+    <span class="c1"># Salvaguarda numérica por si evaluamos exactamente en la frontera</span>
+    <span class="k">if</span> <span class="n">D</span> <span class="o">&lt;</span> <span class="mf">1e-15</span><span class="p">:</span>
+        <span class="n">D</span> <span class="o">=</span> <span class="mf">1e-15</span>
+
+    <span class="c1"># Ecuaciones exactas despejadas</span>
+    <span class="n">du_dx</span> <span class="o">=</span> <span class="p">(</span><span class="n">xpu</span> <span class="o">/</span> <span class="n">D</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mf">2.0</span> <span class="o">/</span> <span class="n">x</span> <span class="o">-</span> <span class="n">alpha</span> <span class="o">*</span> <span class="n">xpu</span><span class="p">)</span>
+    <span class="n">dalpha_dx</span> <span class="o">=</span> <span class="n">alpha</span> <span class="o">*</span> <span class="p">(</span><span class="o">-</span><span class="mf">2.0</span> <span class="o">/</span> <span class="n">x</span> <span class="o">-</span> <span class="n">du_dx</span> <span class="o">/</span> <span class="n">xpu</span><span class="p">)</span>
+
+    <span class="c1"># Regla de la cadena para integrar respecto a s = -ln(x)</span>
+    <span class="n">du_ds</span> <span class="o">=</span> <span class="o">-</span><span class="n">x</span> <span class="o">*</span> <span class="n">du_dx</span>
+    <span class="n">dalpha_ds</span> <span class="o">=</span> <span class="o">-</span><span class="n">x</span> <span class="o">*</span> <span class="n">dalpha_dx</span>
+
+    <span class="k">return</span> <span class="p">[</span><span class="n">du_ds</span><span class="p">,</span> <span class="n">dalpha_ds</span><span class="p">]</span>
+
+<span class="c1"># 1. Configuración inicial exacta (Expansión de Taylor, Shu 1977)</span>
+<span class="n">w</span> <span class="o">=</span> <span class="mf">1e-4</span>  <span class="c1"># Paso microscópico hacia adentro del frente de onda</span>
+<span class="n">x_start</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">-</span> <span class="n">w</span>
+<span class="n">s_start</span> <span class="o">=</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">x_start</span><span class="p">)</span>
+
+<span class="c1"># Coeficientes correctos de 2do orden</span>
+<span class="n">u_start</span> <span class="o">=</span> <span class="n">w</span> <span class="o">+</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">w</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">alpha_start</span> <span class="o">=</span> <span class="mf">2.0</span> <span class="o">+</span> <span class="mf">2.0</span> <span class="o">*</span> <span class="n">w</span> <span class="o">+</span> <span class="mf">2.0</span> <span class="o">*</span> <span class="p">(</span><span class="n">w</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># 2. Integración Numérica</span>
+<span class="n">s_end</span> <span class="o">=</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mf">1e-4</span><span class="p">)</span> <span class="c1"># Integraremos hasta x = 0.0001 (muy cerca del centro)</span>
+<span class="n">s_eval</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">s_start</span><span class="p">,</span> <span class="n">s_end</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+
+<span class="c1"># RK45 es más que suficiente ahora que la física de los signos está correcta</span>
+<span class="n">sol</span> <span class="o">=</span> <span class="n">solve_ivp</span><span class="p">(</span><span class="n">shu_odes_s</span><span class="p">,</span> <span class="p">[</span><span class="n">s_start</span><span class="p">,</span> <span class="n">s_end</span><span class="p">],</span> <span class="p">[</span><span class="n">u_start</span><span class="p">,</span> <span class="n">alpha_start</span><span class="p">],</span>
+                <span class="n">t_eval</span><span class="o">=</span><span class="n">s_eval</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;RK45&#39;</span><span class="p">,</span> <span class="n">rtol</span><span class="o">=</span><span class="mf">1e-8</span><span class="p">,</span> <span class="n">atol</span><span class="o">=</span><span class="mf">1e-8</span><span class="p">)</span>
+
+<span class="c1"># 3. Recuperación de las variables originales</span>
+<span class="n">x_sol</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">sol</span><span class="o">.</span><span class="n">t</span><span class="p">)</span>
+<span class="n">u_sol</span> <span class="o">=</span> <span class="n">sol</span><span class="o">.</span><span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">alpha_sol</span> <span class="o">=</span> <span class="n">sol</span><span class="o">.</span><span class="n">y</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="c1"># 4. Visualización</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_sol</span><span class="p">,</span> <span class="n">alpha_sol</span><span class="p">,</span> <span class="s1">&#39;b-&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">2.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Densidad adimensional $</span><span class="se">\\</span><span class="s1">alpha(x)$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_sol</span><span class="p">,</span> <span class="n">u_sol</span><span class="p">,</span> <span class="s1">&#39;r--&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">2.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Velocidad de caída $u(x)$&#39;</span><span class="p">)</span>
+
+<span class="c1"># Asíntotas teóricas cerca del centro (m0 = 0.975)</span>
+<span class="n">m0</span> <span class="o">=</span> <span class="mf">0.975</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_sol</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">m0</span> <span class="o">/</span> <span class="n">x_sol</span><span class="p">),</span> <span class="s1">&#39;r:&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">2.5</span><span class="p">,</span>
+         <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Asíntota caída libre ($u </span><span class="se">\\</span><span class="s1">propto x^{-1/2}$)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_sol</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">m0</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">x_sol</span><span class="o">**</span><span class="mi">3</span><span class="p">)),</span> <span class="s1">&#39;b:&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">2.5</span><span class="p">,</span>
+         <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Asíntota de masa ($</span><span class="se">\\</span><span class="s1">alpha </span><span class="se">\\</span><span class="s1">propto x^{-3/2}$)&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Frente de onda ($x=1$)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mf">1e-4</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">1e6</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Variable Adimensional $x = r/(c_s t)$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Amplitud Adimensional&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Solución de Autosemejanza: Colapso de Adentro Hacia Afuera (Shu 1977)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper right&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">11</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">which</span><span class="o">=</span><span class="s2">&quot;both&quot;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/9d089af48610e0c2fd4c1b3926e60f78442ba0b86a44ff35a202cd50f3e7de8c.png" src="_images/9d089af48610e0c2fd4c1b3926e60f78442ba0b86a44ff35a202cd50f3e7de8c.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="evolucion-en-la-pre-secuencia-principal-pms">
+<h2>4. Evolución en la Pre-Secuencia Principal (PMS).<a class="headerlink" href="#evolucion-en-la-pre-secuencia-principal-pms" title="Link to this heading">#</a></h2>
+<p>Una vez que la acreción de masa cesa (gracias a vientos estelares y eyecciones bipolares que limpian la envoltura), la estrella entra oficialmente en la fase de Pre-Secuencia Principal, gobernada enteramente por la contracción gravitacional sin fuentes de energía nuclear estables en el núcleo (aún no quema hidrógeno de manera sostenida).</p>
+<section id="la-escala-de-tiempo-de-kelvin-helmholtz-t-kh">
+<h3>4.1 La Escala de Tiempo de Kelvin-Helmholtz (<span class="math notranslate nohighlight">\(t_{KH}\)</span>)<a class="headerlink" href="#la-escala-de-tiempo-de-kelvin-helmholtz-t-kh" title="Link to this heading">#</a></h3>
+<p>La energía que radia la estrella PMS proviene exclusivamente de la conversión de energía potencial gravitacional en calor radiado:</p>
+<div class="math notranslate nohighlight">
+\[
+t_{KH}\approx \frac{GM^2}{RL}
+\]</div>
+<p>Para una estrella tipo solar, esta escala de tiempo es de unos <span class="math notranslate nohighlight">\(3\times10^7\)</span> años, lo cual marca la duración de la fase PMS antes de encender el hidrógeno.</p>
+</section>
+<section id="trazas-de-hayashi-y-henyey-en-el-diagrama-hr">
+<h3>4.2 Trazas de Hayashi y Henyey en el Diagrama HR<a class="headerlink" href="#trazas-de-hayashi-y-henyey-en-el-diagrama-hr" title="Link to this heading">#</a></h3>
+<p>En el diagrama Hertzsprung-Russell (HR), las estrellas PMS descienden desde las regiones frías y luminosas hacia la Secuencia Principal a través de dos regímenes evolutivos distintos:</p>
+<ol class="arabic simple">
+<li><p>La Fase Convectiva (La Traza de Hayashi):</p></li>
+</ol>
+<ul class="simple">
+<li><p>Física: Estrellas totalmente convectivas y de baja masa (o fases tempranas muy expandidas de estrellas solares). Debido a la opacidad masiva del gas molecular frío y polvoriento, la energía se transporta por convección.</p></li>
+<li><p>Trayectoria en el HR: Descenso casi vertical (temperatura efectiva <span class="math notranslate nohighlight">\(T_{eff}\)</span> casi constante, mientras la luminosidad <span class="math notranslate nohighlight">\(L\)</span> cae drásticamente porque el radio estelar disminuye según la ley de Stefan-Boltzmann: <span class="math notranslate nohighlight">\(L=4\pi R^2 \sigma_{SB}T^4\)</span>).</p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p>La Fase Radiativa (La Traza de Henyey):</p></li>
+</ol>
+<ul class="simple">
+<li><p>Física: A medida que la estrella se contrae, su temperatura interna sube, el hidrógeno ionizado se recombina parcialmente y la opacidad central disminuye. Se desarrolla un núcleo radiativo interno.
+-Trayectoria en el HR: La traza se curva hacia la derecha, volviéndose horizontal (la luminosidad se estabiliza aproximadamente mientras la temperatura efectiva aumenta de manera constante).</p></li>
+</ul>
+<ol class="arabic simple" start="3">
+<li><p>Llegada a la ZAMS (Zero-Age Main Sequence):</p></li>
+</ol>
+<ul class="simple">
+<li><p>Cuando la temperatura del núcleo alcanza <span class="math notranslate nohighlight">\(\approx10^7\)</span>K, se enciende la cadena protón-protón (reacciones nucleares estables de hidrógeno). La presión termonuclear contrarresta por completo la gravedad y la contracción se detiene. La estrella entra formalmente en la Secuencia Principal.</p></li>
+</ul>
+</section>
+</section>
+<section id="lecturas-recomendadas-de-la-semana">
+<h2>Lecturas recomendadas de la semana<a class="headerlink" href="#lecturas-recomendadas-de-la-semana" title="Link to this heading">#</a></h2>
+<ol class="arabic">
+<li><p>André, P., Di Francesco, J., Ward-Thompson, D., et al. (2014). “From Filamentary Networks to Dense Cores in Molecular Clouds”. Protostars and Planets VI, University of Arizona Press, pp. 27-51.</p>
+<p><em>Relevancia</em>: El capítulo canónico que revolucionó la visión tradicional de las esferas de Bonnor-Ebert aisladas, demostrando que los núcleos pre-estelares se forman primariamente dentro de redes universales de filamentos interestelares mapeados por Herschel.</p>
+</li>
+<li><p>Dunham, M. M., Stutz, A. M., Allen, L. E., et al. (2014). “The Evolution of Protostars: Insights from Herschel”. Protostars and Planets VI, University of Arizona Press, pp. 195-218.</p>
+<p><em>Relevancia</em>: Referencia fundamental para la clasificación observacional de YSOs (Clases 0 a III), detallando cómo los datos infrarrojos y submilimétricos revelan la física de la envoltura y la acreción temprana.</p>
+</li>
+<li><p>Hartmann, L., Herczeg, G., &amp; Calvet, N. (2016). “Accretion onto Pre-Main-Sequence Stars”. Annual Review of Astronomy and Astrophysics, 54, 135-180.</p>
+<p><em>Relevancia</em>: Análisis exhaustivo sobre las tasas de acreción de gas, magnetosferas estelares y la transición dinámica durante la evolución Pre-Secuencia Principal (fases T Tauri).</p>
+</li>
+<li><p>Krumholz, M. R. (2014). “The Star Formation Rate and Efficiency Across Cosmic Time”. Physics Reports, 539, 49-134.</p>
+<p><em>Relevancia</em>: Un marco teórico monumental que conecta la física de núcleos individuales (como el colapso de Shu y la estabilidad de Bonnor-Ebert) con las leyes globales de formación estelar en galaxias.</p>
+</li>
+<li><p>Offner, S. S. R., Clarke, S. D., Whelan, E. T., et al. (2022). “The Origin of Star Clusters and the Initial Mass Function”. Protostars and Planets VII, Astronomical Society of the Pacific / arXiv:2203.09543.</p>
+<p><em>Relevancia</em>: Estado del arte reciente sobre cómo los núcleos colapsan jerárquicamente para dar origen no solo a estrellas aisladas, sino a cúmulos completos, discutiendo la interacción entre turbulencia y gravedad.</p>
+</li>
+</ol>
+</section>
+<section id="ejercicios-para-los-estudiantes">
+<h2>Ejercicios para los estudiantes<a class="headerlink" href="#ejercicios-para-los-estudiantes" title="Link to this heading">#</a></h2>
+<section id="ejercicio-1-limite-de-estabilidad-de-bonnor-ebert-analitico">
+<h3>Ejercicio 1: Límite de Estabilidad de Bonnor-Ebert (Analítico)<a class="headerlink" href="#ejercicio-1-limite-de-estabilidad-de-bonnor-ebert-analitico" title="Link to this heading">#</a></h3>
+<p>Considere un núcleo pre-estelar isotérmico con una temperatura cinéntica <span class="math notranslate nohighlight">\(T=12\)</span>K y un peso molecular medio <span class="math notranslate nohighlight">\(\mu=2.33\)</span>. Suponga que está confinado por el medio interestelar con una presión externa correspondiente a una densidad numérica ambiental de <span class="math notranslate nohighlight">\(n_{H_2}=5\times10^3\)</span>cm<span class="math notranslate nohighlight">\(^{-3}\)</span> y la misma temperatura.</p>
+<ol class="arabic simple">
+<li><p>Calcule la velocidad isotérmica del sonido <span class="math notranslate nohighlight">\(c_s\)</span> en km/s.</p></li>
+<li><p>Determine la presión externa <span class="math notranslate nohighlight">\(P_{ext}\)</span> en unidades cgs (dyn cm<span class="math notranslate nohighlight">\(^{-2}\)</span>), asumiendo <span class="math notranslate nohighlight">\( \rho_{ext} = \mu m_H n_{H_2} \)</span>.</p></li>
+<li><p>Calcule la Masa Crítica de Bonnor-Ebert (<span class="math notranslate nohighlight">\(M_{BE}\)</span>) en masas solares (<span class="math notranslate nohighlight">\(M_\odot\)</span>). Si el núcleo real tiene una masa de <span class="math notranslate nohighlight">\(3.5M_\odot\)</span>, ¿es estable o colapsará?</p></li>
+</ol>
+</section>
+<section id="ejercicio-2-tasa-de-acrecion-de-shu-y-masa-acumulada-analitico">
+<h3>Ejercicio 2: Tasa de Acreción de Shu y Masa Acumulada (Analítico)<a class="headerlink" href="#ejercicio-2-tasa-de-acrecion-de-shu-y-masa-acumulada-analitico" title="Link to this heading">#</a></h3>
+<p>En el modelo de colapso de “adentro hacia afuera” de Frank Shu (Esfera Isoterma Singular), la tasa de acreción de masa sobre la protoestrella central es constante e independiente del tiempo.</p>
+<ol class="arabic simple">
+<li><p>Utilizando la velocidad del sonido isotérmica para <span class="math notranslate nohighlight">\(T=10\)</span>K (<span class="math notranslate nohighlight">\(c_s\approx0.2\)</span>km/s) y la constante adimensional de Shu <span class="math notranslate nohighlight">\(m_0=0.975\)</span>, calcule la tasa de acreción <span class="math notranslate nohighlight">\(\dot{M}\)</span> en <span class="math notranslate nohighlight">\(M_\odot\)</span>.</p></li>
+<li><p>Si la fase de envoltura densa (Clase 0 + Clase I) dura aproximadamente <span class="math notranslate nohighlight">\(t_{env}=5\times10^5\)</span> años, ¿cuál es la masa total acumulada por la protoestrella al final de esta fase?</p></li>
+</ol>
+</section>
+<section id="ejercicio-3-calculo-numerico-de-la-masa-de-bonnor-ebert-computacional-python">
+<h3>Ejercicio 3: Cálculo Numérico de la Masa de Bonnor-Ebert (Computacional - Python)<a class="headerlink" href="#ejercicio-3-calculo-numerico-de-la-masa-de-bonnor-ebert-computacional-python" title="Link to this heading">#</a></h3>
+<p>Escriba un script en Python que calcule y grafique cómo cambia la Masa Crítica de Bonnor-Ebert (<span class="math notranslate nohighlight">\(M_{BE}\)</span>) en función de la temperatura del núcleo (<span class="math notranslate nohighlight">\(T\)</span> de 5K a 30K) para tres presiones externas diferentes (<span class="math notranslate nohighlight">\(P_{ext}/k_B=[10^4,10^5,10^6]\)</span> K cm<span class="math notranslate nohighlight">\(^{-3}\)</span>).</p>
+</section>
+<section id="ejercicio-4-simulacion-de-crecimiento-de-masa-protoestelar-por-acrecion-computacional-python">
+<h3>Ejercicio 4: Simulación de Crecimiento de Masa Protoestelar por Acreción (Computacional - Python)<a class="headerlink" href="#ejercicio-4-simulacion-de-crecimiento-de-masa-protoestelar-por-acrecion-computacional-python" title="Link to this heading">#</a></h3>
+<p>Simule la evolución temporal de la masa de una protoestrella durante su fase de acreción envolvente según el modelo de Shu, y grafique cómo crece la masa central (<span class="math notranslate nohighlight">\(M_\star\)</span>) y cómo disminuye la masa de la envoltura restante (<span class="math notranslate nohighlight">\(M_{env}\)</span>) partiendo de una masa inicial de núcleo <span class="math notranslate nohighlight">\(M_{core}=5.0M_\odot\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Escriba aquí su solución</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Clase_01_NubeEstatica.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Clase 1: Nube estática</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objetivos">Objetivos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formalizacion-y-solucieon-de-la-esfera-de-bonnor-ebert">Formalización y Solucieon de la Esfera de Bonnor-Ebert</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#la-solucion-completa-de-la-esfera-de-bonnor-ebert">1.1 La Solución Completa de la Esfera de Bonnor-Ebert:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#el-limite-de-estabilidad-y-la-masa-critica">1.2 El Límite de Estabilidad y la Masa Crítica</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clasificacion-observacional-de-objetos-estelares-jovenes-ysos">2. Clasificación Observacional de Objetos Estelares Jóvenes (YSOs)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#el-colapso-de-adentro-hacia-afuera-inside-out-collapse-de-frank-shu-1977">3. El Colapso de “Adentro hacia Afuera” (Inside-Out Collapse) de Frank Shu (1977).</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#el-perfil-inicial-de-la-sis">3.1 El Perfil Inicial de la SIS.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#la-onda-de-rarefaccion-y-el-colapso-dinamico">3.2 La Onda de Rarefacción y el Colapso Dinámico.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tasa-de-acrecion-constante">3.3 Tasa de Acreción Constante.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evolucion-en-la-pre-secuencia-principal-pms">4. Evolución en la Pre-Secuencia Principal (PMS).</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#la-escala-de-tiempo-de-kelvin-helmholtz-t-kh">4.1 La Escala de Tiempo de Kelvin-Helmholtz (<span class="math notranslate nohighlight">\(t_{KH}\)</span>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#trazas-de-hayashi-y-henyey-en-el-diagrama-hr">4.2 Trazas de Hayashi y Henyey en el Diagrama HR</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecturas-recomendadas-de-la-semana">Lecturas recomendadas de la semana</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicios-para-los-estudiantes">Ejercicios para los estudiantes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicio-1-limite-de-estabilidad-de-bonnor-ebert-analitico">Ejercicio 1: Límite de Estabilidad de Bonnor-Ebert (Analítico)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicio-2-tasa-de-acrecion-de-shu-y-masa-acumulada-analitico">Ejercicio 2: Tasa de Acreción de Shu y Masa Acumulada (Analítico)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicio-3-calculo-numerico-de-la-masa-de-bonnor-ebert-computacional-python">Ejercicio 3: Cálculo Numérico de la Masa de Bonnor-Ebert (Computacional - Python)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicio-4-simulacion-de-crecimiento-de-masa-protoestelar-por-acrecion-computacional-python">Ejercicio 4: Simulación de Crecimiento de Masa Protoestelar por Acreción (Computacional - Python)</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Esteban Silva Villa
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
