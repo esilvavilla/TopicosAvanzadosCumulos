@@ -6,5 +6,4 @@ root: intro
 chapters:
 - file: Clase_01_NubeEstatica
 - file: Clase_02_ColapsoFormacion
-
-
+- file: Clase_03_IMF_DinamicaInicial
