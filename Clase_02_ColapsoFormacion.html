@@ -719,7 +719,9 @@ r_s=c_st
 <span class="n">flux_class1</span> <span class="o">=</span> <span class="p">(</span><span class="mf">1e-6</span> <span class="o">*</span> <span class="n">planck_lambda_flambda</span><span class="p">(</span><span class="n">lam</span><span class="p">,</span> <span class="mi">3000</span><span class="p">))</span> <span class="o">+</span> <span class="p">(</span><span class="mf">2e-4</span> <span class="o">*</span> <span class="n">planck_lambda_flambda</span><span class="p">(</span><span class="n">lam</span><span class="p">,</span> <span class="mi">300</span><span class="p">))</span> <span class="o">+</span> <span class="n">planck_lambda_flambda</span><span class="p">(</span><span class="n">lam</span><span class="p">,</span> <span class="mi">70</span><span class="p">)</span>
 
 <span class="c1"># Clase II (T Tauri Clásica): Estrella visible + Exceso infrarrojo del disco</span>
-<span class="n">flux_class2</span> <span class="o">=</span> <span class="n">planck_lambda_flambda</span><span class="p">(</span><span class="n">lam</span><span class="p">,</span> <span class="mi">4000</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mf">1.5e-3</span> <span class="o">*</span> <span class="n">planck_lambda_flambda</span><span class="p">(</span><span class="n">lam</span><span class="p">,</span> <span class="mi">300</span><span class="p">))</span>
+<span class="c1">#flux_class2 = (1e-4 * planck_lambda_flambda(lam, 300)) + (planck_lambda_flambda(lam, 3500)) + planck_lambda_flambda(lam, 70)</span>
+<span class="n">flux_class2</span> <span class="o">=</span> <span class="p">(</span><span class="mf">1e-5</span> <span class="o">*</span> <span class="n">planck_lambda_flambda</span><span class="p">(</span><span class="n">lam</span><span class="p">,</span> <span class="mi">3500</span><span class="p">))</span> <span class="o">+</span> <span class="p">(</span><span class="mf">2e-4</span> <span class="o">*</span> <span class="n">planck_lambda_flambda</span><span class="p">(</span><span class="n">lam</span><span class="p">,</span> <span class="mi">300</span><span class="p">))</span> <span class="o">+</span> <span class="n">planck_lambda_flambda</span><span class="p">(</span><span class="n">lam</span><span class="p">,</span> <span class="mi">70</span><span class="p">)</span>
+<span class="c1"># (1e-4 * planck_lambda_flambda(lam, 300)) +  + planck_lambda_flambda(lam, 70)</span>
 
 <span class="c1"># Clase III (T Tauri de Líneas Débiles): Solo la estrella (cuerpo negro casi puro)</span>
 <span class="n">flux_class3</span> <span class="o">=</span> <span class="n">planck_lambda_flambda</span><span class="p">(</span><span class="n">lam</span><span class="p">,</span> <span class="mi">4000</span><span class="p">)</span>
@@ -750,11 +752,11 @@ r_s=c_st
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/q2/bqj89jbx5rgb58jm21hskzzm0000gn/T/ipykernel_63512/1262835751.py:11: RuntimeWarning: overflow encountered in exp
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/q2/bqj89jbx5rgb58jm21hskzzm0000gn/T/ipykernel_64973/2711917561.py:11: RuntimeWarning: overflow encountered in exp
   B_lam = (2 * h * c**2 / lam_m**5) / (np.exp(h * c / (lam_m * kB * T)) - 1)
 </pre></div>
 </div>
-<img alt="_images/ca77cfd03d905e923cb5e65a88eb73b6d561b259e0625a6c4b697b7f488c8b7c.png" src="_images/ca77cfd03d905e923cb5e65a88eb73b6d561b259e0625a6c4b697b7f488c8b7c.png" />
+<img alt="_images/1c5e943753da93c469ac18dbe6a8f74a235b3f60f3b5a57fdf9b76a2cbc0d9dd.png" src="_images/1c5e943753da93c469ac18dbe6a8f74a235b3f60f3b5a57fdf9b76a2cbc0d9dd.png" />
 </div>
 </div>
 </section>
