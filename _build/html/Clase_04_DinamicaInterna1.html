@@ -1,0 +1,830 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Clase 3: Dinámica Interna 1 &#8212; Tópicos Avanzados Cúmulos y Formación Estelar</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Clase_04_DinamicaInterna1';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Clase 3: Función Inicial de Masa (IMF) y Dinámica inicial de un Cúmulo Estelar" href="Clase_03_IMF_DinamicaInicial.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/UdeA.png" class="logo__image only-light" alt="Tópicos Avanzados Cúmulos y Formación Estelar - Home"/>
+    <img src="_static/UdeA.png" class="logo__image only-dark pst-js-only" alt="Tópicos Avanzados Cúmulos y Formación Estelar - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Formación y Evolución de Cúmulos Estelares
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Clase_01_NubeEstatica.html">Clase 1: Nube estática</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Clase_02_ColapsoFormacion.html">Clase 2: Colapso y Formación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Clase_03_IMF_DinamicaInicial.html">Clase 3: Función Inicial de Masa (IMF) y Dinámica inicial de un Cúmulo Estelar</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Clase 3: Dinámica Interna 1</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FClase_04_DinamicaInterna1.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Clase_04_DinamicaInterna1.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Clase 3: Dinámica Interna 1</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objetivos">Objetivos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#el-cumulo-como-sistema-estelar-gravitacional-n-cuerpos">1. El Cúmulo como Sistema Estelar Gravitacional (N-cuerpos)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#desarrollos-matematicos">1.1 Desarrollos Matemáticos</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-fisico-y-suposiciones">1.2 Análisis Físico y Suposiciones</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contraste-observacional">1.3 Contraste Observacional</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cinematica-y-tiempos-escala-dinamicos">2. Cinemática y Tiempos Escala Dinámicos</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">2.1 Desarrollos Matemáticos</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">2.2 Análisis Físico y Suposiciones</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grafico-ilustrativo-python-matplotlib">2.3 Gráfico Ilustrativo (Python / Matplotlib)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#equilibrio-dinamico-y-equiparticion-de-la-energia">3. Equilibrio Dinámico y Equipartición de la Energía</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivacion-estadistica-la-maximizacion-de-la-entropia">3.1 Derivación Estadística: La Maximización de la Entropía</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#el-principio-de-equiparticion">3.2 El Principio de Equipartición</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contraste-observacional-cumulos-abiertos-vs-globulares">3.3 Contraste Observacional: Cúmulos Abiertos vs. Globulares</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#taller-practico-computacional-extraccion-de-cinematica-con-adql">3.4 Taller Práctico Computacional: Extracción de Cinemática con ADQL</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#articulos-relevantes-recomendados-estado-del-arte">4. Artículos Relevantes Recomendados (Estado del Arte)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicios-propuestos">5. Ejercicios Propuestos</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="clase-3-dinamica-interna-1">
+<h1>Clase 3: Dinámica Interna 1<a class="headerlink" href="#clase-3-dinamica-interna-1" title="Link to this heading">#</a></h1>
+<section id="objetivos">
+<h2>Objetivos<a class="headerlink" href="#objetivos" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>El cúmulo como sistema estelar gravitacional (N-cuerpos).</p></li>
+<li><p>Cinemática y tiempos escala dinámicos: Tiempo de cruce y tiempo de relajación.</p></li>
+<li><p>Equilibrio dinámico y equipartición de la energía.</p></li>
+</ol>
+</section>
+<section id="el-cumulo-como-sistema-estelar-gravitacional-n-cuerpos">
+<h2>1. El Cúmulo como Sistema Estelar Gravitacional (N-cuerpos)<a class="headerlink" href="#el-cumulo-como-sistema-estelar-gravitacional-n-cuerpos" title="Link to this heading">#</a></h2>
+<p>Una vez que el gas es expulsado, el potencial gravitacional del cúmulo está dictado únicamente por la suma de las contribuciones puntuales de sus estrellas.</p>
+<section id="desarrollos-matematicos">
+<h3>1.1 Desarrollos Matemáticos<a class="headerlink" href="#desarrollos-matematicos" title="Link to this heading">#</a></h3>
+<p>Para un sistema de <span class="math notranslate nohighlight">\(N\)</span> estrellas, la ecuación de movimiento para la estrella <span class="math notranslate nohighlight">\(i\)</span> de masa <span class="math notranslate nohighlight">\(m_i\)</span> y vector de posición <span class="math notranslate nohighlight">\(\mathbf{r}_i\)</span> está dada por la suma de las fuerzas newtonianas de las <span class="math notranslate nohighlight">\(N-1\)</span> estrellas restantes:</p>
+<div class="math notranslate nohighlight">
+\[m_i \frac{d^2\mathbf{r}_i}{dt^2} = - \sum_{j \neq i}^N \frac{G m_i m_j}{|\mathbf{r}_i - \mathbf{r}_j|^3} (\mathbf{r}_i - \mathbf{r}_j)\]</div>
+<p>Para un sistema en equilibrio dinámico, el Teorema del Virial vincula la energía cinética total (<span class="math notranslate nohighlight">\(K\)</span>) y la energía potencial gravitacional total (<span class="math notranslate nohighlight">\(\Omega\)</span>). Partiendo de la segunda derivada del momento de inercia escalar (<span class="math notranslate nohighlight">\(I = \sum m_i |\mathbf{r}_i|^2\)</span>), en estado estacionario (<span class="math notranslate nohighlight">\(\ddot{I} = 0\)</span>), se demuestra que:</p>
+<div class="math notranslate nohighlight">
+\[2K + \Omega = 0\]</div>
+<p>Donde <span class="math notranslate nohighlight">\(K = \frac{1}{2} M \langle v^2 \rangle\)</span> (con <span class="math notranslate nohighlight">\(\langle v^2 \rangle \approx 3\sigma^2\)</span> para un sistema isotrópico con dispersión de velocidades 1D <span class="math notranslate nohighlight">\(\sigma\)</span>) y <span class="math notranslate nohighlight">\(\Omega \approx - \frac{G M^2}{R_v}\)</span> (<span class="math notranslate nohighlight">\(R_v\)</span> es el radio virial). Esto nos permite derivar la <strong>Masa Dinámica</strong> (o Masa Virial) de un cúmulo basándonos solo en su cinemática:</p>
+<div class="math notranslate nohighlight">
+\[M_{vir} = \frac{3 \sigma^2 R_v}{G}\]</div>
+</section>
+<section id="analisis-fisico-y-suposiciones">
+<h3>1.2 Análisis Físico y Suposiciones<a class="headerlink" href="#analisis-fisico-y-suposiciones" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Análisis:</strong> El sistema de N-cuerpos es intrínsecamente caótico. Sin embargo, a nivel macroscópico, el Teorema del Virial nos dice que la energía de ligadura de un cúmulo en equilibrio es exactamente igual a su energía cinética total cambiada de signo (<span class="math notranslate nohighlight">\(E = K + \Omega = -K\)</span>).</p></li>
+<li><p><strong>Suposiciones:</strong></p>
+<ol class="arabic simple">
+<li><p>Se modelan las estrellas como masas puntuales (radio estelar despreciable frente a distancias inter-estelares).</p></li>
+<li><p>El sistema está aislado (se ignora el campo de marea galáctico en esta primera aproximación).</p></li>
+<li><p>El sistema ha alcanzado un estado estacionario macroscópico (<span class="math notranslate nohighlight">\(\ddot{I} = 0\)</span>).</p></li>
+</ol>
+</li>
+</ul>
+</section>
+<section id="contraste-observacional">
+<h3>1.3 Contraste Observacional<a class="headerlink" href="#contraste-observacional" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Apoyo:</strong> Midiendo <span class="math notranslate nohighlight">\(\sigma\)</span> con astrometría, la <span class="math notranslate nohighlight">\(M_{vir}\)</span> coincide razonablemente bien con la masa fotométrica en los cúmulos abiertos maduros, validando el equilibrio virial estelar.</p></li>
+<li><p><strong>Refutación/Desafío:</strong> En asociaciones estelares muy jóvenes, la masa virial calculada suele ser muchísimo mayor que la masa visible. Esto indica empíricamente que estas agrupaciones no están en equilibrio virial (<span class="math notranslate nohighlight">\(\ddot{I} &gt; 0\)</span>); se encuentran en expansión tras la expulsión del gas.</p></li>
+</ul>
+</section>
+</section>
+<section id="cinematica-y-tiempos-escala-dinamicos">
+<h2>2. Cinemática y Tiempos Escala Dinámicos<a class="headerlink" href="#cinematica-y-tiempos-escala-dinamicos" title="Link to this heading">#</a></h2>
+<p>Existen dos relojes fundamentales que dictan la evolución de un cúmulo: el tiempo de cruce y el tiempo de relajación.</p>
+<section id="id1">
+<h3>2.1 Desarrollos Matemáticos<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<p><strong>Tiempo de Cruce (<span class="math notranslate nohighlight">\(t_{cross}\)</span>):</strong>
+Es el tiempo promedio que le toma a una estrella atravesar el sistema.</p>
+<div class="math notranslate nohighlight">
+\[t_{cross} = \frac{R}{\sigma}\]</div>
+<p><strong>Tiempo de Relajación (<span class="math notranslate nohighlight">\(t_{relax}\)</span>):</strong>
+Una estrella sufre una caminata aleatoria en el espacio de velocidades debido a pequeños encuentros gravitacionales. La varianza de la velocidad crece con el tiempo:</p>
+<div class="math notranslate nohighlight">
+\[\langle \Delta v_\perp^2 \rangle = \int_{b_{min}}^{b_{max}} \left( \frac{2Gm}{bv} \right)^2 n v (2\pi b \, db) t\]</div>
+<p>Evaluando la integral, aparece el término <span class="math notranslate nohighlight">\(\ln(b_{max}/b_{min})\)</span>, conocido como el <strong>Logaritmo de Coulomb</strong> (<span class="math notranslate nohighlight">\(\ln \Lambda\)</span>).
+El tiempo de relajación es el tiempo necesario para que la varianza acumulada iguale a la velocidad típica al cuadrado (<span class="math notranslate nohighlight">\(\langle \Delta v_\perp^2 \rangle \approx v^2\)</span>). Simplificando para todo el cúmulo:</p>
+<div class="math notranslate nohighlight">
+\[t_{relax} \approx \frac{N}{8 \ln(N)} t_{cross}\]</div>
+</section>
+<section id="id2">
+<h3>2.2 Análisis Físico y Suposiciones<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Análisis:</strong> Los cúmulos estelares tienen <span class="math notranslate nohighlight">\(t_{relax}\)</span> de decenas a cientos de millones de años. Son sistemas colisionales termodinámicamente: las estrellas “olvidan” sus órbitas iniciales debido al intercambio de energía constante.</p></li>
+<li><p><strong>Suposiciones:</strong> Masa promedio uniforme <span class="math notranslate nohighlight">\(m\)</span>, densidad homogénea (en la realidad el núcleo se relaja más rápido) y encuentros sucesivos de dos cuerpos (ignorando N-cuerpos simultáneos).</p></li>
+</ul>
+</section>
+<section id="grafico-ilustrativo-python-matplotlib">
+<h3>2.3 Gráfico Ilustrativo (Python / Matplotlib)<a class="headerlink" href="#grafico-ilustrativo-python-matplotlib" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">N</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span><span class="mf">1.5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+<span class="n">t_relax_ratio</span> <span class="o">=</span> <span class="n">N</span> <span class="o">/</span> <span class="p">(</span><span class="mi">8</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">N</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">t_relax_ratio</span><span class="p">,</span> <span class="s1">&#39;k-&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mf">2.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$t_</span><span class="si">{relax}</span><span class="s1"> / t_</span><span class="si">{cross}</span><span class="s1">$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvspan</span><span class="p">(</span><span class="mf">1e2</span><span class="p">,</span> <span class="mf">3e3</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.15</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Cúmulos Abiertos&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvspan</span><span class="p">(</span><span class="mf">1e4</span><span class="p">,</span> <span class="mf">1e6</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.15</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Cúmulos Globulares&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Número de Estrellas (N)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Razón de Tiempos&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Tiempos de Relajación Dinámica en función del Número de Estrellas&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper left&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">which</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/813f0e1b9f555ad93320eb4c48a62885ee6c89805fc0d21b63f6f8b1728bc72f.png" src="_images/813f0e1b9f555ad93320eb4c48a62885ee6c89805fc0d21b63f6f8b1728bc72f.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="equilibrio-dinamico-y-equiparticion-de-la-energia">
+<h2>3. Equilibrio Dinámico y Equipartición de la Energía<a class="headerlink" href="#equilibrio-dinamico-y-equiparticion-de-la-energia" title="Link to this heading">#</a></h2>
+<p>Al transcurrir varios tiempos de relajación (<span class="math notranslate nohighlight">\(t &gt; t_{relax}\)</span>), el intercambio constante de energía conduce al sistema a un estado de máximo desorden termodinámico.</p>
+<section id="derivacion-estadistica-la-maximizacion-de-la-entropia">
+<h3>3.1 Derivación Estadística: La Maximización de la Entropía<a class="headerlink" href="#derivacion-estadistica-la-maximizacion-de-la-entropia" title="Link to this heading">#</a></h3>
+<p>Modelamos la distribución de velocidades de las estrellas mediante una función de densidad de probabilidad <span class="math notranslate nohighlight">\(f(\mathbf{v})\)</span>. La entropía de Boltzmann es:</p>
+<div class="math notranslate nohighlight">
+\[S = -k_B \int f(\mathbf{v}) \ln f(\mathbf{v}) \, d^3v\]</div>
+<p>Maximizamos <span class="math notranslate nohighlight">\(S\)</span> bajo la conservación del número de partículas (<span class="math notranslate nohighlight">\(N = \int f d^3v\)</span>) y la conservación de la energía cinética (<span class="math notranslate nohighlight">\(K = \int \frac{1}{2} m v^2 f d^3v\)</span>) utilizando <strong>Multiplicadores de Lagrange</strong>:</p>
+<div class="math notranslate nohighlight">
+\[\delta \int \left[ -f \ln f - \lambda_1 f - \lambda_2 \left( \frac{1}{2} m v^2 f \right) \right] d^3v = 0\]</div>
+<p>Derivando respecto a <span class="math notranslate nohighlight">\(f\)</span> e igualando a cero:</p>
+<div class="math notranslate nohighlight">
+\[-\ln f - 1 - \lambda_1 - \lambda_2 \frac{1}{2} m v^2 = 0 \implies f(\mathbf{v}) = \exp(-1 - \lambda_1) \exp\left( - \lambda_2 \frac{1}{2} m v^2 \right)\]</div>
+<p>Definiendo <span class="math notranslate nohighlight">\(A = \exp(-1-\lambda_1)\)</span> y usando la dispersión térmica <span class="math notranslate nohighlight">\(\sigma^2 = \frac{1}{\lambda_2 m} = \frac{k_B T}{m}\)</span>, e integrando sobre la cáscara esférica de velocidades (<span class="math notranslate nohighlight">\(d^3v = 4\pi v^2 dv\)</span>), demostramos formalmente la <strong>Distribución de Maxwell-Boltzmann</strong>:</p>
+<div class="math notranslate nohighlight">
+\[f(v) \, dv = 4\pi A v^2 \exp\left( - \frac{v^2}{2 \sigma^2} \right) dv\]</div>
+</section>
+<section id="el-principio-de-equiparticion">
+<h3>3.2 El Principio de Equipartición<a class="headerlink" href="#el-principio-de-equiparticion" title="Link to this heading">#</a></h3>
+<p>Los encuentros gravitacionales obligan al sistema a tender hacia una única “temperatura cinética”:</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{2} m_1 \sigma_1^2 = \frac{1}{2} m_2 \sigma_2^2 \implies \sigma(m) \propto m^{-0.5}\]</div>
+<p>Predicción fundamental: las estrellas masivas se mueven más lento (segregación) y las ligeras adquieren altas velocidades.</p>
+</section>
+<section id="contraste-observacional-cumulos-abiertos-vs-globulares">
+<h3>3.3 Contraste Observacional: Cúmulos Abiertos vs. Globulares<a class="headerlink" href="#contraste-observacional-cumulos-abiertos-vs-globulares" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Caso 1: Cúmulo Abierto (Ej. Pléyades):</strong> Siendo jóvenes (~115 Myr) y poco masivos, su <span class="math notranslate nohighlight">\(t_{relax}\)</span> es de ~30 a 50 Myr. Se encuentran en un estado de <strong>relajación parcial</strong>. Al observarlos con Gaia, las estrellas masivas están termalizadas, pero la pendiente observada de <span class="math notranslate nohighlight">\(\sigma\)</span> para estrellas de baja masa es más plana que -0.5. El campo de marea galáctico extrae a las estrellas rápidas antes de que alcancen la equipartición completa.</p></li>
+<li><p><strong>Caso 2: Cúmulo Globular (Ej. NGC 2808):</strong> Con edades &gt; 10 Gyr y pozos de potencial profundos, han experimentado decenas de tiempos de relajación sin que la marea disuelva su núcleo. En este estado de <strong>relajación profunda</strong>, los datos del HST muestran un ajuste casi perfecto a la ley teórica <span class="math notranslate nohighlight">\(\sigma \propto m^{-0.5}\)</span>, evidenciando la firma intacta de la mecánica estadística clásica.</p></li>
+</ul>
+</section>
+<section id="taller-practico-computacional-extraccion-de-cinematica-con-adql">
+<h3>3.4 Taller Práctico Computacional: Extracción de Cinemática con ADQL<a class="headerlink" href="#taller-practico-computacional-extraccion-de-cinematica-con-adql" title="Link to this heading">#</a></h3>
+<p>Este ejercicio instruye cómo calcular la dispersión de velocidades 3D y 1D real de las Pléyades utilizando minería de datos. Accedemos al archivo de Gaia a través del protocolo TAP y ejecutamos una consulta en SQL astronómico (ADQL) para transformar los movimientos propios (<span class="math notranslate nohighlight">\(\mu\)</span>) en velocidades transversales físicas (<span class="math notranslate nohighlight">\(v_{tan}\)</span>).</p>
+<div class="math notranslate nohighlight">
+\[v_{tan} \approx 4.74 \frac{\mu}{\varpi}\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">subprocess</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># 1. Definir la consulta ADQL optimizada para las Pléyades</span>
+<span class="n">adql_query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">SELECT source_id, ra, dec, parallax, pmra, pmdec</span>
+<span class="s2">FROM gaiadr3.gaia_source</span>
+<span class="s2">WHERE 1=CONTAINS(POINT(&#39;ICRS&#39;, ra, dec), CIRCLE(&#39;ICRS&#39;, 56.75, 24.11, 3.0))</span>
+<span class="s2">  AND parallax BETWEEN 6.0 AND 9.0</span>
+<span class="s2">  AND pmra IS NOT NULL AND pmdec IS NOT NULL</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="c1"># 2. Construir la URL del servicio TAP síncrono de la ESA y los parámetros</span>
+<span class="n">tap_url</span> <span class="o">=</span> <span class="s2">&quot;https://gea.esac.esa.int/tap-server/tap/sync&quot;</span>
+<span class="n">payload</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;request&#39;</span><span class="p">:</span> <span class="s1">&#39;doQuery&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;lang&#39;</span><span class="p">:</span> <span class="s1">&#39;adql&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;format&#39;</span><span class="p">:</span> <span class="s1">&#39;csv&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;query&#39;</span><span class="p">:</span> <span class="n">adql_query</span>
+<span class="p">}</span>
+
+<span class="c1"># 3. Descarga ultra-rápida utilizando wget mediante subprocess</span>
+<span class="kn">import</span> <span class="nn">urllib.parse</span>
+<span class="n">encoded_payload</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">parse</span><span class="o">.</span><span class="n">urlencode</span><span class="p">(</span><span class="n">payload</span><span class="p">)</span>
+<span class="n">wget_command</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;wget&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;--post-data&quot;</span><span class="p">,</span> <span class="n">encoded_payload</span><span class="p">,</span>
+    <span class="s2">&quot;-O&quot;</span><span class="p">,</span> <span class="s2">&quot;pleiades_data.csv&quot;</span><span class="p">,</span>
+    <span class="n">tap_url</span>
+<span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Descargando datos de Gaia de forma síncrona con wget...&quot;</span><span class="p">)</span>
+<span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">wget_command</span><span class="p">,</span> <span class="n">check</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;¡Descarga completada con éxito!&quot;</span><span class="p">)</span>
+
+<span class="c1"># 4. Lectura inmediata del archivo de salida con Pandas</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;pleiades_data.csv&quot;</span><span class="p">)</span>
+
+<span class="c1"># 5. Limpieza de datos (Filtro cinemático rústico para aislar el cúmulo)</span>
+<span class="n">mask</span> <span class="o">=</span> <span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;pmra&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">15</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;pmra&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">25</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;pmdec&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">55</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;pmdec&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">40</span><span class="p">)</span>
+<span class="n">clean_data</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span>
+
+<span class="c1"># 6. Conversión de astrometría a velocidades tangenciales (km/s)</span>
+<span class="n">v_ra</span> <span class="o">=</span> <span class="mf">4.74</span> <span class="o">*</span> <span class="p">(</span><span class="n">clean_data</span><span class="p">[</span><span class="s1">&#39;pmra&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">clean_data</span><span class="p">[</span><span class="s1">&#39;parallax&#39;</span><span class="p">])</span>
+<span class="n">v_dec</span> <span class="o">=</span> <span class="mf">4.74</span> <span class="o">*</span> <span class="p">(</span><span class="n">clean_data</span><span class="p">[</span><span class="s1">&#39;pmdec&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">clean_data</span><span class="p">[</span><span class="s1">&#39;parallax&#39;</span><span class="p">])</span>
+
+<span class="n">sigma_ra</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">v_ra</span><span class="p">)</span>
+<span class="n">sigma_dec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">v_dec</span><span class="p">)</span>
+<span class="n">sigma_1D</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">([</span><span class="n">sigma_ra</span><span class="p">,</span> <span class="n">sigma_dec</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Miembros cinemáticos identificados: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">clean_data</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Dispersión de velocidad física (1D promedio): </span><span class="si">{</span><span class="n">sigma_1D</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> km/s&quot;</span><span class="p">)</span>
+
+<span class="c1"># 7. Visualización del Vector Point Diagram (VPD)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">7</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;pmra&#39;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;pmdec&#39;</span><span class="p">],</span> <span class="n">s</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Campo (Background)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">clean_data</span><span class="p">[</span><span class="s1">&#39;pmra&#39;</span><span class="p">],</span> <span class="n">clean_data</span><span class="p">[</span><span class="s1">&#39;pmdec&#39;</span><span class="p">],</span> <span class="n">s</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Pléyades&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Movimiento Propio RA (mas/yr)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Movimiento Propio Dec (mas/yr)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Diagrama de Movimiento Propio (VPD) - Las Pléyades&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">150</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Descargando datos de Gaia de forma síncrona con wget...
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2026-08-31 10:37:03--  https://gea.esac.esa.int/tap-server/tap/sync
+Resolving gea.esac.esa.int (gea.esac.esa.int)... 193.147.152.106
+Connecting to gea.esac.esa.int (gea.esac.esa.int)|193.147.152.106|:443... 
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>connected.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>HTTP request sent, awaiting response... 
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>200 200
+Length: unspecified [text/csv]
+Saving to: &#39;pleiades_data.csv&#39;
+
+     0K .......... .......... .......... ..
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>........ ..........  132K
+    50K .......... .......... .......... .......... ..........  273K
+   100K .......... .
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>......... .......... .......... ..........  274K
+   150K .......... .......... .......... .......... ..........  303K
+   200K .......... .......... ..........                       1.96M=0.9s
+
+2026-08-31 10:37:18 (249 KB/s) - &#39;pleiades_data.csv&#39; saved [235573]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>¡Descarga completada con éxito!
+
+Miembros cinemáticos identificados: 1358
+Dispersión de velocidad física (1D promedio): 0.99 km/s
+</pre></div>
+</div>
+<img alt="_images/292c6f8aadff6920417e2a639169c9b911a13d7399b7d8742c49243dad821120.png" src="_images/292c6f8aadff6920417e2a639169c9b911a13d7399b7d8742c49243dad821120.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="articulos-relevantes-recomendados-estado-del-arte">
+<h2>4. Artículos Relevantes Recomendados (Estado del Arte)<a class="headerlink" href="#articulos-relevantes-recomendados-estado-del-arte" title="Link to this heading">#</a></h2>
+<ol class="arabic">
+<li><p><strong>Portegies Zwart, S. F., McMillan, S. L. W., &amp; Gieles, M. (2010)</strong>. <em>“Young Massive Star Clusters”</em>. Annual Review of Astronomy and Astrophysics, 48, 431-493.</p>
+<p><em>Relevancia</em>: Es un artículo de revisión fundamental que conecta la formación de los cúmulos estelares con su evolución dinámica temprana. Aborda empíricamente cómo se miden los tiempos de cruce y relajación en poblaciones jóvenes, sirviendo de puente entre la hidrodinámica (Semana 2-3) y el régimen de N-cuerpos.</p>
+</li>
+<li><p><strong>Baumgardt, H., &amp; Makino, J. (2003)</strong>. <em>“Dynamical evolution of star clusters in tidal fields”</em>. Monthly Notices of the Royal Astronomical Society, 340(1), 227-246.</p>
+<p><em>Relevancia</em>: Este es un trabajo teórico y computacional seminal. Mediante integradores directos de N-cuerpos, los autores demuestran cómo la interacción gravitacional interna (relajación) acoplada al campo de marea galáctico determina la tasa de evaporación del cúmulo. Vital para entender las limitaciones del Teorema del Virial en sistemas no aislados.</p>
+</li>
+<li><p><strong>Trenti, M., &amp; van der Marel, R. (2013)</strong>. <em>“Energy Equipartition in Globular Clusters”</em>. Monthly Notices of the Royal Astronomical Society, 435(4), 3272-3282.</p>
+<p><em>Relevancia</em>: Aterriza de forma crítica la teoría de la maximización de la entropía. Demuestra, usando simulaciones de N-cuerpos y comparaciones observacionales, por qué los cúmulos reales nunca alcanzan una equipartición perfecta de energía (<span class="math notranslate nohighlight">\(\sigma \propto m^{−0.5}\)</span>) debido al escape constante de estrellas de baja masa y la inestabilidad termodinámica.</p>
+</li>
+<li><p><strong>Cantat-Gaudin, T., et al. (2018)</strong>. <em>“A Gaia DR2 view of the open cluster population in the Milky Way”</em>. Astronomy &amp; Astrophysics, 618, A93.</p>
+<p><em>Relevancia</em>: Muestra la aplicación de vanguardia del análisis de movimientos propios y paralajes astronómicos. Detalla la metodología observacional para identificar miembros de cúmulos estelares utilizando algoritmos de aprendizaje automático no supervisado (DBSCAN), enlazando directamente con la lógica del taller práctico de ADQL y astrometría propuesto en clase.</p>
+</li>
+<li><p><strong>Meingast, S., &amp; Alves, J. (2019)</strong>. <em>“Extended stellar systems in the solar neighborhood. II. Discovery of a massive tail associated with the Pleiades”</em>. Astronomy &amp; Astrophysics, 627, A66.</p>
+<p><em>Relevancia</em>: Presenta evidencia observacional directa y reciente de la evaporación estelar y la segregación. Los autores cartografían una gigantesca “cola de marea” escapando de las Pléyades, ilustrando de manera espectacular cómo el intercambio de energía cinética predicho por las ecuaciones de relajación disuelve los cúmulos abiertos en el campo galáctico.</p>
+</li>
+</ol>
+</section>
+<section id="ejercicios-propuestos">
+<h2>5. Ejercicios Propuestos<a class="headerlink" href="#ejercicios-propuestos" title="Link to this heading">#</a></h2>
+<p><strong>Ejercicio 1 (Analítico):</strong>
+Derive la expresión de la Masa Virial (<span class="math notranslate nohighlight">\(M_{vir} = \frac{3 \sigma^2 R_v}{G}\)</span>) asumiendo un cúmulo esférico isotrópico. Calcule la masa para un cúmulo con dispersión observada de 2.5 km/s y radio virial de 3 pc.</p>
+<p><strong>Ejercicio 2 (Analítico):</strong>
+Asumiendo equipartición de energía en un cúmulo, si las estrellas de tipo solar (1.0 <span class="math notranslate nohighlight">\(M_\odot\)</span>) muestran una dispersión de velocidades 3D de 12 km/s, ¿cuál debe ser la dispersión teórica para una población de enanas blancas masivas (1.4 <span class="math notranslate nohighlight">\(M_\odot\)</span>)?</p>
+<p><strong>Ejercicio 3 (Computacional / Data Mining con ADQL):</strong>
+Modifique el script en Python de la Sección 3.4. Ejecute una consulta ADQL para el cúmulo de las Hyades (<span class="math notranslate nohighlight">\(\alpha \approx 66.75^\circ\)</span>, <span class="math notranslate nohighlight">\(\delta \approx 15.86^\circ\)</span>), aislando el paralaje correcto (~21 mas). Calcule la dispersión de velocidades en la dirección de la Ascensión Recta (<span class="math notranslate nohighlight">\(\sigma_{v\_ra}\)</span>).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Escriba aquí su solución</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Clase_03_IMF_DinamicaInicial.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Clase 3: Función Inicial de Masa (IMF) y Dinámica inicial de un Cúmulo Estelar</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objetivos">Objetivos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#el-cumulo-como-sistema-estelar-gravitacional-n-cuerpos">1. El Cúmulo como Sistema Estelar Gravitacional (N-cuerpos)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#desarrollos-matematicos">1.1 Desarrollos Matemáticos</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-fisico-y-suposiciones">1.2 Análisis Físico y Suposiciones</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contraste-observacional">1.3 Contraste Observacional</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cinematica-y-tiempos-escala-dinamicos">2. Cinemática y Tiempos Escala Dinámicos</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">2.1 Desarrollos Matemáticos</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">2.2 Análisis Físico y Suposiciones</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grafico-ilustrativo-python-matplotlib">2.3 Gráfico Ilustrativo (Python / Matplotlib)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#equilibrio-dinamico-y-equiparticion-de-la-energia">3. Equilibrio Dinámico y Equipartición de la Energía</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivacion-estadistica-la-maximizacion-de-la-entropia">3.1 Derivación Estadística: La Maximización de la Entropía</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#el-principio-de-equiparticion">3.2 El Principio de Equipartición</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contraste-observacional-cumulos-abiertos-vs-globulares">3.3 Contraste Observacional: Cúmulos Abiertos vs. Globulares</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#taller-practico-computacional-extraccion-de-cinematica-con-adql">3.4 Taller Práctico Computacional: Extracción de Cinemática con ADQL</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#articulos-relevantes-recomendados-estado-del-arte">4. Artículos Relevantes Recomendados (Estado del Arte)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicios-propuestos">5. Ejercicios Propuestos</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Esteban Silva Villa
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
