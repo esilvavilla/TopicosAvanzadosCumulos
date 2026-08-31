@@ -1,0 +1,112 @@
+Traceback (most recent call last):
+  File "/Users/esteban/anaconda3/lib/python3.9/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/Users/esteban/anaconda3/lib/python3.9/site-packages/nbclient/client.py", line 1204, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/Users/esteban/anaconda3/lib/python3.9/site-packages/nbclient/util.py", line 84, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/Users/esteban/anaconda3/lib/python3.9/site-packages/nbclient/util.py", line 62, in just_run
+    return loop.run_until_complete(coro)
+  File "/Users/esteban/anaconda3/lib/python3.9/asyncio/base_events.py", line 647, in run_until_complete
+    return future.result()
+  File "/Users/esteban/anaconda3/lib/python3.9/site-packages/nbclient/client.py", line 663, in async_execute
+    await self.async_execute_cell(
+  File "/Users/esteban/anaconda3/lib/python3.9/site-packages/nbclient/client.py", line 965, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/Users/esteban/anaconda3/lib/python3.9/site-packages/nbclient/client.py", line 862, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+import subprocess
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+# 1. Definir la consulta ADQL optimizada para las Pléyades
+adql_query = """
+SELECT source_id, ra, dec, parallax, pmra, pmdec
+FROM gaiadr3.gaia_source
+WHERE 1=CONTAINS(POINT('ICRS', ra, dec), CIRCLE('ICRS', 56.75, 24.11, 3.0))
+  AND parallax BETWEEN 6.0 AND 9.0
+  AND pmra IS NOT NULL AND pmdec IS NOT NULL
+"""
+
+# 2. Construir la URL del servicio TAP síncrono de la ESA y los parámetros
+tap_url = "https://gea.esac.esa.int/tap-server/tap/sync"
+payload = {
+    'request': 'doQuery',
+    'lang': 'adql',
+    'format': 'csv',
+    'query': adql_query
+}
+
+# 3. Descarga ultra-rápida utilizando wget mediante subprocess
+import urllib.parse
+encoded_payload = urllib.parse.urlencode(payload)
+wget_command = [
+    "wget",
+    "--post-data", encoded_payload,
+    "-O", "pleiades_data.csv",
+    tap_url
+]
+
+print("Descargando datos de Gaia de forma síncrona con wget...")
+subprocess.run(wget_command, check=True)
+print("¡Descarga completada con éxito!")
+
+# 4. Lectura inmediata del archivo de salida con Pandas
+data = pd.read_csv("pleiades_data.csv")
+
+# 5. Limpieza de datos (Filtro cinemático rústico para aislar el cúmulo)
+mask = (data['pmra'] > 15) & (data['pmra'] < 25) & (data['pmdec'] > -55) & (data['pmdec'] < -40)
+clean_data = data[mask]
+
+# 6. Conversión de astrometría a velocidades tangenciales (km/s)
+v_ra = 4.74 * (clean_data['pmra'] / clean_data['parallax'])
+v_dec = 4.74 * (clean_data['pmdec'] / clean_data['parallax'])
+
+sigma_ra = np.std(v_ra)
+sigma_dec = np.std(v_dec)
+sigma_1D = np.mean([sigma_ra, sigma_dec])
+
+print(f"\nMiembros cinemáticos identificados: {len(clean_data)}")
+print(f"Dispersión de velocidad física (1D promedio): {sigma_1D:.2f} km/s")
+
+# 7. Visualización del Vector Point Diagram (VPD)
+plt.figure(figsize=(7, 7))
+plt.scatter(data['pmra'], data['pmdec'], s=2, c='gray', alpha=0.3, label='Campo (Background)')
+plt.scatter(clean_data['pmra'], clean_data['pmdec'], s=10, c='blue', alpha=0.8, label='Pléyades')
+plt.xlabel('Movimiento Propio RA (mas/yr)', fontsize=13)
+plt.ylabel('Movimiento Propio Dec (mas/yr)', fontsize=13)
+plt.title('Diagrama de Movimiento Propio (VPD) - Las Pléyades', fontsize=14)
+plt.legend()
+plt.xlim(-100, 200)
+plt.ylim(-150, 100)
+plt.grid(True, ls='--')
+plt.show()
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mCalledProcessError[0m                        Traceback (most recent call last)
+Input [0;32mIn [2][0m, in [0;36m<cell line: 35>[0;34m()[0m
+[1;32m     27[0m wget_command [38;5;241m=[39m [
+[1;32m     28[0m     [38;5;124m"[39m[38;5;124mwget[39m[38;5;124m"[39m,
+[1;32m     29[0m     [38;5;124m"[39m[38;5;124m--post-data[39m[38;5;124m"[39m, encoded_payload,
+[1;32m     30[0m     [38;5;124m"[39m[38;5;124m-O[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124mpleiades_data.csv[39m[38;5;124m"[39m,
+[1;32m     31[0m     tap_url
+[1;32m     32[0m ]
+[1;32m     34[0m [38;5;28mprint[39m([38;5;124m"[39m[38;5;124mDescargando datos de Gaia de forma síncrona con wget...[39m[38;5;124m"[39m)
+[0;32m---> 35[0m [43msubprocess[49m[38;5;241;43m.[39;49m[43mrun[49m[43m([49m[43mwget_command[49m[43m,[49m[43m [49m[43mcheck[49m[38;5;241;43m=[39;49m[38;5;28;43;01mTrue[39;49;00m[43m)[49m
+[1;32m     36[0m [38;5;28mprint[39m([38;5;124m"[39m[38;5;124m¡Descarga completada con éxito![39m[38;5;124m"[39m)
+[1;32m     38[0m [38;5;66;03m# 4. Lectura inmediata del archivo de salida con Pandas[39;00m
+
+File [0;32m~/anaconda3/lib/python3.9/subprocess.py:528[0m, in [0;36mrun[0;34m(input, capture_output, timeout, check, *popenargs, **kwargs)[0m
+[1;32m    526[0m     retcode [38;5;241m=[39m process[38;5;241m.[39mpoll()
+[1;32m    527[0m     [38;5;28;01mif[39;00m check [38;5;129;01mand[39;00m retcode:
+[0;32m--> 528[0m         [38;5;28;01mraise[39;00m CalledProcessError(retcode, process[38;5;241m.[39margs,
+[1;32m    529[0m                                  output[38;5;241m=[39mstdout, stderr[38;5;241m=[39mstderr)
+[1;32m    530[0m [38;5;28;01mreturn[39;00m CompletedProcess(process[38;5;241m.[39margs, retcode, stdout, stderr)
+
+[0;31mCalledProcessError[0m: Command '['wget', '--post-data', 'request=doQuery&lang=adql&format=csv&query=%0ASELECT+source_id%2C+ra%2C+dec%2C+parallax%2C+pmra%2C+pmdec%0AFROM+gaiadr3.gaia_source%0AWHERE+1%3DCONTAINS%28POINT%28%27ICRS%27%2C+ra%2C+dec%29%2C+CIRCLE%28%27ICRS%27%2C+56.75%2C+24.11%2C+3.0%29%29%0A++AND+parallax+BETWEEN+6.0+AND+9.0%0A++AND+pmra+IS+NOT+NULL+AND+pmdec+IS+NOT+NULL%0A', '-O', 'pleiades_data.csv', 'https://gea.esac.esa.int/tap-server/tap/sync']' returned non-zero exit status 3.
+CalledProcessError: Command '['wget', '--post-data', 'request=doQuery&lang=adql&format=csv&query=%0ASELECT+source_id%2C+ra%2C+dec%2C+parallax%2C+pmra%2C+pmdec%0AFROM+gaiadr3.gaia_source%0AWHERE+1%3DCONTAINS%28POINT%28%27ICRS%27%2C+ra%2C+dec%29%2C+CIRCLE%28%27ICRS%27%2C+56.75%2C+24.11%2C+3.0%29%29%0A++AND+parallax+BETWEEN+6.0+AND+9.0%0A++AND+pmra+IS+NOT+NULL+AND+pmdec+IS+NOT+NULL%0A', '-O', 'pleiades_data.csv', 'https://gea.esac.esa.int/tap-server/tap/sync']' returned non-zero exit status 3.
+

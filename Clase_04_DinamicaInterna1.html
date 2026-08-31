@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Clase 3: Dinámica Interna 1 &#8212; Tópicos Avanzados Cúmulos y Formación Estelar</title>
+    <title>Clase 4: Dinámica Interna 1 &#8212; Tópicos Avanzados Cúmulos y Formación Estelar</title>
   
   
   
@@ -173,7 +173,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Clase_01_NubeEstatica.html">Clase 1: Nube estática</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Clase_02_ColapsoFormacion.html">Clase 2: Colapso y Formación</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Clase_03_IMF_DinamicaInicial.html">Clase 3: Función Inicial de Masa (IMF) y Dinámica inicial de un Cúmulo Estelar</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Clase 3: Dinámica Interna 1</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Clase 4: Dinámica Interna 1</a></li>
 </ul>
 
     </div>
@@ -356,7 +356,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Clase 3: Dinámica Interna 1</h1>
+    <h1>Clase 4: Dinámica Interna 1</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -399,8 +399,8 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="clase-3-dinamica-interna-1">
-<h1>Clase 3: Dinámica Interna 1<a class="headerlink" href="#clase-3-dinamica-interna-1" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="clase-4-dinamica-interna-1">
+<h1>Clase 4: Dinámica Interna 1<a class="headerlink" href="#clase-4-dinamica-interna-1" title="Link to this heading">#</a></h1>
 <section id="objetivos">
 <h2>Objetivos<a class="headerlink" href="#objetivos" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
@@ -616,12 +616,9 @@ El tiempo de relajación es el tiempo necesario para que la varianza acumulada i
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Descargando datos de Gaia de forma síncrona con wget...
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2026-08-31 10:37:03--  https://gea.esac.esa.int/tap-server/tap/sync
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2026-08-31 10:42:02--  https://gea.esac.esa.int/tap-server/tap/sync
 Resolving gea.esac.esa.int (gea.esac.esa.int)... 193.147.152.106
-Connecting to gea.esac.esa.int (gea.esac.esa.int)|193.147.152.106|:443... 
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>connected.
+Connecting to gea.esac.esa.int (gea.esac.esa.int)|193.147.152.106|:443... connected.
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>HTTP request sent, awaiting response... 
@@ -631,28 +628,36 @@ Connecting to gea.esac.esa.int (gea.esac.esa.int)|193.147.152.106|:443...
 Length: unspecified [text/csv]
 Saving to: &#39;pleiades_data.csv&#39;
 
-     0K .......... .......... .......... ..
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>........ ..........  132K
-    50K .......... .......... .......... .......... ..........  273K
-   100K .......... .
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>......... .......... .......... ..........  274K
-   150K .......... .......... .......... .......... ..........  303K
-   200K .......... .......... ..........                       1.96M=0.9s
+     0K                                                        0.00 =0s
 
-2026-08-31 10:37:18 (249 KB/s) - &#39;pleiades_data.csv&#39; saved [235573]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>¡Descarga completada con éxito!
 
-Miembros cinemáticos identificados: 1358
-Dispersión de velocidad física (1D promedio): 0.99 km/s
+Cannot write to &#39;pleiades_data.csv&#39; (Success).
 </pre></div>
 </div>
-<img alt="_images/292c6f8aadff6920417e2a639169c9b911a13d7399b7d8742c49243dad821120.png" src="_images/292c6f8aadff6920417e2a639169c9b911a13d7399b7d8742c49243dad821120.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">CalledProcessError</span><span class="g g-Whitespace">                        </span>Traceback (most recent call last)
+<span class="nn">Input In [2],</span> in <span class="ni">&lt;cell line: 35&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">27</span> <span class="n">wget_command</span> <span class="o">=</span> <span class="p">[</span>
+<span class="g g-Whitespace">     </span><span class="mi">28</span>     <span class="s2">&quot;wget&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">29</span>     <span class="s2">&quot;--post-data&quot;</span><span class="p">,</span> <span class="n">encoded_payload</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">30</span>     <span class="s2">&quot;-O&quot;</span><span class="p">,</span> <span class="s2">&quot;pleiades_data.csv&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">31</span>     <span class="n">tap_url</span>
+<span class="g g-Whitespace">     </span><span class="mi">32</span> <span class="p">]</span>
+<span class="g g-Whitespace">     </span><span class="mi">34</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Descargando datos de Gaia de forma síncrona con wget...&quot;</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">35</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">wget_command</span><span class="p">,</span> <span class="n">check</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">36</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;¡Descarga completada con éxito!&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">38</span> <span class="c1"># 4. Lectura inmediata del archivo de salida con Pandas</span>
+
+<span class="nn">File ~/anaconda3/lib/python3.9/subprocess.py:528,</span> in <span class="ni">run</span><span class="nt">(input, capture_output, timeout, check, *popenargs, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">526</span>     <span class="n">retcode</span> <span class="o">=</span> <span class="n">process</span><span class="o">.</span><span class="n">poll</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">527</span>     <span class="k">if</span> <span class="n">check</span> <span class="ow">and</span> <span class="n">retcode</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">528</span>         <span class="k">raise</span> <span class="n">CalledProcessError</span><span class="p">(</span><span class="n">retcode</span><span class="p">,</span> <span class="n">process</span><span class="o">.</span><span class="n">args</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">529</span>                                  <span class="n">output</span><span class="o">=</span><span class="n">stdout</span><span class="p">,</span> <span class="n">stderr</span><span class="o">=</span><span class="n">stderr</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">530</span> <span class="k">return</span> <span class="n">CompletedProcess</span><span class="p">(</span><span class="n">process</span><span class="o">.</span><span class="n">args</span><span class="p">,</span> <span class="n">retcode</span><span class="p">,</span> <span class="n">stdout</span><span class="p">,</span> <span class="n">stderr</span><span class="p">)</span>
+
+<span class="ne">CalledProcessError</span>: Command &#39;[&#39;wget&#39;, &#39;--post-data&#39;, &#39;request=doQuery&amp;lang=adql&amp;format=csv&amp;query=%0ASELECT+source_id%2C+ra%2C+dec%2C+parallax%2C+pmra%2C+pmdec%0AFROM+gaiadr3.gaia_source%0AWHERE+1%3DCONTAINS%28POINT%28%27ICRS%27%2C+ra%2C+dec%29%2C+CIRCLE%28%27ICRS%27%2C+56.75%2C+24.11%2C+3.0%29%29%0A++AND+parallax+BETWEEN+6.0+AND+9.0%0A++AND+pmra+IS+NOT+NULL+AND+pmdec+IS+NOT+NULL%0A&#39;, &#39;-O&#39;, &#39;pleiades_data.csv&#39;, &#39;https://gea.esac.esa.int/tap-server/tap/sync&#39;]&#39; returned non-zero exit status 3.
+</pre></div>
+</div>
 </div>
 </div>
 </section>
