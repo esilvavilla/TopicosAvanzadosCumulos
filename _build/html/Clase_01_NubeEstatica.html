@@ -173,6 +173,7 @@
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Clase 1: Nube estática</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Clase_02_ColapsoFormacion.html">Clase 2: Colapso y Formación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Clase_03_IMF_DinamicaInicial.html">Clase 3: Función Inicial de Masa (IMF) y Dinámica inicial de un Cúmulo Estelar</a></li>
 </ul>
 
     </div>
@@ -400,16 +401,19 @@
 <p>El gran reto observacional de la formación estelar es que las nubes donde nacen las estrellas son extremadamente frías (<span class="math notranslate nohighlight">\(T \sim 10 - 30\)</span> K). A estas temperaturas, el principal constituyente, el hidrógeno molecular (<span class="math notranslate nohighlight">\(H_2\)</span>), no emite radiación observable porque es una molécula simétrica sin momento dipolar eléctrico. Por lo tanto, dependemos de trazadores indirectos:</p>
 <ul class="simple">
 <li><p>Líneas Rotacionales del CO: El monóxido de carbono es la segunda molécula más abundante y posee un momento dipolar. Las colisiones con <span class="math notranslate nohighlight">\(H_2\)</span> excitan el CO, que decae emitiendo fotones en el rango milimétrico (ej. la transición <span class="math notranslate nohighlight">\(J=1 \rightarrow 0\)</span> a <span class="math notranslate nohighlight">\(\lambda \approx 2.6\)</span> mm).</p></li>
-<li><p>Emisión del Polvo: El polvo interestelar (1% de la masa de la nube) absorbe luz ultravioleta y re-emite térmicamente en el infrarrojo lejano y submilimétrico. El flujo observado <span class="math notranslate nohighlight">\(S_{\nu}\)</span> está dado por: $<span class="math notranslate nohighlight">\(S_{\nu} = \Omega_s B_\nu(T_d) (1 - e^{-\tau_\nu})\)</span><span class="math notranslate nohighlight">\( donde \)</span>\Omega_s<span class="math notranslate nohighlight">\( es el ángulo sólido, \)</span>B_\nu(T_d)<span class="math notranslate nohighlight">\( es la función de Planck para la temperatura del polvo \)</span>T_d<span class="math notranslate nohighlight">\(, y \)</span>\tau_\nu$ es la profundidad óptica.</p></li>
+<li><p>Emisión del Polvo: El polvo interestelar (1% de la masa de la nube) absorbe luz ultravioleta y re-emite térmicamente en el infrarrojo lejano y submilimétrico. El flujo observado <span class="math notranslate nohighlight">\(S_{\nu}\)</span> está dado por:</p></li>
 </ul>
+<div class="math notranslate nohighlight">
+\[S_{\nu} = \Omega_s B_\nu(T_d) (1 - e^{-\tau_\nu})\]</div>
+<p>donde <span class="math notranslate nohighlight">\(\Omega_s\)</span> es el ángulo sólido, <span class="math notranslate nohighlight">\(B_\nu(T_d)\)</span> es la función de Planck para la temperatura del polvo <span class="math notranslate nohighlight">\(T_d\)</span>, y <span class="math notranslate nohighlight">\(\tau_\nu\)</span> es la profundidad óptica.</p>
 </section>
 <section id="estructura-del-gas-nubes-nucleos-y-grumos">
 <h2>Estructura del Gas: Nubes, Núcleos y Grumos<a class="headerlink" href="#estructura-del-gas-nubes-nucleos-y-grumos" title="Link to this heading">#</a></h2>
 <p>Las GMCs no son esferas uniformes, sino que presentan una estructura fractal, modelada a menudo por turbulencia supersónica. La jerarquía se divide típicamente en:</p>
 <ul class="simple">
-<li><p>Nubes (GMCs): Tamaño {math}<span class="math notranslate nohighlight">\(\sim 10 - 100\)</span> pc, masa {math}<span class="math notranslate nohighlight">\(\sim 10^4 - 10^6 M_\odot\)</span>, densidad media {math}<span class="math notranslate nohighlight">\(n \sim 10^2 - 10^3 \text{ cm}^{-3}\)</span>.</p></li>
-<li><p>Grumos (Clumps): Estructuras formadoras de cúmulos. Tamaño {math}<span class="math notranslate nohighlight">\(\sim 1\)</span> pc, masa {math}<span class="math notranslate nohighlight">\(\sim 10^3 M_\odot\)</span>, densidad {math}<span class="math notranslate nohighlight">\(n \sim 10^4 \text{ cm}^{-3}\)</span>.</p></li>
-<li><p>Núcleos (Cores): Estructuras formadoras de estrellas individuales o sistemas múltiples. Tamaño {math}<span class="math notranslate nohighlight">\(\sim 0.1\)</span> pc, masa {math}<span class="math notranslate nohighlight">\(\sim 0.1 - 10 M_\odot\)</span>, densidad {math}<span class="math notranslate nohighlight">\(n \gtrsim 10^5 \text{ cm}^{-3}\)</span>.</p></li>
+<li><p>Nubes (GMCs): Tamaño <span class="math notranslate nohighlight">\(\sim 10 - 100\)</span> pc, masa <span class="math notranslate nohighlight">\(\sim 10^4 - 10^6 M_\odot\)</span>, densidad media <span class="math notranslate nohighlight">\(n \sim 10^2 - 10^3 \text{ cm}^{-3}\)</span>.</p></li>
+<li><p>Grumos (Clumps): Estructuras formadoras de cúmulos. Tamaño <span class="math notranslate nohighlight">\(\sim 1\)</span> pc, masa <span class="math notranslate nohighlight">\(\sim 10^3 M_\odot\)</span>, densidad <span class="math notranslate nohighlight">\(n \sim 10^4 \text{ cm}^{-3}\)</span>.</p></li>
+<li><p>Núcleos (Cores): Estructuras formadoras de estrellas individuales o sistemas múltiples. Tamaño <span class="math notranslate nohighlight">\(\sim 0.1\)</span> pc, masa <span class="math notranslate nohighlight">\(\sim 0.1 - 10 M_\odot\)</span>, densidad <span class="math notranslate nohighlight">\(n \gtrsim 10^5 \text{ cm}^{-3}\)</span>.</p></li>
 </ul>
 </section>
 <section id="fisica-del-equilibrio-esferas-hidrostaticas-gravitantes">
