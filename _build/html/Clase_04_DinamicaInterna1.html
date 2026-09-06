@@ -380,9 +380,10 @@
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#equilibrio-dinamico-y-equiparticion-de-la-energia">3. Equilibrio Dinámico y Equipartición de la Energía</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivacion-estadistica-la-maximizacion-de-la-entropia">3.1 Derivación Estadística: La Maximización de la Entropía</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#el-principio-de-equiparticion">3.2 El Principio de Equipartición</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contraste-observacional-cumulos-abiertos-vs-globulares">3.3 Contraste Observacional: Cúmulos Abiertos vs. Globulares</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#por-que-derivar-la-distribucion-de-maxwell-boltzmann">3.1 ¿Por qué derivar la distribución de Maxwell-Boltzmann?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#la-derivacion-estadistica-maximizacion-de-la-entropia">3.2 La Derivación Estadística: Maximización de la Entropía</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#el-principio-de-equiparticion-de-la-energia">3.3 El Principio de Equipartición de la Energía</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contraste-observacional-el-limite-de-la-teoria-clasica-equiparticion-parcial">3.4 Contraste Observacional: El Límite de la Teoría Clásica (Equipartición Parcial)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#taller-practico-computacional-extraccion-de-cinematica-con-adql">3.4 Taller Práctico Computacional: Extracción de Cinemática con ADQL</a></li>
 </ul>
 </li>
@@ -505,34 +506,76 @@ El tiempo de relajación es el tiempo necesario para que la varianza acumulada i
 </section>
 <section id="equilibrio-dinamico-y-equiparticion-de-la-energia">
 <h2>3. Equilibrio Dinámico y Equipartición de la Energía<a class="headerlink" href="#equilibrio-dinamico-y-equiparticion-de-la-energia" title="Link to this heading">#</a></h2>
-<p>Al transcurrir varios tiempos de relajación (<span class="math notranslate nohighlight">\(t &gt; t_{relax}\)</span>), el intercambio constante de energía conduce al sistema a un estado de máximo desorden termodinámico.</p>
-<section id="derivacion-estadistica-la-maximizacion-de-la-entropia">
-<h3>3.1 Derivación Estadística: La Maximización de la Entropía<a class="headerlink" href="#derivacion-estadistica-la-maximizacion-de-la-entropia" title="Link to this heading">#</a></h3>
-<p>Modelamos la distribución de velocidades de las estrellas mediante una función de densidad de probabilidad <span class="math notranslate nohighlight">\(f(\mathbf{v})\)</span>. La entropía de Boltzmann es:</p>
+<p>Una vez que han transcurrido varios tiempos de relajación (<span class="math notranslate nohighlight">\(t &gt; t_{relax}\)</span>), los encuentros gravitacionales de dos cuerpos han transferido energía y momento entre todas las estrellas tantas veces que el cúmulo “olvida” por completo sus condiciones iniciales de colapso. El sistema entra en una nueva fase evolutiva caracterizada por el <strong>equilibrio dinámico</strong>.</p>
+<blockquote>
+<div><h3 class="rubric" id="concepto-clave-el-significado-fisico-del-desorden-estadistico">Concepto Clave: El Significado Físico del Desorden Estadístico</h3>
+<p>En la sección siguiente afirmaremos que el “equilibrio dinámico corresponde al estado de máximo desorden estadístico”. Cotidianamente asociamos equilibrio con quietud y orden, pero en mecánica estadística, el equilibrio se encuentra en la cima del caos.</p>
+<p><strong>1. Microestados vs. Macroestados:</strong> El “desorden” representa la ausencia de información privilegiada. Si un cúmulo recién formado está colapsando radialmente de manera uniforme, es un estado “ordenado” (podemos predecir la velocidad de cada estrella). La entropía (<span class="math notranslate nohighlight">\(S = k_B \ln \Omega\)</span>) mide el número de configuraciones microscópicas (<span class="math notranslate nohighlight">\(\Omega\)</span>) que dan como resultado el mismo estado macroscópico. <strong>El máximo desorden es simplemente el estado que se puede formar de más maneras distintas</strong>.</p>
+<p><strong>2. El Borrado de la Memoria:</strong> Al interactuar gravitacionalmente, las estrellas desvían sus trayectorias e intercambian energía. El sistema explora el espacio de fase. Las leyes de la probabilidad dictan que, eventualmente, el sistema migrará hacia la configuración que posea la abrumadora mayoría de los microestados posibles.</p>
+<p><strong>3. El Desorden como Equilibrio:</strong> Se le llama “equilibrio” porque una vez que se alcanza este nivel de mezcla perfecta (máxima entropía), el estado macroscópico se estanca. Las estrellas individuales siguen chocando e intercambiando energías, pero como el sistema ya está en la distribución más probable, cualquier intercambio microscópico simplemente mantiene el <em>statu quo</em> macroscópico. <strong>El caos microscópico sostiene el orden macroscópico.</strong></p>
+</div></blockquote>
+<section id="por-que-derivar-la-distribucion-de-maxwell-boltzmann">
+<h3>3.1 ¿Por qué derivar la distribución de Maxwell-Boltzmann?<a class="headerlink" href="#por-que-derivar-la-distribucion-de-maxwell-boltzmann" title="Link to this heading">#</a></h3>
+<p>En estado de equilibrio dinámico, el cúmulo ya no experimenta cambios macroscópicos violentos en su estructura. Sin embargo, a nivel microscópico, las estrellas siguen cruzándose y alterando sus velocidades. Para entender el destino del cúmulo (quién escapa, quién se hunde en el núcleo), necesitamos conocer la función de distribución de velocidades <span class="math notranslate nohighlight">\(f(\mathbf{v})\)</span> en este estado estacionario.</p>
+<p>Derivar esta distribución nos permite demostrar analíticamente que un cúmulo estelar relajado, gobernado por la gravedad, adopta la misma configuración estadística que las moléculas de un gas ideal en equilibrio térmico. Esto justifica la aplicación de conceptos termodinámicos (como la “temperatura” o la “evaporación”) a un sistema puramente estelar.</p>
+</section>
+<section id="la-derivacion-estadistica-maximizacion-de-la-entropia">
+<h3>3.2 La Derivación Estadística: Maximización de la Entropía<a class="headerlink" href="#la-derivacion-estadistica-maximizacion-de-la-entropia" title="Link to this heading">#</a></h3>
+<p>Buscamos la función <span class="math notranslate nohighlight">\(f(\mathbf{v})\)</span> que maximiza la entropía de Boltzmann:</p>
 <div class="math notranslate nohighlight">
 \[S = -k_B \int f(\mathbf{v}) \ln f(\mathbf{v}) \, d^3v\]</div>
-<p>Maximizamos <span class="math notranslate nohighlight">\(S\)</span> bajo la conservación del número de partículas (<span class="math notranslate nohighlight">\(N = \int f d^3v\)</span>) y la conservación de la energía cinética (<span class="math notranslate nohighlight">\(K = \int \frac{1}{2} m v^2 f d^3v\)</span>) utilizando <strong>Multiplicadores de Lagrange</strong>:</p>
+<p><strong>¿Por qué utilizamos Multiplicadores de Lagrange?</strong>
+Si solo quisiéramos maximizar <span class="math notranslate nohighlight">\(S\)</span>, la solución trivial sería una distribución infinitamente plana. Pero físicamente, el cúmulo está restringido por leyes de conservación inquebrantables. Los multiplicadores de Lagrange (<span class="math notranslate nohighlight">\(\lambda_1, \lambda_2\)</span>) nos permiten inyectar estas restricciones físicas dentro de la maximización probabilística:</p>
+<ol class="arabic">
+<li><p><strong>Conservación del número de estrellas:</strong> El cúmulo tiene un número finito de miembros <span class="math notranslate nohighlight">\(N\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\int f(\mathbf{v}) d^3v = N\]</div>
+</li>
+<li><p><strong>Conservación de la Energía Cinética:</strong> El sistema está acotado por el Teorema del Virial, por lo que su energía cinética total <span class="math notranslate nohighlight">\(K\)</span> es finita y constante.</p>
+<div class="math notranslate nohighlight">
+\[\int \frac{1}{2} m v^2 f(\mathbf{v})  d^3v = K\]</div>
+</li>
+</ol>
+<p>Construimos el funcional acoplando la entropía con estas dos restricciones físicas:</p>
 <div class="math notranslate nohighlight">
 \[\delta \int \left[ -f \ln f - \lambda_1 f - \lambda_2 \left( \frac{1}{2} m v^2 f \right) \right] d^3v = 0\]</div>
-<p>Derivando respecto a <span class="math notranslate nohighlight">\(f\)</span> e igualando a cero:</p>
+<p>Tomando la derivada variacional respecto a <span class="math notranslate nohighlight">\(f\)</span> e igualando a cero:</p>
 <div class="math notranslate nohighlight">
-\[-\ln f - 1 - \lambda_1 - \lambda_2 \frac{1}{2} m v^2 = 0 \implies f(\mathbf{v}) = \exp(-1 - \lambda_1) \exp\left( - \lambda_2 \frac{1}{2} m v^2 \right)\]</div>
-<p>Definiendo <span class="math notranslate nohighlight">\(A = \exp(-1-\lambda_1)\)</span> y usando la dispersión térmica <span class="math notranslate nohighlight">\(\sigma^2 = \frac{1}{\lambda_2 m} = \frac{k_B T}{m}\)</span>, e integrando sobre la cáscara esférica de velocidades (<span class="math notranslate nohighlight">\(d^3v = 4\pi v^2 dv\)</span>), demostramos formalmente la <strong>Distribución de Maxwell-Boltzmann</strong>:</p>
+\[-\ln f - 1 - \lambda_1 - \lambda_2 \frac{1}{2} m v^2 = 0\]</div>
+<div class="math notranslate nohighlight">
+\[f(\mathbf{v}) = \exp(-1 - \lambda_1) \exp\left( - \lambda_2 \frac{1}{2} m v^2 \right)\]</div>
+<p>Asignando constantes (<span class="math notranslate nohighlight">\(A = \exp(-1-\lambda_1)\)</span>) y reconociendo que el segundo multiplicador está ligado a la “temperatura cinética” del sistema (<span class="math notranslate nohighlight">\(\lambda_2 = \frac{1}{k_B T}\)</span>), definimos la dispersión térmica como <span class="math notranslate nohighlight">\(\sigma^2 = \frac{k_B T}{m}\)</span>. Así obtenemos el vector de velocidades:</p>
+<div class="math notranslate nohighlight">
+\[f(\mathbf{v}) = A \exp\left( - \frac{v^2}{2 \sigma^2} \right)\]</div>
+<p>Integrando sobre el volumen esférico en el espacio de velocidades (<span class="math notranslate nohighlight">\(d^3v = 4\pi v^2 dv\)</span>), demostramos formalmente que la distribución de las magnitudes de velocidad que rige el equilibrio dinámico es la de <strong>Maxwell-Boltzmann</strong>:</p>
 <div class="math notranslate nohighlight">
 \[f(v) \, dv = 4\pi A v^2 \exp\left( - \frac{v^2}{2 \sigma^2} \right) dv\]</div>
 </section>
-<section id="el-principio-de-equiparticion">
-<h3>3.2 El Principio de Equipartición<a class="headerlink" href="#el-principio-de-equiparticion" title="Link to this heading">#</a></h3>
-<p>Los encuentros gravitacionales obligan al sistema a tender hacia una única “temperatura cinética”:</p>
+<section id="el-principio-de-equiparticion-de-la-energia">
+<h3>3.3 El Principio de Equipartición de la Energía<a class="headerlink" href="#el-principio-de-equiparticion-de-la-energia" title="Link to this heading">#</a></h3>
+<p>Ahora que hemos demostrado que el cúmulo se comporta como un gas térmico, introducimos una realidad astrofísica: las estrellas nacen con un espectro de masas (IMF).</p>
+<p>El <strong>equilibrio dinámico</strong> exige que, tras suficientes encuentros, todo el sistema comparta un único multiplicador de Lagrange <span class="math notranslate nohighlight">\(\lambda_2\)</span> (una única “temperatura cinética” <span class="math notranslate nohighlight">\(T\)</span>). Si todas las estrellas comparten la misma <span class="math notranslate nohighlight">\(T\)</span>, su energía cinética promedio debe ser idéntica sin importar su masa. Este es el principio de <strong>Equipartición de la Energía</strong>:</p>
 <div class="math notranslate nohighlight">
-\[\frac{1}{2} m_1 \sigma_1^2 = \frac{1}{2} m_2 \sigma_2^2 \implies \sigma(m) \propto m^{-0.5}\]</div>
-<p>Predicción fundamental: las estrellas masivas se mueven más lento (segregación) y las ligeras adquieren altas velocidades.</p>
+\[\langle K \rangle = \frac{1}{2} m_1 \sigma_1^2 = \frac{1}{2} m_2 \sigma_2^2 = \frac{3}{2} k_B T = \text{constante}\]</div>
+<p>De esta igualdad fundamental se deriva una predicción cinemática observable crucial:</p>
+<div class="math notranslate nohighlight">
+\[\sigma(m) \propto \frac{1}{\sqrt{m}}\]</div>
+<p><strong>Consecuencias Físicas de la Equipartición:</strong></p>
+<ol class="arabic simple">
+<li><p><strong>Segregación de Masas:</strong> Para que la energía se iguale, las estrellas más masivas (<span class="math notranslate nohighlight">\(m \uparrow\)</span>) deben reducir drásticamente su velocidad (<span class="math notranslate nohighlight">\(\sigma \downarrow\)</span>). Al perder energía cinética, “caen” hacia el fondo del pozo gravitacional, concentrándose en el núcleo del cúmulo.</p></li>
+<li><p><strong>Evaporación:</strong> Para compensar, las estrellas de baja masa (<span class="math notranslate nohighlight">\(m \downarrow\)</span>) son aceleradas (<span class="math notranslate nohighlight">\(\sigma \uparrow\)</span>). Al aumentar su velocidad, sus órbitas se expanden. Eventualmente, las colas de la distribución de Maxwell-Boltzmann empujan a muchas de estas estrellas por encima de la velocidad de escape, forzando su expulsión del sistema.</p></li>
+</ol>
 </section>
-<section id="contraste-observacional-cumulos-abiertos-vs-globulares">
-<h3>3.3 Contraste Observacional: Cúmulos Abiertos vs. Globulares<a class="headerlink" href="#contraste-observacional-cumulos-abiertos-vs-globulares" title="Link to this heading">#</a></h3>
+<section id="contraste-observacional-el-limite-de-la-teoria-clasica-equiparticion-parcial">
+<h3>3.4 Contraste Observacional: El Límite de la Teoría Clásica (Equipartición Parcial)<a class="headerlink" href="#contraste-observacional-el-limite-de-la-teoria-clasica-equiparticion-parcial" title="Link to this heading">#</a></h3>
+<p>La equipartición de energía y el equilibrio dinámico se pueden verificar observacionalmente cruzando la cinemática astrométrica con masas fotométricas. Sin embargo, al observar el universo real, descubrimos que el modelo idealizado de Maxwell-Boltzmann (<span class="math notranslate nohighlight">\(\sigma \propto m^{-0.5}\)</span>) es solo un caso límite inalcanzable.</p>
 <ul class="simple">
-<li><p><strong>Caso 1: Cúmulo Abierto (Ej. Pléyades):</strong> Siendo jóvenes (~115 Myr) y poco masivos, su <span class="math notranslate nohighlight">\(t_{relax}\)</span> es de ~30 a 50 Myr. Se encuentran en un estado de <strong>relajación parcial</strong>. Al observarlos con Gaia, las estrellas masivas están termalizadas, pero la pendiente observada de <span class="math notranslate nohighlight">\(\sigma\)</span> para estrellas de baja masa es más plana que -0.5. El campo de marea galáctico extrae a las estrellas rápidas antes de que alcancen la equipartición completa.</p></li>
-<li><p><strong>Caso 2: Cúmulo Globular (Ej. NGC 2808):</strong> Con edades &gt; 10 Gyr y pozos de potencial profundos, han experimentado decenas de tiempos de relajación sin que la marea disuelva su núcleo. En este estado de <strong>relajación profunda</strong>, los datos del HST muestran un ajuste casi perfecto a la ley teórica <span class="math notranslate nohighlight">\(\sigma \propto m^{-0.5}\)</span>, evidenciando la firma intacta de la mecánica estadística clásica.</p></li>
+<li><p><strong>Cúmulos</strong> Abiertos (Ej. Pléyades): Siendo relativamente jóvenes, su núcleo muestra segregación de masa empírica. Sin embargo, al medir la relación σ(m), la pendiente es sumamente plana. Razón: Están en relajación parcial temprana. El campo de marea galáctico extrae a las estrellas rápidas de las afueras mucho antes de que el núcleo logre empujarlas hacia una equipartición térmica completa.</p></li>
+<li><p><strong>Cúmulos Globulares</strong> (Ej. NGC 2808): Con edades superiores a 10 Gyr, confinados en pozos de potencial profundos, uno esperaría que alcanzaran la equipartición perfecta (η=0.5). Sin embargo, observaciones profundas (HST + Gaia) demuestran que se estabilizan con exponentes empíricos en el rango de η≈0.15−0.30.</p>
+<ul>
+<li><p>El Fenómeno Físico: Esto evidencia un estado cuasi-estacionario de equipartición parcial. La inestabilidad termodinámica (Inestabilidad de Spitzer) generada por un espectro amplio de masas impide el equilibrio perfecto. El continuo escape de estrellas de baja masa y el “calentamiento” inyectado por encuentros con estrellas binarias duras en el núcleo obligan al cúmulo a detener su termalización, manteniendo un estado permanentemente “incompleto” hasta su disolución final.</p></li>
+</ul>
+</li>
 </ul>
 </section>
 <section id="taller-practico-computacional-extraccion-de-cinematica-con-adql">
@@ -546,17 +589,20 @@ El tiempo de relajación es el tiempo necesario para que la varianza acumulada i
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">urllib.parse</span>
+<span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">curve_fit</span>
 
-<span class="c1"># 1. Definir la consulta ADQL optimizada para las Pléyades</span>
+<span class="c1"># ==========================================</span>
+<span class="c1"># 1. EXTRACCIÓN DE DATOS VÍA ADQL Y WGET (NGC 2808)</span>
+<span class="c1"># ==========================================</span>
 <span class="n">adql_query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">SELECT source_id, ra, dec, parallax, pmra, pmdec</span>
+<span class="s2">SELECT source_id, ra, dec, parallax, pmra, pmdec, phot_g_mean_mag</span>
 <span class="s2">FROM gaiadr3.gaia_source</span>
-<span class="s2">WHERE 1=CONTAINS(POINT(&#39;ICRS&#39;, ra, dec), CIRCLE(&#39;ICRS&#39;, 56.75, 24.11, 3.0))</span>
-<span class="s2">  AND parallax BETWEEN 6.0 AND 9.0</span>
+<span class="s2">WHERE 1=CONTAINS(POINT(&#39;ICRS&#39;, ra, dec), CIRCLE(&#39;ICRS&#39;, 138.01, -64.86, 0.15))</span>
 <span class="s2">  AND pmra IS NOT NULL AND pmdec IS NOT NULL</span>
+<span class="s2">  AND phot_g_mean_mag IS NOT NULL</span>
 <span class="s2">&quot;&quot;&quot;</span>
 
-<span class="c1"># 2. Construir la URL del servicio TAP síncrono de la ESA y los parámetros</span>
 <span class="n">tap_url</span> <span class="o">=</span> <span class="s2">&quot;https://gea.esac.esa.int/tap-server/tap/sync&quot;</span>
 <span class="n">payload</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">&#39;request&#39;</span><span class="p">:</span> <span class="s1">&#39;doQuery&#39;</span><span class="p">,</span>
@@ -564,95 +610,297 @@ El tiempo de relajación es el tiempo necesario para que la varianza acumulada i
     <span class="s1">&#39;format&#39;</span><span class="p">:</span> <span class="s1">&#39;csv&#39;</span><span class="p">,</span>
     <span class="s1">&#39;query&#39;</span><span class="p">:</span> <span class="n">adql_query</span>
 <span class="p">}</span>
-
-<span class="c1"># 3. Descarga ultra-rápida utilizando wget mediante subprocess</span>
-<span class="kn">import</span> <span class="nn">urllib.parse</span>
 <span class="n">encoded_payload</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">parse</span><span class="o">.</span><span class="n">urlencode</span><span class="p">(</span><span class="n">payload</span><span class="p">)</span>
 <span class="n">wget_command</span> <span class="o">=</span> <span class="p">[</span>
     <span class="s2">&quot;wget&quot;</span><span class="p">,</span>
     <span class="s2">&quot;--post-data&quot;</span><span class="p">,</span> <span class="n">encoded_payload</span><span class="p">,</span>
-    <span class="s2">&quot;-O&quot;</span><span class="p">,</span> <span class="s2">&quot;pleiades_data.csv&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-O&quot;</span><span class="p">,</span> <span class="s2">&quot;ngc2808_data.csv&quot;</span><span class="p">,</span>
     <span class="n">tap_url</span>
 <span class="p">]</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Descargando datos de Gaia de forma síncrona con wget...&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Descargando datos de Gaia para NGC 2808 (Síncrono vía wget)...&quot;</span><span class="p">)</span>
 <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">wget_command</span><span class="p">,</span> <span class="n">check</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;¡Descarga completada con éxito!&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Descarga completada. Iniciando análisis cinemático...&quot;</span><span class="p">)</span>
 
-<span class="c1"># 4. Lectura inmediata del archivo de salida con Pandas</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;pleiades_data.csv&quot;</span><span class="p">)</span>
+<span class="c1"># ==========================================</span>
+<span class="c1"># 2. FILTRADO CINEMÁTICO Y CÁLCULO DE VELOCIDADES</span>
+<span class="c1"># ==========================================</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;ngc2808_data.csv&quot;</span><span class="p">)</span>
 
-<span class="c1"># 5. Limpieza de datos (Filtro cinemático rústico para aislar el cúmulo)</span>
-<span class="n">mask</span> <span class="o">=</span> <span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;pmra&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">15</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;pmra&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">25</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;pmdec&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">55</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;pmdec&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">40</span><span class="p">)</span>
-<span class="n">clean_data</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span>
+<span class="c1"># Filtro en el Vector Point Diagram (VPD) para aislar el cúmulo del fondo galáctico</span>
+<span class="n">mask_kinematic</span> <span class="o">=</span> <span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;pmra&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;pmra&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mf">3.0</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;pmdec&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mf">1.5</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;pmdec&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mf">2.0</span><span class="p">)</span>
+<span class="n">cluster</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">mask_kinematic</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 
-<span class="c1"># 6. Conversión de astrometría a velocidades tangenciales (km/s)</span>
-<span class="n">v_ra</span> <span class="o">=</span> <span class="mf">4.74</span> <span class="o">*</span> <span class="p">(</span><span class="n">clean_data</span><span class="p">[</span><span class="s1">&#39;pmra&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">clean_data</span><span class="p">[</span><span class="s1">&#39;parallax&#39;</span><span class="p">])</span>
-<span class="n">v_dec</span> <span class="o">=</span> <span class="mf">4.74</span> <span class="o">*</span> <span class="p">(</span><span class="n">clean_data</span><span class="p">[</span><span class="s1">&#39;pmdec&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">clean_data</span><span class="p">[</span><span class="s1">&#39;parallax&#39;</span><span class="p">])</span>
+<span class="c1"># Distancia supuesta al cúmulo globular NGC 2808 (~9.6 kpc)</span>
+<span class="n">distancia_kpc</span> <span class="o">=</span> <span class="mf">9.6</span>
 
-<span class="n">sigma_ra</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">v_ra</span><span class="p">)</span>
-<span class="n">sigma_dec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">v_dec</span><span class="p">)</span>
-<span class="n">sigma_1D</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">([</span><span class="n">sigma_ra</span><span class="p">,</span> <span class="n">sigma_dec</span><span class="p">])</span>
+<span class="c1"># Conversión de movimientos propios a velocidades transversales físicas (km/s)</span>
+<span class="n">cluster</span><span class="p">[</span><span class="s1">&#39;v_ra&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">4.74</span> <span class="o">*</span> <span class="n">cluster</span><span class="p">[</span><span class="s1">&#39;pmra&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">distancia_kpc</span>
+<span class="n">cluster</span><span class="p">[</span><span class="s1">&#39;v_dec&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">4.74</span> <span class="o">*</span> <span class="n">cluster</span><span class="p">[</span><span class="s1">&#39;pmdec&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">distancia_kpc</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Miembros cinemáticos identificados: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">clean_data</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Dispersión de velocidad física (1D promedio): </span><span class="si">{</span><span class="n">sigma_1D</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> km/s&quot;</span><span class="p">)</span>
+<span class="c1"># ==========================================</span>
+<span class="c1"># 3. ESTIMACIÓN DE MASAS Y AGRUPAMIENTO (BINNING)</span>
+<span class="c1"># ==========================================</span>
+<span class="c1"># Módulo de distancia y Magnitud Absoluta G</span>
+<span class="n">mod_distancia</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">distancia_kpc</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">)</span> <span class="o">-</span> <span class="mi">5</span>
+<span class="n">cluster</span><span class="p">[</span><span class="s1">&#39;M_G&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">cluster</span><span class="p">[</span><span class="s1">&#39;phot_g_mean_mag&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">mod_distancia</span>
 
-<span class="c1"># 7. Visualización del Vector Point Diagram (VPD)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">7</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;pmra&#39;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;pmdec&#39;</span><span class="p">],</span> <span class="n">s</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Campo (Background)&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">clean_data</span><span class="p">[</span><span class="s1">&#39;pmra&#39;</span><span class="p">],</span> <span class="n">clean_data</span><span class="p">[</span><span class="s1">&#39;pmdec&#39;</span><span class="p">],</span> <span class="n">s</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Pléyades&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Movimiento Propio RA (mas/yr)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Movimiento Propio Dec (mas/yr)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Diagrama de Movimiento Propio (VPD) - Las Pléyades&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">150</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">)</span>
+<span class="c1"># Relación Masa-Luminosidad aproximada para estimar rangos relativos</span>
+<span class="n">cluster</span><span class="p">[</span><span class="s1">&#39;mass_sol&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mf">0.4</span> <span class="o">*</span> <span class="p">(</span><span class="n">cluster</span><span class="p">[</span><span class="s1">&#39;M_G&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="mf">4.67</span><span class="p">)</span> <span class="o">/</span> <span class="mf">3.5</span><span class="p">)</span>
+
+<span class="c1"># Agrupación por cuantiles para asegurar robustez estadística por grupo de masa</span>
+<span class="n">cluster</span><span class="p">[</span><span class="s1">&#39;mass_bin&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">qcut</span><span class="p">(</span><span class="n">cluster</span><span class="p">[</span><span class="s1">&#39;mass_sol&#39;</span><span class="p">],</span> <span class="n">q</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">bins_grouped</span> <span class="o">=</span> <span class="n">cluster</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;mass_bin&#39;</span><span class="p">,</span> <span class="n">observed</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">mass_centers</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">sigma_1D</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">group</span> <span class="ow">in</span> <span class="n">bins_grouped</span><span class="p">:</span>
+    <span class="n">mass_centers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">group</span><span class="p">[</span><span class="s1">&#39;mass_sol&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">())</span>
+    <span class="c1"># Dispersión promedio en las dos componentes espaciales 1D (RA y Dec)</span>
+    <span class="n">sig</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">([</span><span class="n">group</span><span class="p">[</span><span class="s1">&#39;v_ra&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span> <span class="n">group</span><span class="p">[</span><span class="s1">&#39;v_dec&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">()])</span>
+    <span class="n">sigma_1D</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sig</span><span class="p">)</span>
+
+<span class="n">mass_centers</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">mass_centers</span><span class="p">)</span>
+<span class="n">sigma_1D</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">sigma_1D</span><span class="p">)</span>
+
+<span class="c1"># ==========================================</span>
+<span class="c1"># 4. AJUSTE DE CURVAS (MÍNIMOS CUADRADOS)</span>
+<span class="c1"># ==========================================</span>
+<span class="c1"># Modelo Clásico: Exponente fijo -0.5</span>
+<span class="k">def</span> <span class="nf">equiparticion_clasica</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">A</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">A</span> <span class="o">*</span> <span class="p">(</span><span class="n">m</span> <span class="o">**</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">)</span>
+
+<span class="c1"># Modelo Parcial Real: Exponente libre (eta)</span>
+<span class="k">def</span> <span class="nf">equiparticion_parcial</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">A</span><span class="p">,</span> <span class="n">eta</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">A</span> <span class="o">*</span> <span class="p">(</span><span class="n">m</span> <span class="o">**</span> <span class="o">-</span><span class="n">eta</span><span class="p">)</span>
+
+<span class="n">popt_clasica</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">curve_fit</span><span class="p">(</span><span class="n">equiparticion_clasica</span><span class="p">,</span> <span class="n">mass_centers</span><span class="p">,</span> <span class="n">sigma_1D</span><span class="p">)</span>
+<span class="n">popt_parcial</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">curve_fit</span><span class="p">(</span><span class="n">equiparticion_parcial</span><span class="p">,</span> <span class="n">mass_centers</span><span class="p">,</span> <span class="n">sigma_1D</span><span class="p">)</span>
+
+<span class="n">A_opt</span> <span class="o">=</span> <span class="n">popt_clasica</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">A_parcial</span><span class="p">,</span> <span class="n">eta_opt</span> <span class="o">=</span> <span class="n">popt_parcial</span>
+
+<span class="n">mass_theory</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">mass_centers</span><span class="o">.</span><span class="n">min</span><span class="p">()</span> <span class="o">*</span> <span class="mf">0.9</span><span class="p">,</span> <span class="n">mass_centers</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">*</span> <span class="mf">1.05</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">sigma_clasica_opt</span> <span class="o">=</span> <span class="n">equiparticion_clasica</span><span class="p">(</span><span class="n">mass_theory</span><span class="p">,</span> <span class="n">A_opt</span><span class="p">)</span>
+<span class="n">sigma_parcial_opt</span> <span class="o">=</span> <span class="n">equiparticion_parcial</span><span class="p">(</span><span class="n">mass_theory</span><span class="p">,</span> <span class="n">A_parcial</span><span class="p">,</span> <span class="n">eta_opt</span><span class="p">)</span>
+
+<span class="c1"># ==========================================</span>
+<span class="c1"># 5. VISUALIZACIÓN DE RESULTADOS</span>
+<span class="c1"># ==========================================</span>
+<span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">ax1</span><span class="p">,</span> <span class="n">ax2</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+<span class="c1"># Panel 1: Vector Point Diagram (VPD)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;pmra&#39;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;pmdec&#39;</span><span class="p">],</span> <span class="n">s</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Fondo Galáctico&#39;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">cluster</span><span class="p">[</span><span class="s1">&#39;pmra&#39;</span><span class="p">],</span> <span class="n">cluster</span><span class="p">[</span><span class="s1">&#39;pmdec&#39;</span><span class="p">],</span> <span class="n">s</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;NGC 2808 (Aislado)&#39;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\mu_{\alpha*}$ (mas/yr)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\mu_{\delta}$ (mas/yr)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Diagrama de Movimiento Propio (VPD)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+
+<span class="c1"># Panel 2: Prueba de Equipartición Térmica</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">mass_centers</span><span class="p">,</span> <span class="n">sigma_1D</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Datos Gaia NGC 2808&#39;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">mass_theory</span><span class="p">,</span> <span class="n">sigma_clasica_opt</span><span class="p">,</span> <span class="s1">&#39;k--&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mf">2.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;Clásica Ajustada ($\sigma \propto m^{-0.5}$)&#39;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">mass_theory</span><span class="p">,</span> <span class="n">sigma_parcial_opt</span><span class="p">,</span> <span class="s1">&#39;r-&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mf">2.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">rf</span><span class="s1">&#39;Parcial Libre ($\sigma \propto m^</span><span class="se">{{</span><span class="s1">-</span><span class="si">{</span><span class="n">eta_opt</span><span class="si">:</span><span class="s1">.2f</span><span class="se">}}</span><span class="si">}</span><span class="s1">$)&#39;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Masa Estelar Mediana ($M_\odot$)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Dispersión de Velocidad 1D $\sigma$ (km/s)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Equipartición Térmica Real vs Clásica&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">11</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Resultados del Análisis Dinámico ---&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Exponente empírico ajustado ($\eta$): </span><span class="si">{</span><span class="n">eta_opt</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Discusión: El exponente obtenido es menor a 0.5, evidenciando el estado de&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;equipartición parcial real debido a la inestabilidad de Spitzer y la evaporación.&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Descargando datos de Gaia de forma síncrona con wget...
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Descargando datos de Gaia para NGC 2808 (Síncrono vía wget)...
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2026-08-31 10:48:36--  https://gea.esac.esa.int/tap-server/tap/sync
-Resolving gea.esac.esa.int (gea.esac.esa.int)... 193.147.152.106
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2026-09-06 17:35:46--  https://gea.esac.esa.int/tap-server/tap/sync
+Resolving gea.esac.esa.int (gea.esac.esa.int)... 
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>193.147.152.106
 Connecting to gea.esac.esa.int (gea.esac.esa.int)|193.147.152.106|:443... 
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>connected.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>HTTP request sent, awaiting response... 
+HTTP request sent, awaiting response... 
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>200 200
 Length: unspecified [text/csv]
-Saving to: &#39;pleiades_data.csv&#39;
+Saving to: &#39;ngc2808_data.csv&#39;
 
-     0K .......... .......... .......... ..
+     0K .......... ......
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>........ ..........  133K
-    50K .......... .......... .......... .......... ..........  272K
-   100K .......... .......... .......
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.... .......... ..........
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>¡Descarga completada con éxito!
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> ..........  112K
+    50K .......... .......... .
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>......... .......... ..........  129K
+   100K .......... .........
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>. .......... .......... ..........  214K
+   150K .........
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>. .......... .......... .......... ..........  274K
+   200K .......... .......... .......... .........
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>. ..........  920K
+   250K .......... .......... .......... .......... ..........  254K
+   300K .......... .
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>......... .......... .......... ..........  373K
+   350K .......... .......... .......... .......... ..........  641K
+   400K .......... .......... .......... .
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>......... ..........  396K
+   450K .......... .......... .......... .......... ..........  578K
+   500K .......... .......... .......... .......... ...
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>....... 3.33M
+   550K .......... .......... .......... .......... ..........  370K
+   600K .......
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>... .......... .......... .......... ..........  508K
+   650K .......... .......... .......... .......... .......... 2.55M
+   700K .......... .......... .......... .......... ...
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.......  280K
+   750K .......... .......... .......... .......... .......... 1.02M
+   800K .......... .......... .......... .......... ..........  730K
+   850K .....
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>..... .......... .......... .......... ..........  377K
+   900K .......... .......... .......... .......... .......... 1.40M
+   950K .......... .......... .......... ...
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>....... ..........  318K
+  1000K .......... .......... .......... .......... .......... 1.14M
+  1050K .......... .......... .......... .......... ..........  631K
+  1100K ..........
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> .......... .......... .......... ..........  383K
+  1150K .......... .......... .......... .......... .......... 2.09M
+  1200K .......... .......... .......... ........
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.. ..........  287K
+  1250K .......... .......... .......... .......... .......... 1.70M
+  1300K .......... .......... .......... .......... .......... 1.32M
+  1350K .......... ......
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.... .......... .......... ..........  297K
+  1400K .......... .......... .......... .......... .......... 1.36M
+  1450K .......... .......... .......... .......... ....
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>......  266K
+  1500K .......... .......... .......... .......... .......... 2.16M
+  1550K .......... .......... .......... .......... .......... 1.13M
+  1600K .......... .......... ..........
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> .......... ..........  263K
+  1650K .......... .......... .......... .......... .......... 1.64M
+  1700K .......... .......... .......... .......... ..........  403K
+  1750K ........
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.. .......... .......... .......... ..........  595K
+  1800K .......... .......... .......... .......... .......... 1.50M
+  1850K .......... .......... .......... .......... ....
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>......  325K
+  1900K .......... .......... .......... .......... .......... 1.25M
+  1950K .......... .......... .......... .......... ..........  440K
+  2000K ......
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.... .......... .......... .......... ..........  392K
+  2050K .......... .......... .......... .......... ..........  585K
+  2100K .......... .......... .......... ...
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>....... ..........  627K
+  2150K .......... .......... .......... .......... ..........  357K
+  2200K .......... .......... .......... .......... .......... 1.36M
+  2250K .......... .
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>......... .......... .......... ..........  517K
+  2300K .......... .......... .......... .......... ..........  523K
+  2350K .......... .......... ...
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>....... .......... .......... 1.36M
+  2400K .......... .......... .
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>......... .......... ..........  175K
+  2450K .......... .......... .......... .......... ..........  356K
+  2500K .......... .......... .......... .......... ..........  871K
+  2550K .......
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>... .......... .......... .......... ..........  206K
+  2600K .......... .......... .......... .......... ..........  763K
+  2650K .......... .......... .......... .....
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>..... ..........  433K
+  2700K .......... .......... .......... .......... ..........  586K
+  2750K .......... .......... .......... .......... .......... 1.07M
+  2800K .......... .......... .
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>......... .......... ..........  421K
+  2850K .......... .......... .......... .......... ..........  743K
+  2900K .......... .......... .......... .......... .........
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.  464K
+  2950K .......... .......... .......... .......... ..........  593K
+  3000K .......                                                58.5M=6.7s
 
-Miembros cinemáticos identificados: 1358
-Dispersión de velocidad física (1D promedio): 0.99 km/s
+2026-09-06 17:35:54 (451 KB/s) - &#39;ngc2808_data.csv&#39; saved [3079419]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>... .......... ..........  276K
-   150K .......... .......... .......... .......... .......... 8.84M
-   200K .......... .......... ..........                       32.1M=0.7s
-
-2026-08-31 10:48:48 (308 KB/s) - &#39;pleiades_data.csv&#39; saved [235573]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Descarga completada. Iniciando análisis cinemático...
 </pre></div>
 </div>
-<img alt="_images/373d37517312e11bbfb771a669a8d929066de0c26033c6f5135ef0253653e44c.png" src="_images/373d37517312e11bbfb771a669a8d929066de0c26033c6f5135ef0253653e44c.png" />
+<img alt="_images/b7c6f887bcceeed0976d5b2e88d71a223087364dccfc4028fbef1e7598cbd678.png" src="_images/b7c6f887bcceeed0976d5b2e88d71a223087364dccfc4028fbef1e7598cbd678.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- Resultados del Análisis Dinámico ---
+Exponente empírico ajustado ($\eta$): 0.29
+Discusión: El exponente obtenido es menor a 0.5, evidenciando el estado de
+equipartición parcial real debido a la inestabilidad de Spitzer y la evaporación.
+</pre></div>
+</div>
 </div>
 </div>
 </section>
@@ -685,25 +933,6 @@ Derive la expresión de la Masa Virial (<span class="math notranslate nohighligh
 Asumiendo equipartición de energía en un cúmulo, si las estrellas de tipo solar (1.0 <span class="math notranslate nohighlight">\(M_\odot\)</span>) muestran una dispersión de velocidades 3D de 12 km/s, ¿cuál debe ser la dispersión teórica para una población de enanas blancas masivas (1.4 <span class="math notranslate nohighlight">\(M_\odot\)</span>)?</p>
 <p><strong>Ejercicio 3 (Computacional / Data Mining con ADQL):</strong>
 Modifique el script en Python de la Sección 3.4. Ejecute una consulta ADQL para el cúmulo de las Hyades (<span class="math notranslate nohighlight">\(\alpha \approx 66.75^\circ\)</span>, <span class="math notranslate nohighlight">\(\delta \approx 15.86^\circ\)</span>), aislando el paralaje correcto (~21 mas). Calcule la dispersión de velocidades en la dirección de la Ascensión Recta (<span class="math notranslate nohighlight">\(\sigma_{v\_ra}\)</span>).</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">IFrame</span>
-<span class="n">IFrame</span><span class="p">(</span><span class="n">src</span><span class="o">=</span><span class="s2">&quot;https://youtube.com/shorts/_J8Hj4qGN6A&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="s2">&quot;100%&quot;</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="s2">&quot;500px&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html">
-        <iframe
-            width="100%"
-            height="500px"
-            src="https://youtube.com/shorts/_J8Hj4qGN6A"
-            frameborder="0"
-            allowfullscreen
-            
-        ></iframe>
-        </div></div>
-</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">IFrame</span>
@@ -822,9 +1051,10 @@ Modifique el script en Python de la Sección 3.4. Ejecute una consulta ADQL para
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#equilibrio-dinamico-y-equiparticion-de-la-energia">3. Equilibrio Dinámico y Equipartición de la Energía</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivacion-estadistica-la-maximizacion-de-la-entropia">3.1 Derivación Estadística: La Maximización de la Entropía</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#el-principio-de-equiparticion">3.2 El Principio de Equipartición</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contraste-observacional-cumulos-abiertos-vs-globulares">3.3 Contraste Observacional: Cúmulos Abiertos vs. Globulares</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#por-que-derivar-la-distribucion-de-maxwell-boltzmann">3.1 ¿Por qué derivar la distribución de Maxwell-Boltzmann?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#la-derivacion-estadistica-maximizacion-de-la-entropia">3.2 La Derivación Estadística: Maximización de la Entropía</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#el-principio-de-equiparticion-de-la-energia">3.3 El Principio de Equipartición de la Energía</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contraste-observacional-el-limite-de-la-teoria-clasica-equiparticion-parcial">3.4 Contraste Observacional: El Límite de la Teoría Clásica (Equipartición Parcial)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#taller-practico-computacional-extraccion-de-cinematica-con-adql">3.4 Taller Práctico Computacional: Extracción de Cinemática con ADQL</a></li>
 </ul>
 </li>
