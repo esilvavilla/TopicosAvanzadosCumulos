@@ -1,0 +1,984 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Clase 5: Dinámica Interna 2 &#8212; Tópicos Avanzados Cúmulos y Formación Estelar</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Clase_05_DinamicaInterna2';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Clase 4: Dinámica Interna 1" href="Clase_04_DinamicaInterna1.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/UdeA.png" class="logo__image only-light" alt="Tópicos Avanzados Cúmulos y Formación Estelar - Home"/>
+    <img src="_static/UdeA.png" class="logo__image only-dark pst-js-only" alt="Tópicos Avanzados Cúmulos y Formación Estelar - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Formación y Evolución de Cúmulos Estelares
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Clase_01_NubeEstatica.html">Clase 1: Nube estática</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Clase_02_ColapsoFormacion.html">Clase 2: Colapso y Formación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Clase_03_IMF_DinamicaInicial.html">Clase 3: Función Inicial de Masa (IMF) y Dinámica inicial de un Cúmulo Estelar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Clase_04_DinamicaInterna1.html">Clase 4: Dinámica Interna 1</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Clase 5: Dinámica Interna 2</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FClase_05_DinamicaInterna2.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Clase_05_DinamicaInterna2.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Clase 5: Dinámica Interna 2</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objetivos">Objetivos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#la-jerarquia-de-los-tiempos-escala-derivaciones-fundamentales">1. La Jerarquía de los Tiempos Escala: Derivaciones Fundamentales</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tiempo-escala-dinamico-t-dyn">1.1 Tiempo Escala Dinámico (<span class="math notranslate nohighlight">\(t_{dyn}\)</span>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tiempo-escala-termico-kelvin-helmholtz-t-kh">1.2 Tiempo Escala Térmico / Kelvin-Helmholtz (<span class="math notranslate nohighlight">\(t_{KH}\)</span>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tiempo-escala-nuclear-t-nuc">1.3 Tiempo Escala Nuclear (<span class="math notranslate nohighlight">\(t_{nuc}\)</span>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizacion-computacional-tiempos-escala-vs-masa-estelar">1.4 Visualización Computacional: Tiempos Escala vs. Masa Estelar</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#catastrofe-gravitacional-el-colapso-del-nucleo">2. Catástrofe Gravitacional: El Colapso del Núcleo</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#el-flujo-termodinamico-y-el-calor-especifico-negativo">2.1 El Flujo Termodinámico y el Calor Específico Negativo</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#la-catastrofe-gravo-termal">2.2 La Catástrofe Gravo-termal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#el-rol-de-las-estrellas-binarias-core-bounce">2.3 El Rol de las Estrellas Binarias (Core Bounce)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#consecuencias-a-largo-plazo-tasa-de-evaporacion">3. Consecuencias a Largo Plazo: Tasa de Evaporación</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#el-campo-galactico-deduccion-del-radio-de-jacobi">4. El Campo Galáctico: Deducción del Radio de Jacobi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#literatura-relevante-recomendada-estado-del-arte">5. Literatura Relevante Recomendada (Estado del Arte)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicios-propuestos">6. Ejercicios Propuestos</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="clase-5-dinamica-interna-2">
+<h1>Clase 5: Dinámica Interna 2<a class="headerlink" href="#clase-5-dinamica-interna-2" title="Link to this heading">#</a></h1>
+<section id="objetivos">
+<h2>Objetivos<a class="headerlink" href="#objetivos" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>La Jerarquía de los Tiempos Escala: Derivaciones Fundamentales.</p></li>
+<li><p>Catástrofe Gravitacional: El Colapso del Núcleo.</p></li>
+<li><p>Consecuencias a Largo Plazo: Tasa de Evaporación.</p></li>
+<li><p>El Campo Galáctico: Deducción del Radio de Jacobi</p></li>
+</ol>
+</section>
+<section id="la-jerarquia-de-los-tiempos-escala-derivaciones-fundamentales">
+<h2>1. La Jerarquía de los Tiempos Escala: Derivaciones Fundamentales<a class="headerlink" href="#la-jerarquia-de-los-tiempos-escala-derivaciones-fundamentales" title="Link to this heading">#</a></h2>
+<p>Para entender el destino de un cúmulo, primero debemos comparar el reloj dinámico colectivo frente a los relojes evolutivos de las estrellas individuales. A continuación, derivamos analíticamente de dónde provienen estas tres ecuaciones fundamentales.</p>
+<section id="tiempo-escala-dinamico-t-dyn">
+<h3>1.1 Tiempo Escala Dinámico (<span class="math notranslate nohighlight">\(t_{dyn}\)</span>)<a class="headerlink" href="#tiempo-escala-dinamico-t-dyn" title="Link to this heading">#</a></h3>
+<p>Representa el tiempo que tarda el sistema en reaccionar mecánicamente a perturbaciones, equivalente al tiempo de caída libre o tiempo de cruce.</p>
+<p>Partimos de la ecuación de movimiento de Newton. Si una estrella cae desde el borde del cúmulo (radio <span class="math notranslate nohighlight">\(R\)</span>) hacia el centro impulsada por la masa encerrada <span class="math notranslate nohighlight">\(M\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[m \frac{d^2 r}{dt^2} \approx m \frac{R}{t_{dyn}^2} = \frac{G M m}{R^2}\]</div>
+<p>Despejando el tiempo <span class="math notranslate nohighlight">\(t_{dyn}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[t_{dyn} \approx \sqrt{\frac{R^3}{G M}}\]</div>
+<p>Como la densidad promedio es <span class="math notranslate nohighlight">\(\rho \approx \frac{M}{R^3}\)</span>, esto se reescribe como:</p>
+<div class="math notranslate nohighlight">
+\[t_{dyn} \approx (G \rho)^{-1/2}\]</div>
+<p>Ej: Para el Sol: <span class="math notranslate nohighlight">\(\sim30\)</span> minutos. Para un cúmulo estelar: <span class="math notranslate nohighlight">\(\sim1-2\)</span> millones de años.</p>
+</section>
+<section id="tiempo-escala-termico-kelvin-helmholtz-t-kh">
+<h3>1.2 Tiempo Escala Térmico / Kelvin-Helmholtz (<span class="math notranslate nohighlight">\(t_{KH}\)</span>)<a class="headerlink" href="#tiempo-escala-termico-kelvin-helmholtz-t-kh" title="Link to this heading">#</a></h3>
+<p>Representa el tiempo que le tomaría a una estrella radiar toda su energía gravitacional acumulada si cesara la fusión nuclear.</p>
+<p>Por el Teorema del Virial, la energía térmica interna almacenada en la estrella es del orden de su energía gravitacional: <span class="math notranslate nohighlight">\(E \approx \frac{G M^2}{R}\)</span>. Si la estrella radia esta energía a una tasa constante dada por su Luminosidad <span class="math notranslate nohighlight">\(L\)</span> (Energía/Tiempo), el tiempo total de supervivencia térmica es:</p>
+<div class="math notranslate nohighlight">
+\[t_{KH} \approx \frac{E}{L} \approx \frac{G M^2}{R L}\]</div>
+<p>Ej: Para el Sol <span class="math notranslate nohighlight">\(\sim30\)</span> millones de años.</p>
+</section>
+<section id="tiempo-escala-nuclear-t-nuc">
+<h3>1.3 Tiempo Escala Nuclear (<span class="math notranslate nohighlight">\(t_{nuc}\)</span>)<a class="headerlink" href="#tiempo-escala-nuclear-t-nuc" title="Link to this heading">#</a></h3>
+<p>Representa el tiempo de agotamiento del hidrógeno en el núcleo de la estrella.</p>
+<p>Proviene de la ecuación de equivalencia de masa-energía de Einstein (<span class="math notranslate nohighlight">\(E = \Delta m c^2\)</span>). La fusión del hidrógeno en helio tiene una eficiencia teórica de conversión de masa a energía de <span class="math notranslate nohighlight">\(\epsilon \approx 0.007\)</span> (el 0.7% de la masa del protón se convierte en energía). Además, solo el núcleo interno de la estrella (<span class="math notranslate nohighlight">\(\sim 10\%\)</span> de la masa total <span class="math notranslate nohighlight">\(M\)</span>) está suficientemente caliente para fusionar. La energía total disponible es <span class="math notranslate nohighlight">\(E_{nuc} = 0.1 \cdot \epsilon \cdot M c^2\)</span>.</p>
+<p>Dividiendo por la luminosidad <span class="math notranslate nohighlight">\(L\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[t_{nuc} \approx \frac{0.1 \times \epsilon M c^2}{L}\]</div>
+<p>Ej: Para el Sol: <span class="math notranslate nohighlight">\(\sim10^{10}\)</span> años (10 mil millones de años).</p>
+</section>
+<section id="visualizacion-computacional-tiempos-escala-vs-masa-estelar">
+<h3>1.4 Visualización Computacional: Tiempos Escala vs. Masa Estelar<a class="headerlink" href="#visualizacion-computacional-tiempos-escala-vs-masa-estelar" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Rango de masas estelares en M_sol</span>
+<span class="n">M</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
+
+<span class="c1"># Relaciones de homología simplificadas para la Secuencia Principal</span>
+<span class="n">L</span> <span class="o">=</span> <span class="n">M</span><span class="o">**</span><span class="mf">3.5</span>
+<span class="n">R</span> <span class="o">=</span> <span class="n">M</span><span class="o">**</span><span class="mf">0.7</span>
+
+<span class="c1"># Constantes normalizadas al Sol (en años)</span>
+<span class="n">t_dyn_sol</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">/</span> <span class="p">(</span><span class="mi">24</span> <span class="o">*</span> <span class="mi">365</span><span class="p">)</span> <span class="c1"># ~30 minutos</span>
+<span class="n">t_KH_sol</span> <span class="o">=</span> <span class="mf">3e7</span>               <span class="c1"># ~30 Myr</span>
+<span class="n">t_nuc_sol</span> <span class="o">=</span> <span class="mf">1e10</span>             <span class="c1"># ~10 Gyr</span>
+
+<span class="n">t_dyn</span> <span class="o">=</span> <span class="n">t_dyn_sol</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">((</span><span class="n">R</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span> <span class="o">/</span> <span class="n">M</span><span class="p">)</span>
+<span class="n">t_KH</span> <span class="o">=</span> <span class="n">t_KH_sol</span> <span class="o">*</span> <span class="p">(</span><span class="n">M</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">R</span> <span class="o">*</span> <span class="n">L</span><span class="p">)</span>
+<span class="n">t_nuc</span> <span class="o">=</span> <span class="n">t_nuc_sol</span> <span class="o">*</span> <span class="p">(</span><span class="n">M</span> <span class="o">/</span> <span class="n">L</span><span class="p">)</span>
+<span class="n">t_relax_cluster</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">full_like</span><span class="p">(</span><span class="n">M</span><span class="p">,</span> <span class="mf">5e7</span><span class="p">)</span> <span class="c1"># ~50 Myr típico</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">M</span><span class="p">,</span> <span class="n">t_dyn</span><span class="p">,</span> <span class="s1">&#39;k:&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;Dinámico ($t_</span><span class="si">{dyn}</span><span class="s1">$)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">M</span><span class="p">,</span> <span class="n">t_KH</span><span class="p">,</span> <span class="s1">&#39;g--&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;Térmico / KH ($t_</span><span class="si">{KH}</span><span class="s1">$)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">M</span><span class="p">,</span> <span class="n">t_nuc</span><span class="p">,</span> <span class="s1">&#39;b-&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;Nuclear ($t_</span><span class="si">{nuc}</span><span class="s1">$)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">M</span><span class="p">,</span> <span class="n">t_relax_cluster</span><span class="p">,</span> <span class="s1">&#39;r-&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;Relajación Cúmulo ($t_</span><span class="si">{relax}</span><span class="s1"> \sim 50$ Myr)&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Límite Supernova ($\sim 8 M_\odot$)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">yscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Masa Estelar ($M_\odot$)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Tiempo Escala (Años)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Jerarquía Evolutiva de la Escala de Tiempos&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">which</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/b66caab9b7c23e95436454abafd97c1bbd71c5ae8a42b1e754779df69e22a532.png" src="_images/b66caab9b7c23e95436454abafd97c1bbd71c5ae8a42b1e754779df69e22a532.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="catastrofe-gravitacional-el-colapso-del-nucleo">
+<h2>2. Catástrofe Gravitacional: El Colapso del Núcleo<a class="headerlink" href="#catastrofe-gravitacional-el-colapso-del-nucleo" title="Link to this heading">#</a></h2>
+<section id="el-flujo-termodinamico-y-el-calor-especifico-negativo">
+<h3>2.1 El Flujo Termodinámico y el Calor Específico Negativo<a class="headerlink" href="#el-flujo-termodinamico-y-el-calor-especifico-negativo" title="Link to this heading">#</a></h3>
+<p>Partiendo del Teorema del Virial (<span class="math notranslate nohighlight">\(E=−K\)</span>), e inyectando la definición cinética de temperatura (<span class="math notranslate nohighlight">\(K=\frac{3}{2}NK_BT\)</span>), la capacidad calorífica (<span class="math notranslate nohighlight">\(C=dE/dT\)</span>) de un cúmulo estelar es:</p>
+<div class="math notranslate nohighlight">
+\[ C=-\frac{3}{2}NK_BT&lt;0 \]</div>
+</section>
+<section id="la-catastrofe-gravo-termal">
+<h3>2.2 La Catástrofe Gravo-termal<a class="headerlink" href="#la-catastrofe-gravo-termal" title="Link to this heading">#</a></h3>
+<p>El núcleo denso del cúmulo posee una mayor dispersión de velocidades (<span class="math notranslate nohighlight">\(\sigma\)</span>) que el halo extendido. Termodinámicamente, el núcleo está “más caliente”. Mediante interacciones de relajación, el calor fluye naturalmente del núcleo al halo.</p>
+<p>Al ceder energía (<span class="math notranslate nohighlight">\(dE&lt;0\)</span>), el calor específico negativo fuerza a que la temperatura del núcleo suba (<span class="math notranslate nohighlight">\(dT&gt;0\)</span>). Para mantener el equilibrio virial, el núcleo se encoge y aumenta su densidad. El núcleo se vuelve aún más caliente, acelerando la transferencia de calor hacia fuera. Esto genera una inestabilidad desbocada: el <strong>Core Collapse</strong>.</p>
+<p>Si evaluamos la tasa de conducción de calor en el sistema usando la ecuación integro-diferencial de Fokker-Planck para la distribución de fase <span class="math notranslate nohighlight">\(f(E,L,t)\)</span>, descubrimos que el proceso se vuelve “auto-similar” u homólogo.</p>
+<p>En este régimen homólogo profundo, la densidad central <span class="math notranslate nohighlight">\( \rho_c \)</span> evoluciona asintóticamente siguiendo una ley de potencias respecto al tiempo faltante para el colapso (<span class="math notranslate nohighlight">\(t_{cc}−t\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[\rho_c\propto (t_{cc}−t)^{−α}\]</div>
+<p>Al resolver numéricamente la ecuación de Fokker-Planck para un cúmulo estelar de masas idénticas, se encuentra que la integral del tiempo de relajación converge exactamente al valor de <span class="math notranslate nohighlight">\(15.6\)</span>. Así, el tiempo físico en el que la densidad matemática tiende a infinito es:</p>
+<div class="math notranslate nohighlight">
+\[t_{cc} \approx 15.6 t_{relax,initial}\]</div>
+<p>(Ver desarrollo en el artículo seminal de Cohn, H. 1979 - <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/1979ApJ...234.1036C/abstract$0">Link</a>)</p>
+<ul>
+<li><p>Contraste Observacional</p>
+<p>Aproximadamente el 20% de los cúmulos globulares de la Vía Láctea (ej. M15, NGC 6624) presentan un perfil de brillo superficial que no se aplana en el centro (como predice un modelo de King), sino que sigue una ley de potencias escarpada hasta el límite de resolución. Esto es la huella digital óptica de un núcleo colapsado. Además, los núcleos de estos cúmulos están repletos de binarias de rayos X de baja masa (LMXB) y rezagadas azules (blue stragglers), confirmando las violentas interacciones de 3 cuerpos.</p>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Radios logarítmicos</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
+
+<span class="c1"># Modelo de King simplificado (Cúmulo no colapsado)</span>
+<span class="n">r_core</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="n">rho_king</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="p">(</span><span class="n">r</span> <span class="o">/</span> <span class="n">r_core</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># Perfil de Core Collapse (Cúspide central, ley de potencias r^-2)</span>
+<span class="n">rho_collapse</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+<span class="n">mask_inner</span> <span class="o">=</span> <span class="n">r</span> <span class="o">&lt;</span> <span class="n">r_core</span>
+<span class="n">mask_outer</span> <span class="o">=</span> <span class="n">r</span> <span class="o">&gt;=</span> <span class="n">r_core</span>
+<span class="n">rho_collapse</span><span class="p">[</span><span class="n">mask_outer</span><span class="p">]</span> <span class="o">=</span> <span class="n">rho_king</span><span class="p">[</span><span class="n">mask_outer</span><span class="p">]</span>
+<span class="n">rho_collapse</span><span class="p">[</span><span class="n">mask_inner</span><span class="p">]</span> <span class="o">=</span> <span class="n">rho_king</span><span class="p">[</span><span class="n">mask_inner</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="n">mask_inner</span><span class="p">]</span> <span class="o">/</span> <span class="n">r_core</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mf">1.5</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">rho_king</span><span class="p">,</span> <span class="s1">&#39;b-&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Modelo de King (Núcleo Relajado)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">rho_collapse</span><span class="p">,</span> <span class="s1">&#39;r--&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Core Collapse (Cúspide de Gravedad)&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">r_core</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Radio del Núcleo ($r_c$)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Radio proyectado $R$ (pc)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Densidad Superficial $\Sigma(R)$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Huella Observacional de la Catástrofe Gravo-termal&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">which</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/61e067fbf7672e9168a68968c063ff980e05694f25f91f64f782645637b730eb.png" src="_images/61e067fbf7672e9168a68968c063ff980e05694f25f91f64f782645637b730eb.png" />
+</div>
+</div>
+</section>
+<section id="el-rol-de-las-estrellas-binarias-core-bounce">
+<h3>2.3 El Rol de las Estrellas Binarias (Core Bounce)<a class="headerlink" href="#el-rol-de-las-estrellas-binarias-core-bounce" title="Link to this heading">#</a></h3>
+<p>Como demostramos previamente (<span class="math notranslate nohighlight">\(C = -\frac{3}{2} N k_B\)</span>), el núcleo tiene calor específico negativo. Dado que el núcleo tiene mayor dispersión de velocidades (<span class="math notranslate nohighlight">\(\sigma\)</span>) que el halo, está “más caliente”. La energía fluye del núcleo al halo. Al ceder energía, su temperatura aumenta, se contrae (para mantener el Virial) y se vuelve aún más caliente, desatando una inestabilidad térmica.
+El colapso se detiene gracias a las binarias. La energía orbital de un sistema binario es <span class="math notranslate nohighlight">\(E_b=\frac{Gm_1m_2}{2a}\)</span>.</p>
+<p>En el denso núcleo colapsado, los encuentros de <span class="math notranslate nohighlight">\(N\)</span> cuerpos obligan a las binarias “duras” (<span class="math notranslate nohighlight">\(∣E_b∣&gt;\langle K \rangle\)</span>) a encoger su semieje a (Ley de Heggie: “las binarias duras se hacen más duras”).</p>
+<p>La colosal energía de ligadura liberada (<span class="math notranslate nohighlight">\(\Delta E_b\)</span>) se transfiere como energía cinética. El núcleo absorbe este calor, y por su <span class="math notranslate nohighlight">\(C&lt;0\)</span>, su temperatura baja y el núcleo se expande, generando un “Core Bounce”.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Tiempo normalizado a t_relax</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+
+<span class="c1"># Simulación fenoménologica de Radios de Lagrange (10%, 50%, 90% de la masa)</span>
+<span class="c1"># R90: El halo se expande continuamente por la inyección de calor</span>
+<span class="n">R90</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">t</span><span class="o">**</span><span class="mf">0.8</span>
+<span class="c1"># R50: Radio de media masa (permanece relativamente estable o crece lento)</span>
+<span class="n">R50</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">+</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">t</span><span class="o">**</span><span class="mf">0.5</span>
+
+<span class="c1"># R10: El núcleo sufre Core Collapse a t=15 y luego rebota (Core Bounce)</span>
+<span class="n">t_collapse</span> <span class="o">=</span> <span class="mi">15</span>
+<span class="n">R10</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">time</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">time</span> <span class="o">&lt;</span> <span class="n">t_collapse</span><span class="p">:</span>
+        <span class="n">R10</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">time</span><span class="o">/</span><span class="n">t_collapse</span><span class="p">)</span><span class="o">**</span><span class="mf">0.9</span><span class="p">)</span><span class="o">**</span><span class="mf">0.5</span> <span class="o">+</span> <span class="mf">0.05</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># Fluctuaciones post-colapso inducidas por binarias duras (Gravothermal oscillations)</span>
+        <span class="n">R10</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.05</span> <span class="o">+</span> <span class="mf">0.03</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">10</span><span class="o">*</span><span class="p">(</span><span class="n">time</span><span class="o">-</span><span class="n">t_collapse</span><span class="p">)))</span> <span class="o">+</span> <span class="mf">0.02</span> <span class="o">*</span> <span class="p">(</span><span class="n">time</span><span class="o">-</span><span class="n">t_collapse</span><span class="p">)</span><span class="o">**</span><span class="mf">0.2</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">R90</span><span class="p">,</span> <span class="s1">&#39;b-&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Radio del 90</span><span class="si">% d</span><span class="s1">e la masa (Halo)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">R50</span><span class="p">,</span> <span class="s1">&#39;g-&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Radio del 50</span><span class="si">% d</span><span class="s1">e la masa (R_h)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">R10</span><span class="p">,</span> <span class="s1">&#39;r-&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Radio del 10</span><span class="si">% d</span><span class="s1">e la masa (Núcleo)&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">t_collapse</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Instante de Core Collapse&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">&#39;Calentamiento por</span><span class="se">\n</span><span class="s1">Binarias (Core Bounce)&#39;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">),</span>
+             <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">0.05</span><span class="p">),</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">11</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">yscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Tiempo ($t / t_</span><span class="si">{relax}</span><span class="s1">$)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Radios de Lagrange (Unidades Arbitrarias)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Evolución Estructural del Cúmulo: Core Collapse y Rebote&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">11</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">which</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/de1d9b71ea1d12cb3e3bec8f7713d78d52f4db3b30ef2050ba28ec428d5d7e49.png" src="_images/de1d9b71ea1d12cb3e3bec8f7713d78d52f4db3b30ef2050ba28ec428d5d7e49.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">subprocess</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">urllib.parse</span>
+
+<span class="k">def</span> <span class="nf">extract_and_profile</span><span class="p">(</span><span class="n">ra_c</span><span class="p">,</span> <span class="n">dec_c</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+    <span class="c1"># ADQL para extraer campo estelar en radio de 0.25 grados</span>
+    <span class="n">query</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    SELECT ra, dec</span>
+<span class="s2">    FROM gaiadr3.gaia_source</span>
+<span class="s2">    WHERE 1=CONTAINS(POINT(&#39;ICRS&#39;, ra, dec), CIRCLE(&#39;ICRS&#39;, </span><span class="si">{</span><span class="n">ra_c</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">dec_c</span><span class="si">}</span><span class="s2">, 0.25))</span>
+<span class="s2">      AND phot_g_mean_mag IS NOT NULL</span>
+<span class="s2">    &quot;&quot;&quot;</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://gea.esac.esa.int/tap-server/tap/sync&quot;</span>
+    <span class="n">payload</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;request&#39;</span><span class="p">:</span> <span class="s1">&#39;doQuery&#39;</span><span class="p">,</span> <span class="s1">&#39;lang&#39;</span><span class="p">:</span> <span class="s1">&#39;adql&#39;</span><span class="p">,</span> <span class="s1">&#39;format&#39;</span><span class="p">:</span> <span class="s1">&#39;csv&#39;</span><span class="p">,</span> <span class="s1">&#39;query&#39;</span><span class="p">:</span> <span class="n">query</span><span class="p">}</span>
+    <span class="n">encoded</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">parse</span><span class="o">.</span><span class="n">urlencode</span><span class="p">(</span><span class="n">payload</span><span class="p">)</span>
+    <span class="n">file_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;_&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">.csv&quot;</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Descargando datos de </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">...&quot;</span><span class="p">)</span>
+    <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s2">&quot;wget&quot;</span><span class="p">,</span> <span class="s2">&quot;--post-data&quot;</span><span class="p">,</span> <span class="n">encoded</span><span class="p">,</span> <span class="s2">&quot;-O&quot;</span><span class="p">,</span> <span class="n">file_name</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="s2">&quot;-q&quot;</span><span class="p">],</span> <span class="n">check</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">file_name</span><span class="p">)</span>
+
+    <span class="c1"># Calcular distancia radial al centro en arcmin</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;r_arcmin&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">60</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">((</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;ra&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">ra_c</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="n">dec_c</span><span class="p">))</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;dec&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">dec_c</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+    <span class="c1"># Binning logarítmico para perfilar anillos concéntricos</span>
+    <span class="n">bins</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="mf">0.1</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="mi">15</span><span class="p">),</span> <span class="mi">30</span><span class="p">)</span>
+    <span class="n">counts</span><span class="p">,</span> <span class="n">bin_edges</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">histogram</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;r_arcmin&#39;</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="n">bins</span><span class="p">)</span>
+
+    <span class="c1"># Calcular el área de cada anillo (pi * (r_out^2 - r_in^2))</span>
+    <span class="n">areas</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="p">(</span><span class="n">bin_edges</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">bin_edges</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">surface_density</span> <span class="o">=</span> <span class="n">counts</span> <span class="o">/</span> <span class="n">areas</span>
+    <span class="n">bin_centers</span> <span class="o">=</span> <span class="p">(</span><span class="n">bin_edges</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="o">+</span> <span class="n">bin_edges</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">/</span> <span class="mi">2</span>
+
+    <span class="k">return</span> <span class="n">bin_centers</span><span class="p">,</span> <span class="n">surface_density</span>
+
+<span class="c1"># Coordenadas (M15 colapsado vs Omega Cen relajado)</span>
+<span class="n">r_m15</span><span class="p">,</span> <span class="n">dens_m15</span> <span class="o">=</span> <span class="n">extract_and_profile</span><span class="p">(</span><span class="mf">327.404</span><span class="p">,</span> <span class="mf">12.115</span><span class="p">,</span> <span class="s2">&quot;M15&quot;</span><span class="p">)</span>
+<span class="n">r_omCen</span><span class="p">,</span> <span class="n">dens_omCen</span> <span class="o">=</span> <span class="n">extract_and_profile</span><span class="p">(</span><span class="mf">201.697</span><span class="p">,</span> <span class="o">-</span><span class="mf">47.479</span><span class="p">,</span> <span class="s2">&quot;Omega Cen&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="c1"># Normalizamos a densidades relativas para comparación directa de la FORMA</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">r_omCen</span><span class="p">,</span> <span class="n">dens_omCen</span> <span class="o">/</span> <span class="n">dens_omCen</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="s1">&#39;bo-&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Omega Centauri (Modelo King plano)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">r_m15</span><span class="p">,</span> <span class="n">dens_m15</span> <span class="o">/</span> <span class="n">dens_m15</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="s1">&#39;r^-&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;M15 (Evidencia de Cúspide - Core Collapse)&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">axvspan</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Zona de Crowding (Subestimación de Gaia)&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Radio proyectado desde el centro (arcmin)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Densidad Superficial Relativa $\Sigma(R)$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Perfil Radial de Densidad: M15 vs Omega Centauri&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">11</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">which</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Insight Observacional del Gráfico ---&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;1. Omega Cen exhibe el aplanamiento central clásico del modelo de King.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;2. M15 muestra una tendencia de ley de potencias escarpada hacia el centro,&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;   huella del colapso del núcleo.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;3. CAVEAT DE DATOS: En radios muy pequeños (&lt; 0.4 arcmin), la densidad de M15&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;   &#39;cae&#39;. ¡Esto NO es físico! Es el límite de resolución de Gaia. Las estrellas&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;   están tan juntas que el software las confunde y las rechaza. Entender este&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;   sesgo es la diferencia entre un analista de datos y un astrofísico.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Descargando datos de M15...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Descargando datos de Omega Cen...
+</pre></div>
+</div>
+<img alt="_images/1a60e0f1196be455eee48bc0308bed1a66f2e93d40e094516eb4f7b53863fdf7.png" src="_images/1a60e0f1196be455eee48bc0308bed1a66f2e93d40e094516eb4f7b53863fdf7.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- Insight Observacional del Gráfico ---
+1. Omega Cen exhibe el aplanamiento central clásico del modelo de King.
+2. M15 muestra una tendencia de ley de potencias escarpada hacia el centro,
+   huella del colapso del núcleo.
+3. CAVEAT DE DATOS: En radios muy pequeños (&lt; 0.4 arcmin), la densidad de M15
+   &#39;cae&#39;. ¡Esto NO es físico! Es el límite de resolución de Gaia. Las estrellas
+   están tan juntas que el software las confunde y las rechaza. Entender este
+   sesgo es la diferencia entre un analista de datos y un astrofísico.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="consecuencias-a-largo-plazo-tasa-de-evaporacion">
+<h2>3. Consecuencias a Largo Plazo: Tasa de Evaporación<a class="headerlink" href="#consecuencias-a-largo-plazo-tasa-de-evaporacion" title="Link to this heading">#</a></h2>
+<p>La Tasa de Evaporación es un resultado canónico deducido originalmente por Ambartsumian (1938) y Spitzer (1940) integrando las propiedades de la estadística de Maxwell-Boltzmann.</p>
+<ol class="arabic">
+<li><p><strong>La Velocidad de Escape:</strong> Por el Teorema del Virial, se demuestra que la velocidad necesaria para escapar de un sistema aislado desde el radio medio está relacionada con la velocidad cuadrática media (<span class="math notranslate nohighlight">\(v_{rms} = \sqrt{\langle v^2 \rangle}\)</span>) por: <span class="math notranslate nohighlight">\(v_{esc} \approx 2 v_{rms}\)</span>.</p></li>
+<li><p><strong>La Fracción de Escape (<span class="math notranslate nohighlight">\(\xi\)</span>):</strong> Asumiendo que las estrellas relajan sus velocidades en una distribución de Maxwell-Boltzmann, la fracción de estrellas que instantáneamente se encuentra en la “cola” superando la velocidad de escape es la integral:</p>
+<div class="math notranslate nohighlight">
+\[\xi = \int_{2 v_{rms}}^{\infty} 4\pi \left(\frac{3}{2\pi v_{rms}^2}\right)^{3/2} v^2 \exp\left( - \frac{3 v^2}{2 v_{rms}^2} \right) dv\]</div>
+<p>Resolviendo esta integral analíticamente se obtiene</p>
+<div class="math notranslate nohighlight">
+\[\xi = 0.00738 \approx 0.0074\]</div>
+</li>
+<li><p><strong>El Tiempo de Evaporación:</strong> Esto implica que en cada tiempo de relajación (<span class="math notranslate nohighlight">\(t_{relax}\)</span>), una fracción <span class="math notranslate nohighlight">\(\xi\)</span> de estrellas repuebla la cola y escapa. La tasa de pérdida de masa es:</p>
+<div class="math notranslate nohighlight">
+\[\frac{dM}{dt} \approx - \frac{\xi M}{t_{relax}}\]</div>
+<p>Integrando de manera simple y asumiendo <span class="math notranslate nohighlight">\(t_{relax}\)</span> variable lentamente, el tiempo para que el cúmulo pierda toda su masa (<span class="math notranslate nohighlight">\(t_{evap} = M / |dM/dt|\)</span>) es:</p>
+<div class="math notranslate nohighlight">
+\[t_{evap} = \frac{1}{0.0074} t_{relax} \approx 136 \, t_{relax}\]</div>
+</li>
+</ol>
+</section>
+<section id="el-campo-galactico-deduccion-del-radio-de-jacobi">
+<h2>4. El Campo Galáctico: Deducción del Radio de Jacobi<a class="headerlink" href="#el-campo-galactico-deduccion-del-radio-de-jacobi" title="Link to this heading">#</a></h2>
+<p>El tiempo de evaporación de <span class="math notranslate nohighlight">\(136 t_{relax}\)</span> asume un cúmulo aislado. En la realidad, la galaxia “arranca” estrellas mucho antes. ¿Dónde está exactamente el límite gravitacional del cúmulo? A este límite lo llamamos Radio de Jacobi o Radio de Marea (<span class="math notranslate nohighlight">\(r_J\)</span>).</p>
+<ul>
+<li><p>Consideremos un cúmulo de masa <span class="math notranslate nohighlight">\(M_c\)</span> orbitando una galaxia de masa <span class="math notranslate nohighlight">\(M_G\)</span> a una distancia radial <span class="math notranslate nohighlight">\(R_G\)</span>. En un marco de referencia que rota sincrónicamente con el cúmulo a velocidad angular <span class="math notranslate nohighlight">\(\Omega = \sqrt{G M_G / R_G^3}\)</span>, una estrella en el borde del cúmulo (a distancia <span class="math notranslate nohighlight">\(x\)</span> del centro, en el eje hacia la galaxia) siente tres fuerzas:</p>
+<ol class="arabic simple">
+<li><p>Gravedad del cúmulo atrayéndola: <span class="math notranslate nohighlight">\(- \frac{G M_c}{x^2}\)</span></p></li>
+<li><p>Gravedad galáctica diferencial (marea). Expandiendo por Taylor la fuerza <span class="math notranslate nohighlight">\(\frac{G M_G}{(R_G - x)^2}\)</span>, el término de perturbación lineal es: <span class="math notranslate nohighlight">\(+ \frac{2 G M_G x}{R_G^3}\)</span></p></li>
+<li><p>Fuerza centrífuga por la rotación del marco: <span class="math notranslate nohighlight">\(+ \Omega^2 x = + \frac{G M_G x}{R_G^3}\)</span></p></li>
+</ol>
+</li>
+<li><p><strong>Igualación de Fuerzas:</strong> La estrella escapará cuando la atracción del cúmulo iguale a las fuerzas repulsivas (Marea + Centrífuga).</p>
+<div class="math notranslate nohighlight">
+\[\frac{G M_c}{x^2} = \frac{2 G M_G x}{R_G^3} + \frac{G M_G x}{R_G^3}\]</div>
+<div class="math notranslate nohighlight">
+\[\frac{G M_c}{x^2} = \frac{3 G M_G x}{R_G^3}\]</div>
+<p>Despejando el radio de equilibrio <span class="math notranslate nohighlight">\(x\)</span>, definimos el Radio de Jacobi:
+$<span class="math notranslate nohighlight">\(r_J = R_G \left( \frac{M_c}{3 M_G} \right)^{1/3}\)</span>$</p>
+</li>
+</ul>
+<p>Cualquier estrella acelerada por relajación que cruce este límite <span class="math notranslate nohighlight">\(r_J\)</span> es arrancada por la galaxia formando una cola de marea, reduciendo la velocidad de escape requerida y acelerando la muerte del cúmulo dramáticamente.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Coordenada espacial X normalizada al Radio de Jacobi (r_J = 1)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
+
+<span class="c1"># Potencial del cúmulo aislado (Aproximación puntual -1/x)</span>
+<span class="c1"># Se usa un factor de suavizado &#39;epsilon&#39; para evitar la divergencia en x=0</span>
+<span class="n">epsilon</span> <span class="o">=</span> <span class="mf">0.1</span>
+<span class="n">Phi_cluster</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">epsilon</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># Potencial de Marea de la Galaxia (campo externo) y centrífugo (Aproximación ~ -0.5 * x^2)</span>
+<span class="n">Phi_tide</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.5</span> <span class="o">*</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="c1"># Potencial Efectivo Total</span>
+<span class="n">Phi_eff</span> <span class="o">=</span> <span class="n">Phi_cluster</span> <span class="o">+</span> <span class="n">Phi_tide</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">Phi_cluster</span><span class="p">,</span> <span class="s1">&#39;b--&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Potencial Aislado (Newtoniano)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">Phi_eff</span><span class="p">,</span> <span class="s1">&#39;k-&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Potencial Efectivo (Cúmulo + Galaxia)&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">Phi_eff</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">argmin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Energía de Escape de Marea&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Radio de Jacobi ($L_2$)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Radio de Jacobi ($L_1$)&#39;</span><span class="p">)</span>
+
+<span class="c1"># Rellenar zona de escape</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">Phi_eff</span><span class="p">,</span> <span class="n">Phi_eff</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="n">where</span><span class="o">=</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">1</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;salmon&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Zona de Disolución Estelar&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="o">-</span><span class="mf">3.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Distancia al Centro del Cúmulo ($x / r_J$)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Potencial Gravitacional Efectivo $\Phi$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Mecánica de la Marea Galáctica y Escape Estelar&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;lower left&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">11</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Insight Físico ---&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Las estrellas aceleradas por equipartición no necesitan infinita&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;energía para escapar. Solo necesitan la energía suficiente para&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;rebasar los &#39;bordes&#39; rojos del pozo de potencial en L1 o L2.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Al cruzarlos, la galaxia las arranca, formando las colas de marea.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/1c0c9338bad14fad751d9c2cc4646321c992f38a7ba9264eec1a5e30a12c2dc2.png" src="_images/1c0c9338bad14fad751d9c2cc4646321c992f38a7ba9264eec1a5e30a12c2dc2.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- Insight Físico ---
+Las estrellas aceleradas por equipartición no necesitan infinita
+energía para escapar. Solo necesitan la energía suficiente para
+rebasar los &#39;bordes&#39; rojos del pozo de potencial en L1 o L2.
+Al cruzarlos, la galaxia las arranca, formando las colas de marea.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="literatura-relevante-recomendada-estado-del-arte">
+<h2>5. Literatura Relevante Recomendada (Estado del Arte)<a class="headerlink" href="#literatura-relevante-recomendada-estado-del-arte" title="Link to this heading">#</a></h2>
+<p>Para consolidar la teoría de las inestabilidades seculares y conectar las ecuaciones termodinámicas con la investigación moderna, las siguientes lecturas son fundamentales:</p>
+<ol class="arabic simple">
+<li><p><strong>Lynden-Bell, D., &amp; Wood, R. (1968).</strong> <em>“The gravo-thermal catastrophe in isothermal spheres and the onset of red-giant structure for stellar systems”</em>. Monthly Notices of the Royal Astronomical Society, 138, 495.</p>
+<ul class="simple">
+<li><p><strong>Relevancia:</strong> Es el documento teórico fundacional de la termodinámica de N-cuerpos. Los autores derivan matemáticamente por primera vez por qué el calor específico de un sistema autogravitante es negativo y predicen la inestabilidad que conduce al colapso del núcleo estelar, estableciendo la base de toda la dinámica estelar secular moderna.</p></li>
+</ul>
+</li>
+<li><p><strong>Heggie, D. C. (1975).</strong> <em>“Binary evolution in stellar dynamics”</em>. Monthly Notices of the Royal Astronomical Society, 173, 729-787.</p>
+<ul class="simple">
+<li><p><strong>Relevancia:</strong> Introduce formalmente la “Ley de Heggie”. Es una lectura obligatoria para entender que los sistemas de múltiples cuerpos no son simétricos termodinámicamente. Demuestra de manera analítica que las estrellas binarias actúan como la principal fuente de energía interna (“quemadores nucleares gravitacionales”) que detienen la catástrofe gravo-termal.</p></li>
+</ul>
+</li>
+<li><p><strong>Trager, S. C., King, I. R., &amp; Djorgovski, S. (1995).</strong> <em>“Catalogue of Galactic Globular Cluster Surface Brightness Profiles”</em>. The Astronomical Journal, 109, 218.</p>
+<ul class="simple">
+<li><p><strong>Relevancia:</strong> Es el atlas observacional definitivo que conecta la teoría del <em>core collapse</em> con la realidad empírica. Los estudiantes podrán ver exactamente cómo los astrónomos identificaron qué cúmulos de la Vía Láctea (como M15) sufrieron el colapso al observar una desviación en forma de ley de potencias respecto a los perfiles estándar de King.</p></li>
+</ul>
+</li>
+<li><p><strong>Baumgardt, H., &amp; Makino, J. (2003).</strong> <em>“Dynamical evolution of star clusters in tidal fields”</em>. Monthly Notices of the Royal Astronomical Society, 340(1), 227-246.</p>
+<ul class="simple">
+<li><p><strong>Relevancia:</strong> Un trabajo maestro de simulaciones computacionales (integración directa de N-cuerpos). Los autores modelan numéricamente la tasa de evaporación a través del radio de Jacobi y las colas de marea, demostrando cómo el campo galáctico acelera la disolución predicha por las fórmulas clásicas de Spitzer.</p></li>
+</ul>
+</li>
+<li><p><strong>Ferraro, F. R., et al. (2009).</strong> <em>“Two distinct sequences of blue straggler stars in the globular cluster M30”</em>. Nature, 462, 1028-1031.</p>
+<ul class="simple">
+<li><p><strong>Relevancia:</strong> Conecta espectacularmente la dinámica del núcleo con la evolución estelar individual. Este artículo demuestra con observaciones del Telescopio Espacial Hubble (HST) que el colapso del núcleo fuerza a las estrellas binarias a interactuar tan violentamente que se fusionan, repoblando el diagrama HR con exóticas “rezagadas azules” creadas por colisiones directas.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="ejercicios-propuestos">
+<h2>6. Ejercicios Propuestos<a class="headerlink" href="#ejercicios-propuestos" title="Link to this heading">#</a></h2>
+<p><strong>Ejercicio 1 (Analítico - Jerarquía de Tiempos Escala):</strong>
+Determine el tiempo térmico o de Kelvin-Helmholtz (<span class="math notranslate nohighlight">\(t_{KH}\)</span>) para una estrella prototípica masiva de <span class="math notranslate nohighlight">\(15 M_\odot\)</span> (Clase espectral B0), sabiendo que su luminosidad en la secuencia principal es <span class="math notranslate nohighlight">\(L \approx 30,000 L_\odot\)</span> y su radio es <span class="math notranslate nohighlight">\(R \approx 7 R_\odot\)</span>. Luego, compare este tiempo con su tiempo de vida nuclear (<span class="math notranslate nohighlight">\(t_{nuc}\)</span>) estimado asumiendo un núcleo reactivo del <span class="math notranslate nohighlight">\(10\%\)</span> y una eficiencia <span class="math notranslate nohighlight">\(\epsilon = 0.007\)</span>.
+Si el cúmulo en el que nace esta estrella tiene un tiempo de relajación de <span class="math notranslate nohighlight">\(t_{relax} = 50 \text{ Myr}\)</span>, discuta detalladamente qué implicaciones dinámicas tiene el ciclo de vida de esta estrella masiva sobre la supervivencia del cúmulo.</p>
+<p><strong>Ejercicio 2 (Conceptual - Termodinámica del Colapso):</strong>
+Partiendo del Teorema del Virial (<span class="math notranslate nohighlight">\(E = -K\)</span>) y la definición de capacidad calorífica (<span class="math notranslate nohighlight">\(C = dE/dT\)</span>), explique conceptualmente la secuencia termodinámica exacta del <em>Core Bounce</em>. Describa qué sucede con la energía total, la energía cinética y la temperatura del núcleo inmediatamente después de que un sistema binario duro cede energía cinética al cúmulo mediante un encuentro de tres cuerpos.</p>
+<p><strong>Ejercicio 3 (Computacional - Sesgos Observacionales):</strong>
+Modificando la consulta ADQL construida en el taller práctico de la Sección 5, intente perfilar la densidad superficial del cúmulo abierto de las Pléyades (<span class="math notranslate nohighlight">\(\alpha=56.75^\circ, \delta=24.11^\circ\)</span>, radio de búsqueda <span class="math notranslate nohighlight">\(3^\circ\)</span>). Aplique la técnica de anillos logarítmicos.
+Al comparar la curva resultante con la de un cúmulo globular masivo como Omega Centauri, discuta por qué el perfil radial de un cúmulo abierto es estadísticamente mucho más ruidoso y difícil de delimitar si no se realiza un filtrado previo por movimiento propio o paralaje.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Escriba aquí su solución</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Clase_04_DinamicaInterna1.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Clase 4: Dinámica Interna 1</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objetivos">Objetivos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#la-jerarquia-de-los-tiempos-escala-derivaciones-fundamentales">1. La Jerarquía de los Tiempos Escala: Derivaciones Fundamentales</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tiempo-escala-dinamico-t-dyn">1.1 Tiempo Escala Dinámico (<span class="math notranslate nohighlight">\(t_{dyn}\)</span>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tiempo-escala-termico-kelvin-helmholtz-t-kh">1.2 Tiempo Escala Térmico / Kelvin-Helmholtz (<span class="math notranslate nohighlight">\(t_{KH}\)</span>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tiempo-escala-nuclear-t-nuc">1.3 Tiempo Escala Nuclear (<span class="math notranslate nohighlight">\(t_{nuc}\)</span>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizacion-computacional-tiempos-escala-vs-masa-estelar">1.4 Visualización Computacional: Tiempos Escala vs. Masa Estelar</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#catastrofe-gravitacional-el-colapso-del-nucleo">2. Catástrofe Gravitacional: El Colapso del Núcleo</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#el-flujo-termodinamico-y-el-calor-especifico-negativo">2.1 El Flujo Termodinámico y el Calor Específico Negativo</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#la-catastrofe-gravo-termal">2.2 La Catástrofe Gravo-termal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#el-rol-de-las-estrellas-binarias-core-bounce">2.3 El Rol de las Estrellas Binarias (Core Bounce)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#consecuencias-a-largo-plazo-tasa-de-evaporacion">3. Consecuencias a Largo Plazo: Tasa de Evaporación</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#el-campo-galactico-deduccion-del-radio-de-jacobi">4. El Campo Galáctico: Deducción del Radio de Jacobi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#literatura-relevante-recomendada-estado-del-arte">5. Literatura Relevante Recomendada (Estado del Arte)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicios-propuestos">6. Ejercicios Propuestos</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Esteban Silva Villa
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
