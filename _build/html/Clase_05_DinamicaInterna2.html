@@ -553,61 +553,6 @@
 <img alt="_images/61e067fbf7672e9168a68968c063ff980e05694f25f91f64f782645637b730eb.png" src="_images/61e067fbf7672e9168a68968c063ff980e05694f25f91f64f782645637b730eb.png" />
 </div>
 </div>
-</section>
-<section id="el-rol-de-las-estrellas-binarias-core-bounce">
-<h3>2.3 El Rol de las Estrellas Binarias (Core Bounce)<a class="headerlink" href="#el-rol-de-las-estrellas-binarias-core-bounce" title="Link to this heading">#</a></h3>
-<p>Como demostramos previamente (<span class="math notranslate nohighlight">\(C = -\frac{3}{2} N k_B\)</span>), el núcleo tiene calor específico negativo. Dado que el núcleo tiene mayor dispersión de velocidades (<span class="math notranslate nohighlight">\(\sigma\)</span>) que el halo, está “más caliente”. La energía fluye del núcleo al halo. Al ceder energía, su temperatura aumenta, se contrae (para mantener el Virial) y se vuelve aún más caliente, desatando una inestabilidad térmica.
-El colapso se detiene gracias a las binarias. La energía orbital de un sistema binario es <span class="math notranslate nohighlight">\(E_b=\frac{Gm_1m_2}{2a}\)</span>.</p>
-<p>En el denso núcleo colapsado, los encuentros de <span class="math notranslate nohighlight">\(N\)</span> cuerpos obligan a las binarias “duras” (<span class="math notranslate nohighlight">\(∣E_b∣&gt;\langle K \rangle\)</span>) a encoger su semieje a (Ley de Heggie: “las binarias duras se hacen más duras”).</p>
-<p>La colosal energía de ligadura liberada (<span class="math notranslate nohighlight">\(\Delta E_b\)</span>) se transfiere como energía cinética. El núcleo absorbe este calor, y por su <span class="math notranslate nohighlight">\(C&lt;0\)</span>, su temperatura baja y el núcleo se expande, generando un “Core Bounce”.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-
-<span class="c1"># Tiempo normalizado a t_relax</span>
-<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
-
-<span class="c1"># Simulación fenoménologica de Radios de Lagrange (10%, 50%, 90% de la masa)</span>
-<span class="c1"># R90: El halo se expande continuamente por la inyección de calor</span>
-<span class="n">R90</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">t</span><span class="o">**</span><span class="mf">0.8</span>
-<span class="c1"># R50: Radio de media masa (permanece relativamente estable o crece lento)</span>
-<span class="n">R50</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">+</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">t</span><span class="o">**</span><span class="mf">0.5</span>
-
-<span class="c1"># R10: El núcleo sufre Core Collapse a t=15 y luego rebota (Core Bounce)</span>
-<span class="n">t_collapse</span> <span class="o">=</span> <span class="mi">15</span>
-<span class="n">R10</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">time</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">time</span> <span class="o">&lt;</span> <span class="n">t_collapse</span><span class="p">:</span>
-        <span class="n">R10</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">time</span><span class="o">/</span><span class="n">t_collapse</span><span class="p">)</span><span class="o">**</span><span class="mf">0.9</span><span class="p">)</span><span class="o">**</span><span class="mf">0.5</span> <span class="o">+</span> <span class="mf">0.05</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="c1"># Fluctuaciones post-colapso inducidas por binarias duras (Gravothermal oscillations)</span>
-        <span class="n">R10</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.05</span> <span class="o">+</span> <span class="mf">0.03</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">10</span><span class="o">*</span><span class="p">(</span><span class="n">time</span><span class="o">-</span><span class="n">t_collapse</span><span class="p">)))</span> <span class="o">+</span> <span class="mf">0.02</span> <span class="o">*</span> <span class="p">(</span><span class="n">time</span><span class="o">-</span><span class="n">t_collapse</span><span class="p">)</span><span class="o">**</span><span class="mf">0.2</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">R90</span><span class="p">,</span> <span class="s1">&#39;b-&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Radio del 90</span><span class="si">% d</span><span class="s1">e la masa (Halo)&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">R50</span><span class="p">,</span> <span class="s1">&#39;g-&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Radio del 50</span><span class="si">% d</span><span class="s1">e la masa (R_h)&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">R10</span><span class="p">,</span> <span class="s1">&#39;r-&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Radio del 10</span><span class="si">% d</span><span class="s1">e la masa (Núcleo)&#39;</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">t_collapse</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Instante de Core Collapse&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">&#39;Calentamiento por</span><span class="se">\n</span><span class="s1">Binarias (Core Bounce)&#39;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">),</span>
-             <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">0.05</span><span class="p">),</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">11</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">yscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Tiempo ($t / t_</span><span class="si">{relax}</span><span class="s1">$)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Radios de Lagrange (Unidades Arbitrarias)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Evolución Estructural del Cúmulo: Core Collapse y Rebote&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">11</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">which</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="_images/de1d9b71ea1d12cb3e3bec8f7713d78d52f4db3b30ef2050ba28ec428d5d7e49.png" src="_images/de1d9b71ea1d12cb3e3bec8f7713d78d52f4db3b30ef2050ba28ec428d5d7e49.png" />
-</div>
-</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">subprocess</span>
@@ -697,6 +642,61 @@ El colapso se detiene gracias a las binarias. La energía orbital de un sistema 
    sesgo es la diferencia entre un analista de datos y un astrofísico.
 </pre></div>
 </div>
+</div>
+</div>
+</section>
+<section id="el-rol-de-las-estrellas-binarias-core-bounce">
+<h3>2.3 El Rol de las Estrellas Binarias (Core Bounce)<a class="headerlink" href="#el-rol-de-las-estrellas-binarias-core-bounce" title="Link to this heading">#</a></h3>
+<p>Como demostramos previamente (<span class="math notranslate nohighlight">\(C = -\frac{3}{2} N k_B\)</span>), el núcleo tiene calor específico negativo. Dado que el núcleo tiene mayor dispersión de velocidades (<span class="math notranslate nohighlight">\(\sigma\)</span>) que el halo, está “más caliente”. La energía fluye del núcleo al halo. Al ceder energía, su temperatura aumenta, se contrae (para mantener el Virial) y se vuelve aún más caliente, desatando una inestabilidad térmica.
+El colapso se detiene gracias a las binarias. La energía orbital de un sistema binario es <span class="math notranslate nohighlight">\(E_b=\frac{Gm_1m_2}{2a}\)</span>.</p>
+<p>En el denso núcleo colapsado, los encuentros de <span class="math notranslate nohighlight">\(N\)</span> cuerpos obligan a las binarias “duras” (<span class="math notranslate nohighlight">\(∣E_b∣&gt;\langle K \rangle\)</span>) a encoger su semieje a (Ley de Heggie: “las binarias duras se hacen más duras”).</p>
+<p>La colosal energía de ligadura liberada (<span class="math notranslate nohighlight">\(\Delta E_b\)</span>) se transfiere como energía cinética. El núcleo absorbe este calor, y por su <span class="math notranslate nohighlight">\(C&lt;0\)</span>, su temperatura baja y el núcleo se expande, generando un “Core Bounce”.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Tiempo normalizado a t_relax</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+
+<span class="c1"># Simulación fenoménologica de Radios de Lagrange (10%, 50%, 90% de la masa)</span>
+<span class="c1"># R90: El halo se expande continuamente por la inyección de calor</span>
+<span class="n">R90</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">t</span><span class="o">**</span><span class="mf">0.8</span>
+<span class="c1"># R50: Radio de media masa (permanece relativamente estable o crece lento)</span>
+<span class="n">R50</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">+</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">t</span><span class="o">**</span><span class="mf">0.5</span>
+
+<span class="c1"># R10: El núcleo sufre Core Collapse a t=15 y luego rebota (Core Bounce)</span>
+<span class="n">t_collapse</span> <span class="o">=</span> <span class="mi">15</span>
+<span class="n">R10</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">time</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">time</span> <span class="o">&lt;</span> <span class="n">t_collapse</span><span class="p">:</span>
+        <span class="n">R10</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">time</span><span class="o">/</span><span class="n">t_collapse</span><span class="p">)</span><span class="o">**</span><span class="mf">0.9</span><span class="p">)</span><span class="o">**</span><span class="mf">0.5</span> <span class="o">+</span> <span class="mf">0.05</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># Fluctuaciones post-colapso inducidas por binarias duras (Gravothermal oscillations)</span>
+        <span class="n">R10</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.05</span> <span class="o">+</span> <span class="mf">0.03</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">10</span><span class="o">*</span><span class="p">(</span><span class="n">time</span><span class="o">-</span><span class="n">t_collapse</span><span class="p">)))</span> <span class="o">+</span> <span class="mf">0.02</span> <span class="o">*</span> <span class="p">(</span><span class="n">time</span><span class="o">-</span><span class="n">t_collapse</span><span class="p">)</span><span class="o">**</span><span class="mf">0.2</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">R90</span><span class="p">,</span> <span class="s1">&#39;b-&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Radio del 90</span><span class="si">% d</span><span class="s1">e la masa (Halo)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">R50</span><span class="p">,</span> <span class="s1">&#39;g-&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Radio del 50</span><span class="si">% d</span><span class="s1">e la masa (R_h)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">R10</span><span class="p">,</span> <span class="s1">&#39;r-&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Radio del 10</span><span class="si">% d</span><span class="s1">e la masa (Núcleo)&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">t_collapse</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Instante de Core Collapse&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">&#39;Calentamiento por</span><span class="se">\n</span><span class="s1">Binarias (Core Bounce)&#39;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">),</span>
+             <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">0.05</span><span class="p">),</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">11</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">yscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Tiempo ($t / t_</span><span class="si">{relax}</span><span class="s1">$)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Radios de Lagrange (Unidades Arbitrarias)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Evolución Estructural del Cúmulo: Core Collapse y Rebote&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">11</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">which</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/de1d9b71ea1d12cb3e3bec8f7713d78d52f4db3b30ef2050ba28ec428d5d7e49.png" src="_images/de1d9b71ea1d12cb3e3bec8f7713d78d52f4db3b30ef2050ba28ec428d5d7e49.png" />
 </div>
 </div>
 </section>

@@ -11,9 +11,7 @@
 | | 2. Esteban Silva Villa (esteban.silvav@udea.edu.co)
 | Aula | 6-426
 | Horario | L 8-10AM
-| Evaluación | 30% seguimiento / 70% examen
-
-
+| Evaluación 1a mitad | 30% seguimiento / 70% examen
 
 A continuación se presenta la hoja de ruta temática estructurada para los dos meses del curso de maestría:
 
@@ -38,20 +36,20 @@ A continuación se presenta la hoja de ruta temática estructurada para los dos 
 * Equilibrio dinámico y equipartición de la energía.
 
 ### Semana 5: Dinámica Interna II (Evolución Secular).
+* Tiempos escala fundamentales (Dinámico, Kelvin-Helmholtz, Nuclear).
 * Consecuencias a largo plazo de la relajación.
 * Segregación de masa y evaporación estelar.
 * Catástrofe gravitacional: El colapso del núcleo (core collapse) y el rol de las estrellas binarias.
 
 ### Semana 6: Estructura Estelar y el Diagrama HR.
-* Tiempos escala fundamentales (Dinámico, Kelvin-Helmholtz, Nuclear).
-* El rol de la metalicidad (Z) en la evolución y opacidad.
 * Construcción e interpretación del Diagrama HR (teórico vs. observacional).
+* El rol de la metalicidad (Z) en la evolución y opacidad.
+* Estimación de edades: Isocronas y el Main Sequence Turn-Off (MSTO).
 
 ### Semana 7: Cronometría de Cúmulos y Retos Modernos.
-* Estimación de edades: Isocronas y el Main Sequence Turn-Off (MSTO).
 * El paradigma roto: Evidencia observacional del problema de las múltiples poblaciones en cúmulos globulares (anomalías químicas y fotométricas).
-
-### Semana 8: Destino Final y Observaciones.
-* Mecanismos de disolución: pérdida de masa estelar (supernovas/vientos) vs. mareas galácticas.
 * Astrometría de precisión en la era de Gaia.
 * Detección de corrientes estelares y colas de marea.
+
+### Semana 8: Destino Final y Observaciones.
+* Evaluación del curso
