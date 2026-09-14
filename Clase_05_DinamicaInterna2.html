@@ -648,67 +648,18 @@
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Descargando datos de M15...
 </pre></div>
 </div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="nn">Input In [3],</span> in <span class="ni">&lt;cell line: 39&gt;</span><span class="nt">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">36</span>     <span class="k">return</span> <span class="n">bin_centers</span><span class="p">,</span> <span class="n">surface_density</span>
-<span class="g g-Whitespace">     </span><span class="mi">38</span> <span class="c1"># Coordenadas (M15 colapsado vs Omega Cen relajado)</span>
-<span class="ne">---&gt; </span><span class="mi">39</span> <span class="n">r_m15</span><span class="p">,</span> <span class="n">dens_m15</span> <span class="o">=</span> <span class="n">extract_and_profile</span><span class="p">(</span><span class="mf">327.404</span><span class="p">,</span> <span class="mf">12.115</span><span class="p">,</span> <span class="s2">&quot;M15&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">40</span> <span class="n">r_omCen</span><span class="p">,</span> <span class="n">dens_omCen</span> <span class="o">=</span> <span class="n">extract_and_profile</span><span class="p">(</span><span class="mf">201.697</span><span class="p">,</span> <span class="o">-</span><span class="mf">47.479</span><span class="p">,</span> <span class="s2">&quot;Omega Cen&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">42</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
-
-<span class="nn">Input In [3],</span> in <span class="ni">extract_and_profile</span><span class="nt">(ra_c, dec_c, name)</span>
-<span class="g g-Whitespace">     </span><span class="mi">18</span> <span class="n">file_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;_&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">.csv&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">20</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Descargando datos de </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">...&quot;</span><span class="p">)</span>
-<span class="ne">---&gt; </span><span class="mi">21</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s2">&quot;wget&quot;</span><span class="p">,</span> <span class="s2">&quot;--post-data&quot;</span><span class="p">,</span> <span class="n">encoded</span><span class="p">,</span> <span class="s2">&quot;-O&quot;</span><span class="p">,</span> <span class="n">file_name</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="s2">&quot;-q&quot;</span><span class="p">],</span> <span class="n">check</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">22</span> <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">file_name</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">24</span> <span class="c1"># Calcular distancia radial al centro en arcmin</span>
-
-<span class="nn">File ~/anaconda3/lib/python3.9/subprocess.py:507,</span> in <span class="ni">run</span><span class="nt">(input, capture_output, timeout, check, *popenargs, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">505</span> <span class="k">with</span> <span class="n">Popen</span><span class="p">(</span><span class="o">*</span><span class="n">popenargs</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="k">as</span> <span class="n">process</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">506</span>     <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">507</span>         <span class="n">stdout</span><span class="p">,</span> <span class="n">stderr</span> <span class="o">=</span> <span class="n">process</span><span class="o">.</span><span class="n">communicate</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">508</span>     <span class="k">except</span> <span class="n">TimeoutExpired</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">509</span>         <span class="n">process</span><span class="o">.</span><span class="n">kill</span><span class="p">()</span>
-
-<span class="nn">File ~/anaconda3/lib/python3.9/subprocess.py:1126,</span> in <span class="ni">Popen.communicate</span><span class="nt">(self, input, timeout)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1124</span>         <span class="n">stderr</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-<span class="g g-Whitespace">   </span><span class="mi">1125</span>         <span class="bp">self</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-<span class="ne">-&gt; </span><span class="mi">1126</span>     <span class="bp">self</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
-<span class="g g-Whitespace">   </span><span class="mi">1127</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1128</span>     <span class="k">if</span> <span class="n">timeout</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-
-<span class="nn">File ~/anaconda3/lib/python3.9/subprocess.py:1189,</span> in <span class="ni">Popen.wait</span><span class="nt">(self, timeout)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1187</span>     <span class="n">endtime</span> <span class="o">=</span> <span class="n">_time</span><span class="p">()</span> <span class="o">+</span> <span class="n">timeout</span>
-<span class="g g-Whitespace">   </span><span class="mi">1188</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1189</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_wait</span><span class="p">(</span><span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1190</span> <span class="k">except</span> <span class="ne">KeyboardInterrupt</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1191</span>     <span class="c1"># https://bugs.python.org/issue25942</span>
-<span class="g g-Whitespace">   </span><span class="mi">1192</span>     <span class="c1"># The first keyboard interrupt waits briefly for the child to</span>
-<span class="g g-Whitespace">   </span><span class="mi">1193</span>     <span class="c1"># exit under the common assumption that it also received the ^C</span>
-<span class="g g-Whitespace">   </span><span class="mi">1194</span>     <span class="c1"># generated SIGINT and will exit rapidly.</span>
-<span class="g g-Whitespace">   </span><span class="mi">1195</span>     <span class="k">if</span> <span class="n">timeout</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-
-<span class="nn">File ~/anaconda3/lib/python3.9/subprocess.py:1917,</span> in <span class="ni">Popen._wait</span><span class="nt">(self, timeout)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1915</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">returncode</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1916</span>     <span class="k">break</span>  <span class="c1"># Another thread waited.</span>
-<span class="ne">-&gt; </span><span class="mi">1917</span> <span class="p">(</span><span class="n">pid</span><span class="p">,</span> <span class="n">sts</span><span class="p">)</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_try_wait</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1918</span> <span class="c1"># Check the pid and loop as waitpid has been known to</span>
-<span class="g g-Whitespace">   </span><span class="mi">1919</span> <span class="c1"># return 0 even without WNOHANG in odd situations.</span>
-<span class="g g-Whitespace">   </span><span class="mi">1920</span> <span class="c1"># http://bugs.python.org/issue14396.</span>
-<span class="g g-Whitespace">   </span><span class="mi">1921</span> <span class="k">if</span> <span class="n">pid</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">pid</span><span class="p">:</span>
-
-<span class="nn">File ~/anaconda3/lib/python3.9/subprocess.py:1875,</span> in <span class="ni">Popen._try_wait</span><span class="nt">(self, wait_flags)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1873</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;All callers to this function MUST hold self._waitpid_lock.&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1874</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1875</span>     <span class="p">(</span><span class="n">pid</span><span class="p">,</span> <span class="n">sts</span><span class="p">)</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">waitpid</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pid</span><span class="p">,</span> <span class="n">wait_flags</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1876</span> <span class="k">except</span> <span class="ne">ChildProcessError</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1877</span>     <span class="c1"># This happens if SIGCLD is set to be ignored or waiting</span>
-<span class="g g-Whitespace">   </span><span class="mi">1878</span>     <span class="c1"># for child processes has otherwise been disabled for our</span>
-<span class="g g-Whitespace">   </span><span class="mi">1879</span>     <span class="c1"># process.  This child is dead, we can&#39;t get the status.</span>
-<span class="g g-Whitespace">   </span><span class="mi">1880</span>     <span class="n">pid</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pid</span>
-
-<span class="ne">KeyboardInterrupt</span>: 
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Descargando datos de Omega Cen...
+</pre></div>
+</div>
+<img alt="_images/1a60e0f1196be455eee48bc0308bed1a66f2e93d40e094516eb4f7b53863fdf7.png" src="_images/1a60e0f1196be455eee48bc0308bed1a66f2e93d40e094516eb4f7b53863fdf7.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- Insight Observacional del Gráfico ---
+1. Omega Cen exhibe el aplanamiento central clásico del modelo de King.
+2. M15 muestra una tendencia de ley de potencias escarpada hacia el centro,
+   huella del colapso del núcleo.
+3. CAVEAT DE DATOS: En radios muy pequeños (&lt; 0.4 arcmin), la densidad de M15
+   &#39;cae&#39;. ¡Esto NO es físico! Es el límite de resolución de Gaia. Las estrellas
+   están tan juntas que el software las confunde y las rechaza. Entender este
+   sesgo es la diferencia entre un analista de datos y un astrofísico.
 </pre></div>
 </div>
 </div>
@@ -765,7 +716,7 @@ El colapso se detiene gracias a las binarias. La energía orbital de un sistema 
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/3fe5271c2964d1a9d639c0b1a68b8dbc73db148fc2a5ceb6e8b968f538613ad2.png" src="_images/3fe5271c2964d1a9d639c0b1a68b8dbc73db148fc2a5ceb6e8b968f538613ad2.png" />
+<img alt="_images/de1d9b71ea1d12cb3e3bec8f7713d78d52f4db3b30ef2050ba28ec428d5d7e49.png" src="_images/de1d9b71ea1d12cb3e3bec8f7713d78d52f4db3b30ef2050ba28ec428d5d7e49.png" />
 </div>
 </div>
 </section>
@@ -860,13 +811,7 @@ $<span class="math notranslate nohighlight">\(r_J = R_G \left( \frac{M_c}{3 M_G}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;&gt;:31: SyntaxWarning: invalid escape sequence &#39;\P&#39;
-&lt;&gt;:31: SyntaxWarning: invalid escape sequence &#39;\P&#39;
-/tmp/ipykernel_1215/4012165736.py:31: SyntaxWarning: invalid escape sequence &#39;\P&#39;
-  plt.ylabel(&#39;Potencial Gravitacional Efectivo $\Phi$&#39;, fontsize=13)
-</pre></div>
-</div>
-<img alt="_images/e5199591ce0993187b72e1ea7f46ea3243f689a6cc8314cd9939ceacb356de37.png" src="_images/e5199591ce0993187b72e1ea7f46ea3243f689a6cc8314cd9939ceacb356de37.png" />
+<img alt="_images/1c0c9338bad14fad751d9c2cc4646321c992f38a7ba9264eec1a5e30a12c2dc2.png" src="_images/1c0c9338bad14fad751d9c2cc4646321c992f38a7ba9264eec1a5e30a12c2dc2.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- Insight Físico ---
 Las estrellas aceleradas por equipartición no necesitan infinita
 energía para escapar. Solo necesitan la energía suficiente para
@@ -1019,17 +964,7 @@ Si <strong><span class="math notranslate nohighlight">\(\Delta E_{cúmulo} &gt; 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;&gt;:27: SyntaxWarning: invalid escape sequence &#39;\o&#39;
-&lt;&gt;:30: SyntaxWarning: invalid escape sequence &#39;\D&#39;
-&lt;&gt;:27: SyntaxWarning: invalid escape sequence &#39;\o&#39;
-&lt;&gt;:30: SyntaxWarning: invalid escape sequence &#39;\D&#39;
-/tmp/ipykernel_826/3620459040.py:27: SyntaxWarning: invalid escape sequence &#39;\o&#39;
-  plt.plot(b, ratio, lw=2.5, label=f&#39;GMC: $M_p = 10^{{{int(np.log10(M_p))}}}$ $M_\odot$&#39;)
-/tmp/ipykernel_826/3620459040.py:30: SyntaxWarning: invalid escape sequence &#39;\D&#39;
-  plt.axhline(1.0, color=&#39;r&#39;, linestyle=&#39;--&#39;, label=&#39;Límite de Destrucción ($\Delta E = |E_{bind}|$)&#39;)
-</pre></div>
-</div>
-<img alt="_images/5cdf1b863c2db29c734b134c706fa4d60e42cc16d6713594c175a023fd2342df.png" src="_images/5cdf1b863c2db29c734b134c706fa4d60e42cc16d6713594c175a023fd2342df.png" />
+<img alt="_images/3a75932a994e8ff3d2bb9537b0e0a53bdc3a1b23bc20142e1dc59536cc78e87a.png" src="_images/3a75932a994e8ff3d2bb9537b0e0a53bdc3a1b23bc20142e1dc59536cc78e87a.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- Insight Físico del Modelo ---
 Observe la brutal dependencia con b^-4. Un encuentro con una nube masiva
 a menos de 10-15 pc inyecta más energía que la energía gravitacional total
@@ -1119,13 +1054,61 @@ del cúmulo (Ratio &gt; 1). El cúmulo es desgarrado antes de salir de su galaxi
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Descargando cinemática de la cuna natal de Orión vía wget...
 </pre></div>
 </div>
-<img alt="_images/a70bdc76d0fdfe9cbeb75496afcc7012ddb83d02255bbf6747fdef8d0b6986d9.png" src="_images/a70bdc76d0fdfe9cbeb75496afcc7012ddb83d02255bbf6747fdef8d0b6986d9.png" />
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- Discusión Observacional: El Efecto de la Cuna ---
-El &#39;Quiver Plot&#39; muestra flechas que apuntan en direcciones caóticas y radiales
-desde diferentes sub-centros. Restando el movimiento del grupo, vemos que el
-complejo no está virializado (ordenado); está sufriendo CALENTAMIENTO DINÁMICO.
-Las interacciones con la nube circundante inyectan energía cinética a estas estrellas,
-haciendo que el complejo se expanda y se disuelva activamente en el campo galáctico.
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="nn">Input In [7],</span> in <span class="ni">&lt;cell line: 24&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">21</span> <span class="n">encoded_payload</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">parse</span><span class="o">.</span><span class="n">urlencode</span><span class="p">(</span><span class="n">payload</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">23</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Descargando cinemática de la cuna natal de Orión vía wget...&quot;</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">24</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s2">&quot;wget&quot;</span><span class="p">,</span> <span class="s2">&quot;--post-data&quot;</span><span class="p">,</span> <span class="n">encoded_payload</span><span class="p">,</span> <span class="s2">&quot;-O&quot;</span><span class="p">,</span> <span class="s2">&quot;orion_cradle.csv&quot;</span><span class="p">,</span> <span class="n">tap_url</span><span class="p">,</span> <span class="s2">&quot;-q&quot;</span><span class="p">],</span> <span class="n">check</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">25</span> <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;orion_cradle.csv&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">27</span> <span class="c1"># 2. Filtrado para limpieza visual</span>
+<span class="g g-Whitespace">     </span><span class="mi">28</span> <span class="c1"># Nos enfocamos en el grueso del movimiento del complejo para ver la dispersión</span>
+
+<span class="nn">File ~/anaconda3/lib/python3.9/subprocess.py:507,</span> in <span class="ni">run</span><span class="nt">(input, capture_output, timeout, check, *popenargs, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">505</span> <span class="k">with</span> <span class="n">Popen</span><span class="p">(</span><span class="o">*</span><span class="n">popenargs</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="k">as</span> <span class="n">process</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">506</span>     <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">507</span>         <span class="n">stdout</span><span class="p">,</span> <span class="n">stderr</span> <span class="o">=</span> <span class="n">process</span><span class="o">.</span><span class="n">communicate</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">508</span>     <span class="k">except</span> <span class="n">TimeoutExpired</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">509</span>         <span class="n">process</span><span class="o">.</span><span class="n">kill</span><span class="p">()</span>
+
+<span class="nn">File ~/anaconda3/lib/python3.9/subprocess.py:1126,</span> in <span class="ni">Popen.communicate</span><span class="nt">(self, input, timeout)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1124</span>         <span class="n">stderr</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1125</span>         <span class="bp">self</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="ne">-&gt; </span><span class="mi">1126</span>     <span class="bp">self</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1127</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1128</span>     <span class="k">if</span> <span class="n">timeout</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+
+<span class="nn">File ~/anaconda3/lib/python3.9/subprocess.py:1189,</span> in <span class="ni">Popen.wait</span><span class="nt">(self, timeout)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1187</span>     <span class="n">endtime</span> <span class="o">=</span> <span class="n">_time</span><span class="p">()</span> <span class="o">+</span> <span class="n">timeout</span>
+<span class="g g-Whitespace">   </span><span class="mi">1188</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1189</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_wait</span><span class="p">(</span><span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1190</span> <span class="k">except</span> <span class="ne">KeyboardInterrupt</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1191</span>     <span class="c1"># https://bugs.python.org/issue25942</span>
+<span class="g g-Whitespace">   </span><span class="mi">1192</span>     <span class="c1"># The first keyboard interrupt waits briefly for the child to</span>
+<span class="g g-Whitespace">   </span><span class="mi">1193</span>     <span class="c1"># exit under the common assumption that it also received the ^C</span>
+<span class="g g-Whitespace">   </span><span class="mi">1194</span>     <span class="c1"># generated SIGINT and will exit rapidly.</span>
+<span class="g g-Whitespace">   </span><span class="mi">1195</span>     <span class="k">if</span> <span class="n">timeout</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+
+<span class="nn">File ~/anaconda3/lib/python3.9/subprocess.py:1917,</span> in <span class="ni">Popen._wait</span><span class="nt">(self, timeout)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1915</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">returncode</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1916</span>     <span class="k">break</span>  <span class="c1"># Another thread waited.</span>
+<span class="ne">-&gt; </span><span class="mi">1917</span> <span class="p">(</span><span class="n">pid</span><span class="p">,</span> <span class="n">sts</span><span class="p">)</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_try_wait</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1918</span> <span class="c1"># Check the pid and loop as waitpid has been known to</span>
+<span class="g g-Whitespace">   </span><span class="mi">1919</span> <span class="c1"># return 0 even without WNOHANG in odd situations.</span>
+<span class="g g-Whitespace">   </span><span class="mi">1920</span> <span class="c1"># http://bugs.python.org/issue14396.</span>
+<span class="g g-Whitespace">   </span><span class="mi">1921</span> <span class="k">if</span> <span class="n">pid</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">pid</span><span class="p">:</span>
+
+<span class="nn">File ~/anaconda3/lib/python3.9/subprocess.py:1875,</span> in <span class="ni">Popen._try_wait</span><span class="nt">(self, wait_flags)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1873</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;All callers to this function MUST hold self._waitpid_lock.&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1874</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1875</span>     <span class="p">(</span><span class="n">pid</span><span class="p">,</span> <span class="n">sts</span><span class="p">)</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">waitpid</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pid</span><span class="p">,</span> <span class="n">wait_flags</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1876</span> <span class="k">except</span> <span class="ne">ChildProcessError</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1877</span>     <span class="c1"># This happens if SIGCLD is set to be ignored or waiting</span>
+<span class="g g-Whitespace">   </span><span class="mi">1878</span>     <span class="c1"># for child processes has otherwise been disabled for our</span>
+<span class="g g-Whitespace">   </span><span class="mi">1879</span>     <span class="c1"># process.  This child is dead, we can&#39;t get the status.</span>
+<span class="g g-Whitespace">   </span><span class="mi">1880</span>     <span class="n">pid</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pid</span>
+
+<span class="ne">KeyboardInterrupt</span>: 
 </pre></div>
 </div>
 </div>

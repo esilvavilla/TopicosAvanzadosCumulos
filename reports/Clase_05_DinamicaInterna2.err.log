@@ -34,6 +34,6 @@ Here is a preview of the cell contents:
 -------------------
 ['import subprocess', 'import pandas as pd', 'import numpy as np', 'import matplotlib.pyplot as plt', 'import urllib.parse']
 ...
-['print("   huella del colapso del núcleo.")', 'print("3. CAVEAT DE DATOS: En radios muy pequeños (< 0.4 arcmin), la densidad de M15")', 'print("   \'cae\'. ¡Esto NO es físico! Es el límite de resolución de Gaia. Las estrellas")', 'print("   están tan juntas que el software las confunde y las rechaza. Entender este")', 'print("   sesgo es la diferencia entre un analista de datos y un astrofísico.")']
+['print("El \'Quiver Plot\' muestra flechas que apuntan en direcciones caóticas y radiales")', 'print("desde diferentes sub-centros. Restando el movimiento del grupo, vemos que el")', 'print("complejo no está virializado (ordenado); está sufriendo CALENTAMIENTO DINÁMICO.")', 'print("Las interacciones con la nube circundante inyectan energía cinética a estas estrellas,")', 'print("haciendo que el complejo se expanda y se disuelva activamente en el campo galáctico.")']
 -------------------
 
