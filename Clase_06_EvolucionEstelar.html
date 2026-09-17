@@ -1,0 +1,1140 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Clase 6: Evolución Estelar &#8212; Tópicos Avanzados Cúmulos y Formación Estelar</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Clase_06_EvolucionEstelar';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Clase 5: Dinámica Interna 2" href="Clase_05_DinamicaInterna2.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/UdeA.png" class="logo__image only-light" alt="Tópicos Avanzados Cúmulos y Formación Estelar - Home"/>
+    <img src="_static/UdeA.png" class="logo__image only-dark pst-js-only" alt="Tópicos Avanzados Cúmulos y Formación Estelar - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Formación y Evolución de Cúmulos Estelares
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Clase_01_NubeEstatica.html">Clase 1: Nube estática</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Clase_02_ColapsoFormacion.html">Clase 2: Colapso y Formación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Clase_03_IMF_DinamicaInicial.html">Clase 3: Función Inicial de Masa (IMF) y Dinámica inicial de un Cúmulo Estelar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Clase_04_DinamicaInterna1.html">Clase 4: Dinámica Interna 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Clase_05_DinamicaInterna2.html">Clase 5: Dinámica Interna 2</a></li>
+
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Clase 6: Evolución Estelar</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FClase_06_EvolucionEstelar.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Clase_06_EvolucionEstelar.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Clase 6: Evolución Estelar</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objetivos">Objetivos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#el-diagrama-hr-el-espacio-de-fase-de-la-evolucion-estelar">1. El Diagrama HR: El Espacio de Fase de la Evolución Estelar</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#el-plano-teorico-log-l-vs-log-t-eff">1.1 El Plano Teórico (<span class="math notranslate nohighlight">\(\log L\)</span> vs. <span class="math notranslate nohighlight">\(\log T_{eff}\)</span>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#el-plano-observacional-m-v-vs-indice-de-color">1.2 El Plano Observacional (<span class="math notranslate nohighlight">\(M_V\)</span> vs. Índice de Color)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#el-rol-de-la-metalicidad-z-y-la-opacidad">2. El Rol de la Metalicidad (<span class="math notranslate nohighlight">\(Z\)</span>) y la Opacidad</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#la-ecuacion-de-transporte-radiativo">2.1 La Ecuación de Transporte Radiativo</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#line-blanketing-y-el-efecto-observacional-de-z">2.2 Line Blanketing y el Efecto Observacional de <span class="math notranslate nohighlight">\(Z\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comparacion-de-z-con-el-telescopio-espacial-hubble-hst-y-sdss">2.3 Comparación de <span class="math notranslate nohighlight">\(Z\)</span> con el Telescopio Espacial Hubble (HST) y SDSS</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cronometria-estelar-el-main-sequence-turn-off-msto">3. Cronometría Estelar: El Main Sequence Turn-Off (MSTO)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivacion-de-la-edad-de-la-secuencia-principal">3.1 Derivación de la Edad de la Secuencia Principal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#el-punto-de-quiebre-msto">3.2 El Punto de Quiebre (MSTO)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relacion-directa-edad-vs-luminosidad-del-msto">3.3 Relación Directa: Edad vs. Luminosidad del MSTO</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#taller-computacional-extraccion-multi-base-gaia-sdss">4. Taller Computacional: Extracción Multi-Base (Gaia + SDSS)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#literatura-relevante-recomendada-estado-del-arte">5. Literatura Relevante Recomendada (Estado del Arte)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicios-propuestos-y-solucionario">6. Ejercicios Propuestos y Solucionario</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="clase-6-evolucion-estelar">
+<h1>Clase 6: Evolución Estelar<a class="headerlink" href="#clase-6-evolucion-estelar" title="Link to this heading">#</a></h1>
+<section id="objetivos">
+<h2>Objetivos<a class="headerlink" href="#objetivos" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>El Diagrama HR: El Espacio de Fase de la Evolución Estelar.</p></li>
+<li><p>El Rol de la Metalicidad (<span class="math notranslate nohighlight">\(Z\)</span>) y la Opacidad.</p></li>
+<li><p>Cronometría Estelar: El Main Sequence Turn-Off (MSTO).</p></li>
+</ol>
+</section>
+<section id="el-diagrama-hr-el-espacio-de-fase-de-la-evolucion-estelar">
+<h2>1. El Diagrama HR: El Espacio de Fase de la Evolución Estelar<a class="headerlink" href="#el-diagrama-hr-el-espacio-de-fase-de-la-evolucion-estelar" title="Link to this heading">#</a></h2>
+<p>El Diagrama HR es el análogo astronómico de la tabla periódica. Nos permite clasificar el estado termodinámico y evolutivo de una estrella.</p>
+<section id="el-plano-teorico-log-l-vs-log-t-eff">
+<h3>1.1 El Plano Teórico (<span class="math notranslate nohighlight">\(\log L\)</span> vs. <span class="math notranslate nohighlight">\(\log T_{eff}\)</span>)<a class="headerlink" href="#el-plano-teorico-log-l-vs-log-t-eff" title="Link to this heading">#</a></h3>
+<p>Teóricamente, una estrella en equilibrio térmico e hidrostático irradia energía como un cuerpo negro esférico. La Ley de Stefan-Boltzmann vincula la luminosidad intrínseca (<span class="math notranslate nohighlight">\(L\)</span>), el radio estelar (<span class="math notranslate nohighlight">\(R\)</span>) y la temperatura efectiva de la fotósfera (<span class="math notranslate nohighlight">\(T_{eff}\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[L = 4\pi R^2 \sigma T_{eff}^4\]</div>
+<p>Tomando logaritmos a ambos lados, obtenemos la ecuación de las líneas de radio constante en el plano HR teórico:</p>
+<div class="math notranslate nohighlight">
+\[\log L = 2 \log R + 4 \log T_{eff} + \log(4\pi\sigma)\]</div>
+<p>En el plano teórico, la masa de la estrella determina su posición exacta a lo largo de una franja diagonal conocida como la Secuencia Principal (MS), gobernada por la relación masa-luminosidad (<span class="math notranslate nohighlight">\(L \propto M^{3.5}\)</span>).</p>
+</section>
+<section id="el-plano-observacional-m-v-vs-indice-de-color">
+<h3>1.2 El Plano Observacional (<span class="math notranslate nohighlight">\(M_V\)</span> vs. Índice de Color)<a class="headerlink" href="#el-plano-observacional-m-v-vs-indice-de-color" title="Link to this heading">#</a></h3>
+<p>Nuestros telescopios no miden <span class="math notranslate nohighlight">\(L\)</span> ni <span class="math notranslate nohighlight">\(T_{eff}\)</span> directamente. Miden flujos fotónicos a través de filtros (ej. fotometría <span class="math notranslate nohighlight">\(B, V, G, u, r\)</span>).</p>
+<ul>
+<li><p><strong>De Luminosidad a Magnitud Absoluta:</strong></p>
+<div class="math notranslate nohighlight">
+\[M_\lambda = -2.5 \log\left(\frac{L_\lambda}{L_0}\right)\]</div>
+</li>
+<li><p><strong>De Temperatura a Color:</strong> Por la Ley de Planck y el desplazamiento de Wien, una estrella caliente emite más fotones azules que rojos. El índice de color (la resta de dos magnitudes, ej. <span class="math notranslate nohighlight">\(B-V\)</span> o <span class="math notranslate nohighlight">\(G_{BP}-G_{RP}\)</span>) es un proxy directo (pero no lineal) del inverso de la temperatura.</p></li>
+</ul>
+<p><strong>La Transformación Observacional:</strong>
+Para graficar el diagrama observacional intrínseco, debemos corregir las magnitudes aparentes (<span class="math notranslate nohighlight">\(m_\lambda\)</span>) midiendo la distancia (<span class="math notranslate nohighlight">\(d\)</span> en parsecs) mediante el <strong>módulo de distancia</strong> y corrigiendo la extinción interestelar (<span class="math notranslate nohighlight">\(A_\lambda\)</span>) producida por el polvo en la línea de visión:</p>
+<div class="math notranslate nohighlight">
+\[M_\lambda = m_\lambda - 5 \log_{10}(d) + 5 - A_\lambda\]</div>
+<p>El color intrínseco se corrige por el <strong>enrojecimiento</strong> (<span class="math notranslate nohighlight">\(E\)</span>):
+$<span class="math notranslate nohighlight">\((B-V)_0 = (B-V)_{obs} - E(B-V)\)</span>$</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">subprocess</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">urllib.parse</span>
+
+<span class="c1"># Consulta ADQL a Gaia DR3 para el cúmulo M4 (NGC 6121)</span>
+<span class="n">adql_m4</span> <span class="o">=</span> <span class="s2">&quot;SELECT phot_g_mean_mag, bp_rp FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT(&#39;ICRS&#39;, ra, dec), CIRCLE(&#39;ICRS&#39;, 245.89, -26.52, 0.2)) AND parallax BETWEEN 0.4 AND 0.6 AND pmra BETWEEN -15 AND -10 AND pmdec BETWEEN -22 AND -16&quot;</span>
+<span class="n">url_tap</span> <span class="o">=</span> <span class="s2">&quot;https://gea.esac.esa.int/tap-server/tap/sync&quot;</span>
+<span class="n">payload</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;request&#39;</span><span class="p">:</span> <span class="s1">&#39;doQuery&#39;</span><span class="p">,</span> <span class="s1">&#39;lang&#39;</span><span class="p">:</span> <span class="s1">&#39;adql&#39;</span><span class="p">,</span> <span class="s1">&#39;format&#39;</span><span class="p">:</span> <span class="s1">&#39;csv&#39;</span><span class="p">,</span> <span class="s1">&#39;query&#39;</span><span class="p">:</span> <span class="n">adql_m4</span><span class="p">}</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Descargando fotometría de M4...&quot;</span><span class="p">)</span>
+<span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s2">&quot;wget&quot;</span><span class="p">,</span> <span class="s2">&quot;--post-data&quot;</span><span class="p">,</span> <span class="n">urllib</span><span class="o">.</span><span class="n">parse</span><span class="o">.</span><span class="n">urlencode</span><span class="p">(</span><span class="n">payload</span><span class="p">),</span> <span class="s2">&quot;-O&quot;</span><span class="p">,</span> <span class="s2">&quot;m4_cmd.csv&quot;</span><span class="p">,</span> <span class="n">url_tap</span><span class="p">,</span> <span class="s2">&quot;-q&quot;</span><span class="p">])</span>
+<span class="n">df_m4</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;m4_cmd.csv&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">df_m4</span><span class="p">[</span><span class="s1">&#39;bp_rp&#39;</span><span class="p">],</span> <span class="n">df_m4</span><span class="p">[</span><span class="s1">&#39;phot_g_mean_mag&#39;</span><span class="p">],</span> <span class="n">s</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">invert_yaxis</span><span class="p">()</span> <span class="c1"># Convención: Mayor luminosidad (menor magnitud) arriba</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Color $G_</span><span class="si">{BP}</span><span class="s1"> - G_</span><span class="si">{RP}</span><span class="s1">$ (Temperatura $\rightarrow$ Frío)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Magnitud Aparente $G$ (Luminosidad $\uparrow$)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Diagrama Color-Magnitud (CMD) - Cúmulo Globular M4&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Descargando fotometría de M4...
+</pre></div>
+</div>
+<img alt="_images/59acb68cffd66eedda138f4c835addfbf7ebf56e9638b284db3d182e6dd38b53.png" src="_images/59acb68cffd66eedda138f4c835addfbf7ebf56e9638b284db3d182e6dd38b53.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="el-rol-de-la-metalicidad-z-y-la-opacidad">
+<h2>2. El Rol de la Metalicidad (<span class="math notranslate nohighlight">\(Z\)</span>) y la Opacidad<a class="headerlink" href="#el-rol-de-la-metalicidad-z-y-la-opacidad" title="Link to this heading">#</a></h2>
+<p>En astrofísica, cualquier elemento más pesado que el Helio se denomina “metal”. La fracción de masa estelar se divide en Hidrógeno (<span class="math notranslate nohighlight">\(X\)</span>), Helio (<span class="math notranslate nohighlight">\(Y\)</span>) y metales (<span class="math notranslate nohighlight">\(Z\)</span>), tal que <span class="math notranslate nohighlight">\(X + Y + Z = 1\)</span>. Para el Sol, <span class="math notranslate nohighlight">\(Z \approx 0.014\)</span> (el 1.4%).</p>
+<p>A pesar de ser una fracción minúscula, <span class="math notranslate nohighlight">\(Z\)</span> domina por completo la arquitectura exterior de la estrella a través de la Opacidad (<span class="math notranslate nohighlight">\(\kappa\)</span>).</p>
+<section id="la-ecuacion-de-transporte-radiativo">
+<h3>2.1 La Ecuación de Transporte Radiativo<a class="headerlink" href="#la-ecuacion-de-transporte-radiativo" title="Link to this heading">#</a></h3>
+<p>El gradiente de temperatura en el interior de una estrella está gobernado por qué tan “opaco” es el material al paso de los fotones:</p>
+<div class="math notranslate nohighlight">
+\[\frac{dT}{dr} = -\frac{3 \kappa \rho L_r}{16 \pi a c r^2 T^3}\]</div>
+<p>donde <span class="math notranslate nohighlight">\(\kappa\)</span> es la opacidad de <span class="math notranslate nohighlight">\(Rosseland\)</span>. En las capas exteriores, la opacidad dominante es la de <span class="math notranslate nohighlight">\(Kramers\)</span> (transiciones bound-free y free-free), que depende de la densidad y la temperatura:</p>
+<div class="math notranslate nohighlight">
+\[\kappa \propto \rho T^{-3.5}\]</div>
+</section>
+<section id="line-blanketing-y-el-efecto-observacional-de-z">
+<h3>2.2 Line Blanketing y el Efecto Observacional de <span class="math notranslate nohighlight">\(Z\)</span><a class="headerlink" href="#line-blanketing-y-el-efecto-observacional-de-z" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Efecto Estructural:</strong> Si un cúmulo es “rico en metales” (alto <span class="math notranslate nohighlight">\(Z\)</span>, como los cúmulos abiertos), sus estrellas tienen una alta concentración de electrones ligados que absorben fotones UV y ópticos. Esta alta opacidad en la envoltura bloquea la radiación, obligando a la estrella a expandirse para mantener el equilibrio. Mayor radio (<span class="math notranslate nohighlight">\(R \uparrow\)</span>) con misma luminosidad implica menor temperatura (<span class="math notranslate nohighlight">\(T_{eff} \downarrow\)</span>). <strong>Las estrellas ricas en metales son más rojas y frías.</strong></p></li>
+<li><p><strong>Subenanas (Subdwarfs):</strong> Si un cúmulo es “pobre en metales” (bajo <span class="math notranslate nohighlight">\(Z\)</span>, como los cúmulos globulares del halo galáctico), la radiación escapa fácilmente. Las estrellas son más compactas y calientes, desplazando la Secuencia Principal hacia la izquierda (azul) en el diagrama HR observacional.</p></li>
+<li><p><strong>Line Blanketing (El filtro <span class="math notranslate nohighlight">\(u\)</span>):</strong> Los metales absorben abrumadoramente en el espectro ultravioleta/azul. Utilizando fotometría del SDSS (filtro <span class="math notranslate nohighlight">\(u\)</span>), el índice de color <span class="math notranslate nohighlight">\(u-g\)</span> es extremadamente sensible a <span class="math notranslate nohighlight">\(Z\)</span>. Esto nos permite clasificar espectralmente las poblaciones sin tomar un solo espectro.</p></li>
+</ul>
+</section>
+<section id="comparacion-de-z-con-el-telescopio-espacial-hubble-hst-y-sdss">
+<h3>2.3 Comparación de <span class="math notranslate nohighlight">\(Z\)</span> con el Telescopio Espacial Hubble (HST) y SDSS<a class="headerlink" href="#comparacion-de-z-con-el-telescopio-espacial-hubble-hst-y-sdss" title="Link to this heading">#</a></h3>
+<p>Para ilustrar esto, consultaremos el “HST ACS Globular Cluster Treasury” (Sarajedini et al. 2007) a través del endpoint TAP de VizieR, un repositorio maestro de datos de la NASA/ESA. Compararemos 47 Tucanae (Rico en metales, halo interior, <span class="math notranslate nohighlight">\([Fe/H]\approx −0.7\)</span>) y NGC 6397 (Muy pobre en metales, halo exterior, <span class="math notranslate nohighlight">\([Fe/H]\approx−2.0\)</span>).
+Ambos tienen edades similares (<span class="math notranslate nohighlight">\(\sim12-13\)</span> Gyr), aislando el efecto puro de la metalicidad.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">subprocess</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">urllib.parse</span>
+
+<span class="k">def</span> <span class="nf">fetch_cluster_clean</span><span class="p">(</span><span class="n">ra</span><span class="p">,</span> <span class="n">dec</span><span class="p">,</span> <span class="n">radius</span><span class="p">,</span> <span class="n">plx_center</span><span class="p">,</span> <span class="n">plx_tol</span><span class="p">,</span> <span class="n">pmra_val</span><span class="p">,</span> <span class="n">pmdec_val</span><span class="p">,</span> <span class="n">pm_tol</span><span class="p">,</span> <span class="n">dm</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Descarga segura filtrando estrictamente por movimiento propio y aplicando</span>
+<span class="sd">    un Módulo de Distancia (DM) fijo para evitar la dispersión por errores de paralaje individual.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">query</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    SELECT phot_g_mean_mag, bp_rp</span>
+<span class="s2">    FROM gaiadr3.gaia_source</span>
+<span class="s2">    WHERE CONTAINS(POINT(&#39;ICRS&#39;, ra, dec), CIRCLE(&#39;ICRS&#39;, </span><span class="si">{</span><span class="n">ra</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">dec</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">radius</span><span class="si">}</span><span class="s2">)) = 1</span>
+<span class="s2">      AND parallax BETWEEN </span><span class="si">{</span><span class="n">plx_center</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">plx_tol</span><span class="si">}</span><span class="s2"> AND </span><span class="si">{</span><span class="n">plx_center</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">plx_tol</span><span class="si">}</span>
+<span class="s2">      AND pmra BETWEEN </span><span class="si">{</span><span class="n">pmra_val</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">pm_tol</span><span class="si">}</span><span class="s2"> AND </span><span class="si">{</span><span class="n">pmra_val</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">pm_tol</span><span class="si">}</span>
+<span class="s2">      AND pmdec BETWEEN </span><span class="si">{</span><span class="n">pmdec_val</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">pm_tol</span><span class="si">}</span><span class="s2"> AND </span><span class="si">{</span><span class="n">pmdec_val</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">pm_tol</span><span class="si">}</span>
+<span class="s2">      AND phot_g_mean_mag &lt; 20.0</span>
+<span class="s2">    &quot;&quot;&quot;</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://gea.esac.esa.int/tap-server/tap/sync&quot;</span>
+    <span class="n">payload</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;request&#39;</span><span class="p">:</span> <span class="s1">&#39;doQuery&#39;</span><span class="p">,</span> <span class="s1">&#39;lang&#39;</span><span class="p">:</span> <span class="s1">&#39;adql&#39;</span><span class="p">,</span> <span class="s1">&#39;format&#39;</span><span class="p">:</span> <span class="s1">&#39;csv&#39;</span><span class="p">,</span> <span class="s1">&#39;query&#39;</span><span class="p">:</span> <span class="n">query</span><span class="p">}</span>
+    <span class="n">fname</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">.csv&quot;</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Descargando miembros limpios para </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">...&quot;</span><span class="p">)</span>
+    <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s2">&quot;wget&quot;</span><span class="p">,</span> <span class="s2">&quot;--post-data&quot;</span><span class="p">,</span> <span class="n">urllib</span><span class="o">.</span><span class="n">parse</span><span class="o">.</span><span class="n">urlencode</span><span class="p">(</span><span class="n">payload</span><span class="p">),</span> <span class="s2">&quot;-O&quot;</span><span class="p">,</span> <span class="n">fname</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="s2">&quot;-q&quot;</span><span class="p">])</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span>
+
+    <span class="c1"># Conversión a Magnitud Absoluta usando Módulo de Distancia fijo (DM = 5*log(d) - 5)</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;M_G&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;phot_g_mean_mag&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">dm</span>
+    <span class="k">return</span> <span class="n">df</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;--- Extracción de Cúmulos Globulares con Filtro Cinemático Estricto ---&quot;</span><span class="p">)</span>
+
+<span class="c1"># 1. 47 Tucanae (NGC 104): [M/H] ~ -0.7 (Más metálica), Distancia ~ 4.5 kpc (DM ~ 13.27)</span>
+<span class="c1"># Centro: RA=6.023, Dec=-72.081 | Plx ~ 0.22 mas | PMra ~ 5.2, PMdec ~ -2.5</span>
+<span class="n">df_47tuc</span> <span class="o">=</span> <span class="n">fetch_cluster_clean</span><span class="p">(</span>
+    <span class="n">ra</span><span class="o">=</span><span class="mf">6.023</span><span class="p">,</span> <span class="n">dec</span><span class="o">=-</span><span class="mf">72.081</span><span class="p">,</span> <span class="n">radius</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span>
+    <span class="n">plx_center</span><span class="o">=</span><span class="mf">0.22</span><span class="p">,</span> <span class="n">plx_tol</span><span class="o">=</span><span class="mf">0.08</span><span class="p">,</span>
+    <span class="n">pmra_val</span><span class="o">=</span><span class="mf">5.2</span><span class="p">,</span> <span class="n">pmdec_val</span><span class="o">=-</span><span class="mf">2.5</span><span class="p">,</span> <span class="n">pm_tol</span><span class="o">=</span><span class="mf">1.2</span><span class="p">,</span>
+    <span class="n">dm</span><span class="o">=</span><span class="mf">13.27</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;47tuc_clean&quot;</span>
+<span class="p">)</span>
+
+<span class="c1"># 2. NGC 6397: [M/H] ~ -2.0 (Pobre en metales / Subenanas), Distancia ~ 2.3 kpc (DM ~ 11.82)</span>
+<span class="c1"># Centro: RA=265.18, Dec=-53.67 | Plx ~ 0.43 mas | PMra ~ 3.3, PMdec ~ -17.6</span>
+<span class="n">df_n6397</span> <span class="o">=</span> <span class="n">fetch_cluster_clean</span><span class="p">(</span>
+    <span class="n">ra</span><span class="o">=</span><span class="mf">265.18</span><span class="p">,</span> <span class="n">dec</span><span class="o">=-</span><span class="mf">53.67</span><span class="p">,</span> <span class="n">radius</span><span class="o">=</span><span class="mf">0.25</span><span class="p">,</span>
+    <span class="n">plx_center</span><span class="o">=</span><span class="mf">0.43</span><span class="p">,</span> <span class="n">plx_tol</span><span class="o">=</span><span class="mf">0.10</span><span class="p">,</span>
+    <span class="n">pmra_val</span><span class="o">=</span><span class="mf">3.3</span><span class="p">,</span> <span class="n">pmdec_val</span><span class="o">=-</span><span class="mf">17.6</span><span class="p">,</span> <span class="n">pm_tol</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span>
+    <span class="n">dm</span><span class="o">=</span><span class="mf">11.82</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;ngc6397_clean&quot;</span>
+<span class="p">)</span>
+
+<span class="c1"># ==========================================</span>
+<span class="c1"># VISUALIZACIÓN FÍSICAMENTE CONSISTENTE</span>
+<span class="c1"># ==========================================</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+
+<span class="c1"># NGC 6397 (Baja metalicidad) debe quedar a la izquierda (más azul)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">df_n6397</span><span class="p">[</span><span class="s1">&#39;bp_rp&#39;</span><span class="p">],</span> <span class="n">df_n6397</span><span class="p">[</span><span class="s1">&#39;M_G&#39;</span><span class="p">],</span> <span class="n">s</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span>
+            <span class="n">label</span><span class="o">=</span><span class="s1">&#39;NGC 6397 (Baja Metalicidad, [M/H] ~ -2.0)&#39;</span><span class="p">)</span>
+
+<span class="c1"># 47 Tucanae (Alta metalicidad) debe quedar a la derecha (más roja)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">df_47tuc</span><span class="p">[</span><span class="s1">&#39;bp_rp&#39;</span><span class="p">],</span> <span class="n">df_47tuc</span><span class="p">[</span><span class="s1">&#39;M_G&#39;</span><span class="p">],</span> <span class="n">s</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+            <span class="n">label</span><span class="o">=</span><span class="s1">&#39;47 Tucanae (Alta Metalicidad, [M/H] ~ -0.7)&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">invert_yaxis</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Color Intrínseco $G_</span><span class="si">{BP}</span><span class="s1"> - G_</span><span class="si">{RP}</span><span class="s1">$ (mag)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Magnitud Absoluta $M_G$ (mag)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Efecto de la Opacidad Metálica: Secuencia Principal y Subenanas&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">11</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper left&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="o">-</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mf">10.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">3.0</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Conclusión Física ---&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Al fijar los módulos de distancia y limpiar el campo con movimientos propios,&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;se aprecia claramente que NGC 6397 (azul) se desplaza hacia la izquierda en color&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;debido a su baja opacidad atmosférica (menor bloqueo de fotones),&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;formando la clásica secuencia de subenanas por debajo de 47 Tuc (roja).&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- Extracción de Cúmulos Globulares con Filtro Cinemático Estricto ---
+Descargando miembros limpios para 47tuc_clean...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Descargando miembros limpios para ngc6397_clean...
+</pre></div>
+</div>
+<img alt="_images/02156b2f1ba8bcea3d8cf3130575daf95590f5a4f8a98f0739198e7e3a7a681f.png" src="_images/02156b2f1ba8bcea3d8cf3130575daf95590f5a4f8a98f0739198e7e3a7a681f.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- Conclusión Física ---
+Al fijar los módulos de distancia y limpiar el campo con movimientos propios,
+se aprecia claramente que NGC 6397 (azul) se desplaza hacia la izquierda en color
+debido a su baja opacidad atmosférica (menor bloqueo de fotones),
+formando la clásica secuencia de subenanas por debajo de 47 Tuc (roja).
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="cronometria-estelar-el-main-sequence-turn-off-msto">
+<h2>3. Cronometría Estelar: El Main Sequence Turn-Off (MSTO)<a class="headerlink" href="#cronometria-estelar-el-main-sequence-turn-off-msto" title="Link to this heading">#</a></h2>
+<p>El Diagrama HR nos da el reloj más preciso del universo. ¿Cómo calculamos la edad de un cúmulo estelar?</p>
+<section id="derivacion-de-la-edad-de-la-secuencia-principal">
+<h3>3.1 Derivación de la Edad de la Secuencia Principal<a class="headerlink" href="#derivacion-de-la-edad-de-la-secuencia-principal" title="Link to this heading">#</a></h3>
+<p>El tiempo que una estrella pasa en la MS (<span class="math notranslate nohighlight">\(t_{MS}\)</span>) es proporcional a sus reservas de combustible (<span class="math notranslate nohighlight">\(M\)</span>) dividido por el ritmo al que lo consume (<span class="math notranslate nohighlight">\(L\)</span>):
+$<span class="math notranslate nohighlight">\(t_{MS} \propto \frac{M}{L}\)</span><span class="math notranslate nohighlight">\(
+Inyectando la relación masa-luminosidad empírica (\)</span>L \propto M^{3.5}<span class="math notranslate nohighlight">\():
+\)</span><span class="math notranslate nohighlight">\(t_{MS} \propto \frac{M}{M^{3.5}} = M^{-2.5}\)</span><span class="math notranslate nohighlight">\(
+Normalizando con los valores solares (\)</span>t_\odot \approx 10 \text{ Gyr}<span class="math notranslate nohighlight">\():
+\)</span><span class="math notranslate nohighlight">\(t_{MS} \approx 10 \text{ Gyr} \left( \frac{M}{M_\odot} \right)^{-2.5}\)</span>$</p>
+</section>
+<section id="el-punto-de-quiebre-msto">
+<h3>3.2 El Punto de Quiebre (MSTO)<a class="headerlink" href="#el-punto-de-quiebre-msto" title="Link to this heading">#</a></h3>
+<p>A medida que el cúmulo envejece, las estrellas más masivas (que están más arriba en el diagrama HR) agotan su hidrógeno y abandonan la MS hacia la rama de las gigantes rojas. El punto exacto en el diagrama HR donde la secuencia principal se “apaga” o quiebra se conoce como <strong>Main Sequence Turn-Off (MSTO)</strong>.
+La edad del cúmulo es <strong>exactamente</strong> igual al <span class="math notranslate nohighlight">\(t_{MS}\)</span> de la estrella que se encuentra actualmente en el Turn-Off.</p>
+</section>
+<section id="relacion-directa-edad-vs-luminosidad-del-msto">
+<h3>3.3 Relación Directa: Edad vs. Luminosidad del MSTO<a class="headerlink" href="#relacion-directa-edad-vs-luminosidad-del-msto" title="Link to this heading">#</a></h3>
+<p>Sustituyendo la masa por la luminosidad usando <span class="math notranslate nohighlight">\(M \propto L^{1/3.5}\)</span>:
+$<span class="math notranslate nohighlight">\(t_{cúmulo} \approx 10 \text{ Gyr} \left( \frac{L_{TO}}{L_\odot} \right)^{-5/7}\)</span><span class="math notranslate nohighlight">\(
+Expresado en términos de Magnitud Bolométrica Absoluta (\)</span>M_{bol} = -2.5 \log L/L_\odot + M_{bol,\odot}$), esto demuestra que la magnitud del Turn-Off se correlaciona analíticamente con el logaritmo de la edad del cúmulo.</p>
+<p><em>Caveat Pedagógico:</em> Existe una <strong>degeneración edad-metalicidad</strong>. Un cúmulo más viejo se ve más rojo (porque el MSTO baja a estrellas de menor masa). Pero un cúmulo más rico en metales <em>también</em> se ve más rojo (por la opacidad térmica). Romper esta degeneración requiere combinar el MSTO con análisis espectroscópicos o el uso inteligente de fotometría infrarroja frente a fotometría UV (Line Blanketing).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">astroquery.gaia</span> <span class="kn">import</span> <span class="n">Gaia</span>
+<span class="kn">from</span> <span class="nn">scipy.spatial</span> <span class="kn">import</span> <span class="n">cKDTree</span>
+
+<span class="c1"># ==========================================</span>
+<span class="c1"># 1. LECTURA DE ISOCRONAS PARSEC</span>
+<span class="c1"># ==========================================</span>
+<span class="k">def</span> <span class="nf">leer_isocronas</span><span class="p">(</span><span class="n">archivo_parsec</span><span class="p">):</span>
+    <span class="n">columnas</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s2">&quot;Zini&quot;</span><span class="p">,</span> <span class="s2">&quot;MH&quot;</span><span class="p">,</span> <span class="s2">&quot;logAge&quot;</span><span class="p">,</span> <span class="s2">&quot;Mini&quot;</span><span class="p">,</span> <span class="s2">&quot;int_IMF&quot;</span><span class="p">,</span> <span class="s2">&quot;Mass&quot;</span><span class="p">,</span> <span class="s2">&quot;logL&quot;</span><span class="p">,</span> <span class="s2">&quot;logTe&quot;</span><span class="p">,</span> <span class="s2">&quot;logg&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;label&quot;</span><span class="p">,</span> <span class="s2">&quot;McoreTP&quot;</span><span class="p">,</span> <span class="s2">&quot;C_O&quot;</span><span class="p">,</span> <span class="s2">&quot;period0&quot;</span><span class="p">,</span> <span class="s2">&quot;period1&quot;</span><span class="p">,</span> <span class="s2">&quot;period2&quot;</span><span class="p">,</span> <span class="s2">&quot;period3&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;period4&quot;</span><span class="p">,</span> <span class="s2">&quot;pmode&quot;</span><span class="p">,</span> <span class="s2">&quot;Mloss&quot;</span><span class="p">,</span> <span class="s2">&quot;tau1m&quot;</span><span class="p">,</span> <span class="s2">&quot;X&quot;</span><span class="p">,</span> <span class="s2">&quot;Y&quot;</span><span class="p">,</span> <span class="s2">&quot;Xc&quot;</span><span class="p">,</span> <span class="s2">&quot;Xn&quot;</span><span class="p">,</span> <span class="s2">&quot;Xo&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Cexcess&quot;</span><span class="p">,</span> <span class="s2">&quot;Z&quot;</span><span class="p">,</span> <span class="s2">&quot;mbolmag&quot;</span><span class="p">,</span> <span class="s2">&quot;Gmag&quot;</span><span class="p">,</span> <span class="s2">&quot;G_BPmag&quot;</span><span class="p">,</span> <span class="s2">&quot;G_RPmag&quot;</span>
+    <span class="p">]</span>
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">archivo_parsec</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;\s+&#39;</span><span class="p">,</span> <span class="n">comment</span><span class="o">=</span><span class="s1">&#39;#&#39;</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="n">columnas</span><span class="p">)</span>
+
+<span class="c1"># ==========================================</span>
+<span class="c1"># 2. DESCARGA CON FILTRADO CINEMÁTICO (PROPER MOTION)</span>
+<span class="c1"># ==========================================</span>
+<span class="k">def</span> <span class="nf">descargar_datos_cumulo</span><span class="p">(</span><span class="n">nombre_cumulo</span><span class="o">=</span><span class="s1">&#39;pleiades&#39;</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Consulta ADQL mejorada: Filtra por movimiento propio (pmra, pmdec)</span>
+<span class="sd">    para eliminar las estrellas de campo y quedarse solo con los miembros del cúmulo.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">nombre_cumulo</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;pleiades&#39;</span><span class="p">:</span>
+        <span class="c1"># Las Pléyades se mueven juntas a pmra ~ 20, pmdec ~ -45</span>
+        <span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">            SELECT source_id, phot_g_mean_mag, phot_bp_mean_mag, phot_rp_mean_mag, parallax</span>
+<span class="s2">            FROM gaiadr3.gaia_source</span>
+<span class="s2">            WHERE CONTAINS(POINT(&#39;ICRS&#39;, ra, dec), CIRCLE(&#39;ICRS&#39;, 56.75, 24.11, 2.5)) = 1</span>
+<span class="s2">              AND parallax_over_error &gt; 10</span>
+<span class="s2">              AND phot_g_mean_mag &lt; 17.5</span>
+<span class="s2">              AND pmra BETWEEN 15 AND 25</span>
+<span class="s2">              AND pmdec BETWEEN -55 AND -35</span>
+<span class="s2">        &quot;&quot;&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Cúmulo no configurado en este script.&quot;</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Descargando datos limpios para </span><span class="si">{</span><span class="n">nombre_cumulo</span><span class="si">}</span><span class="s2"> desde Gaia DR3...&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">Gaia</span><span class="o">.</span><span class="n">launch_job</span><span class="p">(</span><span class="n">query</span><span class="p">)</span><span class="o">.</span><span class="n">get_results</span><span class="p">()</span><span class="o">.</span><span class="n">to_pandas</span><span class="p">()</span>
+
+<span class="c1"># ==========================================</span>
+<span class="c1"># 3. AJUSTE ROBUSTO (MEDIANA) CON REPORTE DE ERROR</span>
+<span class="c1"># ==========================================</span>
+<span class="k">def</span> <span class="nf">ajustar_isocrona_robusta</span><span class="p">(</span><span class="n">df_obs</span><span class="p">,</span> <span class="n">df_iso</span><span class="p">,</span> <span class="n">A_G</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">E_BP_RP</span><span class="o">=</span><span class="mf">0.05</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Ajuste bidimensional robusto. Utiliza la mediana de las distancias para</span>
+<span class="sd">    ignorar estrellas rezagadas y aplica corrección de extinción.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">df_obs</span> <span class="o">=</span> <span class="n">df_obs</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;phot_g_mean_mag&#39;</span><span class="p">,</span> <span class="s1">&#39;phot_bp_mean_mag&#39;</span><span class="p">,</span> <span class="s1">&#39;phot_rp_mean_mag&#39;</span><span class="p">,</span> <span class="s1">&#39;parallax&#39;</span><span class="p">])</span>
+
+    <span class="c1"># 1. Distancia y corrección de extinción interestelar</span>
+    <span class="n">distancia_pc</span> <span class="o">=</span> <span class="mf">1000.0</span> <span class="o">/</span> <span class="n">df_obs</span><span class="p">[</span><span class="s1">&#39;parallax&#39;</span><span class="p">]</span>
+    <span class="n">obs_mag_abs</span> <span class="o">=</span> <span class="p">(</span><span class="n">df_obs</span><span class="p">[</span><span class="s1">&#39;phot_g_mean_mag&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">distancia_pc</span><span class="p">)</span> <span class="o">+</span> <span class="mi">5</span><span class="p">)</span> <span class="o">-</span> <span class="n">A_G</span>
+    <span class="n">obs_color</span> <span class="o">=</span> <span class="p">(</span><span class="n">df_obs</span><span class="p">[</span><span class="s1">&#39;phot_bp_mean_mag&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">df_obs</span><span class="p">[</span><span class="s1">&#39;phot_rp_mean_mag&#39;</span><span class="p">])</span> <span class="o">-</span> <span class="n">E_BP_RP</span>
+
+    <span class="c1"># 2. Estandarización para el k-d tree</span>
+    <span class="n">std_mag</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">obs_mag_abs</span><span class="p">)</span>
+    <span class="n">std_color</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">obs_color</span><span class="p">)</span>
+    <span class="n">obs_points</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">column_stack</span><span class="p">((</span><span class="n">obs_color</span> <span class="o">/</span> <span class="n">std_color</span><span class="p">,</span> <span class="n">obs_mag_abs</span> <span class="o">/</span> <span class="n">std_mag</span><span class="p">))</span>
+
+    <span class="n">mejor_edad</span><span class="p">,</span> <span class="n">mejor_metalicidad</span><span class="p">,</span> <span class="n">mejor_isocrona</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span>
+    <span class="n">min_error_mediano</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">inf</span>
+
+    <span class="n">metalicidades_disponibles</span> <span class="o">=</span> <span class="n">df_iso</span><span class="p">[</span><span class="s1">&#39;Z&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Optimizando sobre </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">metalicidades_disponibles</span><span class="p">)</span><span class="si">}</span><span class="s2"> metalicidades...&quot;</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">mh</span> <span class="ow">in</span> <span class="n">metalicidades_disponibles</span><span class="p">:</span>
+        <span class="n">df_iso_mh</span> <span class="o">=</span> <span class="n">df_iso</span><span class="p">[</span><span class="n">df_iso</span><span class="p">[</span><span class="s1">&#39;Z&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">mh</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">edad</span> <span class="ow">in</span> <span class="n">df_iso_mh</span><span class="p">[</span><span class="s1">&#39;logAge&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">():</span>
+            <span class="n">iso_edad</span> <span class="o">=</span> <span class="n">df_iso_mh</span><span class="p">[</span><span class="n">df_iso_mh</span><span class="p">[</span><span class="s1">&#39;logAge&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">edad</span><span class="p">]</span>
+
+            <span class="c1"># Normalizar isocrona teórica</span>
+            <span class="n">iso_color</span> <span class="o">=</span> <span class="n">iso_edad</span><span class="p">[</span><span class="s1">&#39;G_BPmag&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">iso_edad</span><span class="p">[</span><span class="s1">&#39;G_RPmag&#39;</span><span class="p">]</span>
+            <span class="n">iso_mag</span> <span class="o">=</span> <span class="n">iso_edad</span><span class="p">[</span><span class="s1">&#39;Gmag&#39;</span><span class="p">]</span>
+            <span class="n">iso_points</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">column_stack</span><span class="p">((</span><span class="n">iso_color</span> <span class="o">/</span> <span class="n">std_color</span><span class="p">,</span> <span class="n">iso_mag</span> <span class="o">/</span> <span class="n">std_mag</span><span class="p">))</span>
+
+            <span class="c1"># Evaluar ajuste con k-d tree</span>
+            <span class="n">tree</span> <span class="o">=</span> <span class="n">cKDTree</span><span class="p">(</span><span class="n">iso_points</span><span class="p">)</span>
+            <span class="n">distancias</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">obs_points</span><span class="p">)</span>
+
+            <span class="c1"># CAMBIO CLAVE: Usar la mediana en lugar de la suma de cuadrados</span>
+            <span class="n">error_mediano</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">distancias</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">error_mediano</span> <span class="o">&lt;</span> <span class="n">min_error_mediano</span><span class="p">:</span>
+                <span class="n">min_error_mediano</span> <span class="o">=</span> <span class="n">error_mediano</span>
+                <span class="n">mejor_edad</span> <span class="o">=</span> <span class="n">edad</span>
+                <span class="n">mejor_metalicidad</span> <span class="o">=</span> <span class="n">mh</span>
+                <span class="n">mejor_isocrona</span> <span class="o">=</span> <span class="n">iso_edad</span>
+
+    <span class="c1"># Calcular RMSE final solo para reporte, basado en el mejor modelo</span>
+    <span class="n">iso_color</span> <span class="o">=</span> <span class="n">mejor_isocrona</span><span class="p">[</span><span class="s1">&#39;G_BPmag&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">mejor_isocrona</span><span class="p">[</span><span class="s1">&#39;G_RPmag&#39;</span><span class="p">]</span>
+    <span class="n">iso_mag</span> <span class="o">=</span> <span class="n">mejor_isocrona</span><span class="p">[</span><span class="s1">&#39;Gmag&#39;</span><span class="p">]</span>
+    <span class="n">best_iso_points</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">column_stack</span><span class="p">((</span><span class="n">iso_color</span> <span class="o">/</span> <span class="n">std_color</span><span class="p">,</span> <span class="n">iso_mag</span> <span class="o">/</span> <span class="n">std_mag</span><span class="p">))</span>
+    <span class="n">distancias_finales</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">cKDTree</span><span class="p">(</span><span class="n">best_iso_points</span><span class="p">)</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">obs_points</span><span class="p">)</span>
+    <span class="n">rmse_final</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">distancias_finales</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- RESULTADOS DEL AJUSTE ---&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Metalicidad Z óptima: </span><span class="si">{</span><span class="n">mejor_metalicidad</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;log(Age/yr) óptima      : </span><span class="si">{</span><span class="n">mejor_edad</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> (~</span><span class="si">{</span><span class="mi">10</span><span class="o">**</span><span class="n">mejor_edad</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">1e6</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> millones de años)&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error Mediano Est.      : </span><span class="si">{</span><span class="n">min_error_mediano</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;RMSE Global             : </span><span class="si">{</span><span class="n">rmse_final</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">mejor_edad</span><span class="p">,</span> <span class="n">mejor_metalicidad</span><span class="p">,</span> <span class="n">rmse_final</span><span class="p">,</span> <span class="n">mejor_isocrona</span><span class="p">,</span> <span class="n">obs_color</span><span class="p">,</span> <span class="n">obs_mag_abs</span>
+
+<span class="c1"># ==========================================</span>
+<span class="c1"># 4. GRAFICACIÓN CON REPORTE DE ERROR</span>
+<span class="c1"># ==========================================</span>
+<span class="k">def</span> <span class="nf">graficar_cmd</span><span class="p">(</span><span class="n">obs_color</span><span class="p">,</span> <span class="n">obs_mag_abs</span><span class="p">,</span> <span class="n">mejor_iso</span><span class="p">,</span> <span class="n">nombre_cumulo</span><span class="p">,</span> <span class="n">log_edad</span><span class="p">,</span> <span class="n">mh_optimo</span><span class="p">,</span> <span class="n">error_rmse</span><span class="p">):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+
+    <span class="c1"># Secuencia principal limpia</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">obs_color</span><span class="p">,</span> <span class="n">obs_mag_abs</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Gaia DR3 Kinematically Cleaned (</span><span class="si">{</span><span class="n">nombre_cumulo</span><span class="si">}</span><span class="s1">)&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Isocrona ajustada</span>
+    <span class="n">iso_color</span> <span class="o">=</span> <span class="n">mejor_iso</span><span class="p">[</span><span class="s1">&#39;G_BPmag&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">mejor_iso</span><span class="p">[</span><span class="s1">&#39;G_RPmag&#39;</span><span class="p">]</span>
+    <span class="n">iso_mag</span> <span class="o">=</span> <span class="n">mejor_iso</span><span class="p">[</span><span class="s1">&#39;Gmag&#39;</span><span class="p">]</span>
+
+    <span class="n">etiqueta</span> <span class="o">=</span> <span class="p">(</span><span class="sa">f</span><span class="s1">&#39;PARSEC Fit</span><span class="se">\n</span><span class="s1">&#39;</span>
+                <span class="sa">f</span><span class="s1">&#39;log t = </span><span class="si">{</span><span class="n">log_edad</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="se">\n</span><span class="s1">&#39;</span>
+                <span class="sa">f</span><span class="s1">&#39;[M/H] = </span><span class="si">{</span><span class="n">mh_optimo</span><span class="si">}</span><span class="se">\n</span><span class="s1">&#39;</span>
+                <span class="sa">f</span><span class="s1">&#39;RMSE = </span><span class="si">{</span><span class="n">error_rmse</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">iso_color</span><span class="p">,</span> <span class="n">iso_mag</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">3.0</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">etiqueta</span><span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">invert_yaxis</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$(G_</span><span class="si">{BP}</span><span class="s1"> - G_</span><span class="si">{RP}</span><span class="s1">)_0$ (mag)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$M_{G, 0}$ (mag)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Diagrama Color-Magnitud Corregido - </span><span class="si">{</span><span class="n">nombre_cumulo</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">frameon</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;lower left&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">11</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># ==========================================</span>
+<span class="c1"># EJECUCIÓN</span>
+<span class="c1"># ==========================================</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">CUMULO</span> <span class="o">=</span> <span class="s1">&#39;pleiades&#39;</span>
+    <span class="n">ARCHIVO_PARSEC</span> <span class="o">=</span> <span class="s1">&#39;isocronas.dat&#39;</span>
+
+    <span class="c1"># Valores empíricos de extinción para las Pléyades</span>
+    <span class="n">EXTINCION_G</span> <span class="o">=</span> <span class="mf">0.12</span>
+    <span class="n">EXCESO_COLOR</span> <span class="o">=</span> <span class="mf">0.05</span>
+
+    <span class="n">df_iso</span> <span class="o">=</span> <span class="n">leer_isocronas</span><span class="p">(</span><span class="n">ARCHIVO_PARSEC</span><span class="p">)</span>
+    <span class="n">df_obs</span> <span class="o">=</span> <span class="n">descargar_datos_cumulo</span><span class="p">(</span><span class="n">CUMULO</span><span class="p">)</span>
+
+    <span class="n">edad</span><span class="p">,</span> <span class="n">mh</span><span class="p">,</span> <span class="n">error_rmse</span><span class="p">,</span> <span class="n">iso</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">mag</span> <span class="o">=</span> <span class="n">ajustar_isocrona_robusta</span><span class="p">(</span>
+        <span class="n">df_obs</span><span class="p">,</span> <span class="n">df_iso</span><span class="p">,</span> <span class="n">A_G</span><span class="o">=</span><span class="n">EXTINCION_G</span><span class="p">,</span> <span class="n">E_BP_RP</span><span class="o">=</span><span class="n">EXCESO_COLOR</span>
+    <span class="p">)</span>
+
+    <span class="n">graficar_cmd</span><span class="p">(</span><span class="n">color</span><span class="p">,</span> <span class="n">mag</span><span class="p">,</span> <span class="n">iso</span><span class="p">,</span> <span class="n">CUMULO</span><span class="p">,</span> <span class="n">edad</span><span class="p">,</span> <span class="n">mh</span><span class="p">,</span> <span class="n">error_rmse</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Descargando datos limpios para pleiades desde Gaia DR3...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Optimizando sobre 3263 metalicidades...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- RESULTADOS DEL AJUSTE ---
+Metalicidad Z óptima: 0.01
+log(Age/yr) óptima      : 7.70 (~50.1 millones de años)
+Error Mediano Est.      : 0.0815
+RMSE Global             : 0.2021
+</pre></div>
+</div>
+<img alt="_images/989372d38af5249e990df5aa277374568b0153563420ca33ef566af4a065d5b3.png" src="_images/989372d38af5249e990df5aa277374568b0153563420ca33ef566af4a065d5b3.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="taller-computacional-extraccion-multi-base-gaia-sdss">
+<h2>4. Taller Computacional: Extracción Multi-Base (Gaia + SDSS)<a class="headerlink" href="#taller-computacional-extraccion-multi-base-gaia-sdss" title="Link to this heading">#</a></h2>
+<p>Para superar el “sesgo de una sola base de datos”, este script combina la astrometría impecable de <strong>Gaia DR3</strong> con la fotometría profunda de <strong>Sloan Digital Sky Survey (SDSS DR12)</strong> utilizando el protocolo <code class="docutils literal notranslate"><span class="pre">TAP</span></code> de <strong>VizieR</strong>. Extraeremos los datos del famoso cúmulo abierto <strong>M67</strong> (<span class="math notranslate nohighlight">\(\sim 4 \text{ Gyr}\)</span>, metalicidad solar) y mediremos su Turn-Off.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">astroquery.gaia</span> <span class="kn">import</span> <span class="n">Gaia</span>
+<span class="kn">from</span> <span class="nn">astroquery.vizier</span> <span class="kn">import</span> <span class="n">Vizier</span>
+<span class="kn">import</span> <span class="nn">astropy.coordinates</span> <span class="k">as</span> <span class="nn">coord</span>
+<span class="kn">import</span> <span class="nn">astropy.units</span> <span class="k">as</span> <span class="nn">u</span>
+
+<span class="c1"># ==========================================</span>
+<span class="c1"># FUNCIONES DE AJUSTE TOPOLÓGICO (MSTO MATCHING)</span>
+<span class="c1"># ==========================================</span>
+<span class="k">def</span> <span class="nf">leer_isocronas</span><span class="p">(</span><span class="n">archivo_parsec</span><span class="p">):</span>
+    <span class="n">columnas</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s2">&quot;Zini&quot;</span><span class="p">,</span> <span class="s2">&quot;MH&quot;</span><span class="p">,</span> <span class="s2">&quot;logAge&quot;</span><span class="p">,</span> <span class="s2">&quot;Mini&quot;</span><span class="p">,</span> <span class="s2">&quot;int_IMF&quot;</span><span class="p">,</span> <span class="s2">&quot;Mass&quot;</span><span class="p">,</span> <span class="s2">&quot;logL&quot;</span><span class="p">,</span> <span class="s2">&quot;logTe&quot;</span><span class="p">,</span> <span class="s2">&quot;logg&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;label&quot;</span><span class="p">,</span> <span class="s2">&quot;McoreTP&quot;</span><span class="p">,</span> <span class="s2">&quot;C_O&quot;</span><span class="p">,</span> <span class="s2">&quot;period0&quot;</span><span class="p">,</span> <span class="s2">&quot;period1&quot;</span><span class="p">,</span> <span class="s2">&quot;period2&quot;</span><span class="p">,</span> <span class="s2">&quot;period3&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;period4&quot;</span><span class="p">,</span> <span class="s2">&quot;pmode&quot;</span><span class="p">,</span> <span class="s2">&quot;Mloss&quot;</span><span class="p">,</span> <span class="s2">&quot;tau1m&quot;</span><span class="p">,</span> <span class="s2">&quot;X&quot;</span><span class="p">,</span> <span class="s2">&quot;Y&quot;</span><span class="p">,</span> <span class="s2">&quot;Xc&quot;</span><span class="p">,</span> <span class="s2">&quot;Xn&quot;</span><span class="p">,</span> <span class="s2">&quot;Xo&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Cexcess&quot;</span><span class="p">,</span> <span class="s2">&quot;Z&quot;</span><span class="p">,</span> <span class="s2">&quot;mbolmag&quot;</span><span class="p">,</span> <span class="s2">&quot;Gmag&quot;</span><span class="p">,</span> <span class="s2">&quot;G_BPmag&quot;</span><span class="p">,</span> <span class="s2">&quot;G_RPmag&quot;</span>
+    <span class="p">]</span>
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">archivo_parsec</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;\s+&#39;</span><span class="p">,</span> <span class="n">comment</span><span class="o">=</span><span class="s1">&#39;#&#39;</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="n">columnas</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">ajustar_por_msto</span><span class="p">(</span><span class="n">df_obs</span><span class="p">,</span> <span class="n">df_iso</span><span class="p">,</span> <span class="n">E_BP_RP</span><span class="o">=</span><span class="mf">0.04</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Identifica el codo del MSTO en las observaciones filtrando Blue Stragglers</span>
+<span class="sd">    y busca la isocrona cuyo MSTO teórico minimice la distancia euclidiana hacia él.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># 1. IDENTIFICACIÓN DEL MSTO EMPÍRICO ROBUSTO</span>
+    <span class="c1"># Buscamos en la franja de magnitud donde ocurre el Turn-Off</span>
+    <span class="n">mask_msto</span> <span class="o">=</span> <span class="p">(</span><span class="n">df_obs</span><span class="p">[</span><span class="s1">&#39;M_G&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">2.5</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df_obs</span><span class="p">[</span><span class="s1">&#39;M_G&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mf">4.0</span><span class="p">)</span>
+    <span class="n">df_msto</span> <span class="o">=</span> <span class="n">df_obs</span><span class="p">[</span><span class="n">mask_msto</span><span class="p">]</span>
+
+    <span class="c1"># Usamos el percentil 5 para ignorar ruido y estrellas rezagadas azules extremas</span>
+    <span class="n">msto_color_emp</span> <span class="o">=</span> <span class="n">df_msto</span><span class="p">[</span><span class="s1">&#39;bp_rp&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.05</span><span class="p">)</span>
+
+    <span class="c1"># Para la magnitud, promediamos las estrellas que yacen exactamente sobre ese límite de color</span>
+    <span class="n">estrellas_en_codo</span> <span class="o">=</span> <span class="n">df_msto</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">df_msto</span><span class="p">[</span><span class="s1">&#39;bp_rp&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">msto_color_emp</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mf">0.05</span><span class="p">]</span>
+    <span class="n">msto_mag_emp</span> <span class="o">=</span> <span class="n">estrellas_en_codo</span><span class="p">[</span><span class="s1">&#39;M_G&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+
+    <span class="c1"># 2. MATCHING TEÓRICO</span>
+    <span class="c1"># Filtramos enanas blancas y remanentes</span>
+    <span class="n">df_iso_clean</span> <span class="o">=</span> <span class="n">df_iso</span><span class="p">[</span><span class="n">df_iso</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+    <span class="n">resultados_fit</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">for</span> <span class="n">z_val</span> <span class="ow">in</span> <span class="n">df_iso_clean</span><span class="p">[</span><span class="s1">&#39;Z&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">():</span>
+        <span class="n">df_iso_z</span> <span class="o">=</span> <span class="n">df_iso_clean</span><span class="p">[</span><span class="n">df_iso_clean</span><span class="p">[</span><span class="s1">&#39;Z&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">z_val</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">edad</span> <span class="ow">in</span> <span class="n">df_iso_z</span><span class="p">[</span><span class="s1">&#39;logAge&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">():</span>
+            <span class="n">iso_edad</span> <span class="o">=</span> <span class="n">df_iso_z</span><span class="p">[</span><span class="n">df_iso_z</span><span class="p">[</span><span class="s1">&#39;logAge&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">edad</span><span class="p">]</span>
+
+            <span class="c1"># Identificamos el MSTO teórico (el punto estrictamente más azul de la isocrona)</span>
+            <span class="n">idx_msto_teo</span> <span class="o">=</span> <span class="p">(</span><span class="n">iso_edad</span><span class="p">[</span><span class="s1">&#39;G_BPmag&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">iso_edad</span><span class="p">[</span><span class="s1">&#39;G_RPmag&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">idxmin</span><span class="p">()</span>
+            <span class="n">msto_color_teo</span> <span class="o">=</span> <span class="n">iso_edad</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">idx_msto_teo</span><span class="p">,</span> <span class="s1">&#39;G_BPmag&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">iso_edad</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">idx_msto_teo</span><span class="p">,</span> <span class="s1">&#39;G_RPmag&#39;</span><span class="p">]</span>
+            <span class="n">msto_mag_teo</span> <span class="o">=</span> <span class="n">iso_edad</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">idx_msto_teo</span><span class="p">,</span> <span class="s1">&#39;Gmag&#39;</span><span class="p">]</span>
+
+            <span class="c1"># Calculamos las deltas (incorporando el enrojecimiento)</span>
+            <span class="n">delta_color</span> <span class="o">=</span> <span class="n">msto_color_emp</span> <span class="o">-</span> <span class="p">(</span><span class="n">msto_color_teo</span> <span class="o">+</span> <span class="n">E_BP_RP</span><span class="p">)</span>
+            <span class="n">delta_mag</span> <span class="o">=</span> <span class="n">msto_mag_emp</span> <span class="o">-</span> <span class="n">msto_mag_teo</span>
+
+            <span class="c1"># El eje de color es más estrecho, aplicamos un factor x5 para balancear el peso geométrico</span>
+            <span class="n">error</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">((</span><span class="n">delta_color</span> <span class="o">*</span> <span class="mi">5</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">delta_mag</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+            <span class="n">resultados_fit</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+                <span class="s1">&#39;logAge&#39;</span><span class="p">:</span> <span class="n">edad</span><span class="p">,</span>
+                <span class="s1">&#39;Age_Gyr&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mi">10</span><span class="o">**</span><span class="n">edad</span><span class="p">)</span> <span class="o">/</span> <span class="mf">1e9</span><span class="p">,</span>
+                <span class="s1">&#39;Zini&#39;</span><span class="p">:</span> <span class="n">z_val</span><span class="p">,</span>
+                <span class="s1">&#39;Error&#39;</span><span class="p">:</span> <span class="n">error</span><span class="p">,</span>
+                <span class="s1">&#39;iso_df&#39;</span><span class="p">:</span> <span class="n">iso_edad</span>
+            <span class="p">})</span>
+
+    <span class="c1"># 3. REPORTE DE ERRORES</span>
+    <span class="n">df_reporte</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">resultados_fit</span><span class="p">)</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;Error&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">mejor</span> <span class="o">=</span> <span class="n">df_reporte</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">msto_color_emp</span><span class="p">,</span> <span class="n">msto_mag_emp</span><span class="p">,</span> <span class="n">mejor</span><span class="p">[</span><span class="s1">&#39;logAge&#39;</span><span class="p">],</span> <span class="n">mejor</span><span class="p">[</span><span class="s1">&#39;Zini&#39;</span><span class="p">],</span> <span class="n">mejor</span><span class="p">[</span><span class="s1">&#39;iso_df&#39;</span><span class="p">],</span> <span class="n">df_reporte</span>
+
+<span class="c1"># ==========================================</span>
+<span class="c1"># EJECUCIÓN DEL FLUJO</span>
+<span class="c1"># ==========================================</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Descargando astrometría de M67 (Gaia DR3)...&quot;</span><span class="p">)</span>
+<span class="n">adql_gaia</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">SELECT source_id, parallax, phot_g_mean_mag, bp_rp</span>
+<span class="s2">FROM gaiadr3.gaia_source</span>
+<span class="s2">WHERE 1=CONTAINS(POINT(&#39;ICRS&#39;, ra, dec), CIRCLE(&#39;ICRS&#39;, 132.825, 11.8, 0.4))</span>
+<span class="s2">  AND parallax BETWEEN 0.8 AND 1.5</span>
+<span class="s2">  AND pmra BETWEEN -15 AND -7</span>
+<span class="s2">  AND pmdec BETWEEN -5 AND 0</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="n">df_gaia</span> <span class="o">=</span> <span class="n">Gaia</span><span class="o">.</span><span class="n">launch_job</span><span class="p">(</span><span class="n">adql_gaia</span><span class="p">)</span><span class="o">.</span><span class="n">get_results</span><span class="p">()</span><span class="o">.</span><span class="n">to_pandas</span><span class="p">()</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+
+<span class="n">dist_pc</span> <span class="o">=</span> <span class="mi">1000</span> <span class="o">/</span> <span class="n">df_gaia</span><span class="p">[</span><span class="s1">&#39;parallax&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+<span class="n">df_gaia</span><span class="p">[</span><span class="s1">&#39;M_G&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_gaia</span><span class="p">[</span><span class="s1">&#39;phot_g_mean_mag&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="p">(</span><span class="mi">5</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">dist_pc</span><span class="p">)</span> <span class="o">-</span> <span class="mi">5</span><span class="p">)</span> <span class="o">-</span> <span class="mf">0.1</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Optimizando por Topología del MSTO...&quot;</span><span class="p">)</span>
+<span class="n">df_iso</span> <span class="o">=</span> <span class="n">leer_isocronas</span><span class="p">(</span><span class="s1">&#39;isocronas.dat&#39;</span><span class="p">)</span>
+<span class="n">msto_color</span><span class="p">,</span> <span class="n">msto_mag</span><span class="p">,</span> <span class="n">edad_log</span><span class="p">,</span> <span class="n">zini_optimo</span><span class="p">,</span> <span class="n">iso_optima</span><span class="p">,</span> <span class="n">reporte_errores</span> <span class="o">=</span> <span class="n">ajustar_por_msto</span><span class="p">(</span><span class="n">df_gaia</span><span class="p">,</span> <span class="n">df_iso</span><span class="p">,</span> <span class="n">E_BP_RP</span><span class="o">=</span><span class="mf">0.04</span><span class="p">)</span>
+
+<span class="n">L_TO</span> <span class="o">=</span> <span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mf">0.4</span> <span class="o">*</span> <span class="p">(</span><span class="n">msto_mag</span> <span class="o">-</span> <span class="mf">4.67</span><span class="p">))</span>
+<span class="n">edad_analitica_gyr</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">*</span> <span class="p">(</span><span class="n">L_TO</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="o">/</span><span class="mi">7</span><span class="p">)</span>
+
+<span class="c1"># ==========================================</span>
+<span class="c1"># VISUALIZACIÓN Y REPORTE</span>
+<span class="c1"># ==========================================</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">=== REPORTE DE ERRORES (TOP 5 AJUSTES) ===&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">reporte_errores</span><span class="p">[[</span><span class="s1">&#39;Age_Gyr&#39;</span><span class="p">,</span> <span class="s1">&#39;Zini&#39;</span><span class="p">,</span> <span class="s1">&#39;Error&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">to_string</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">df_gaia</span><span class="p">[</span><span class="s1">&#39;bp_rp&#39;</span><span class="p">],</span> <span class="n">df_gaia</span><span class="p">[</span><span class="s1">&#39;M_G&#39;</span><span class="p">],</span> <span class="n">s</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;M67 (Gaia DR3)&#39;</span><span class="p">)</span>
+
+<span class="c1"># MSTO Empírico</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">msto_color</span><span class="p">,</span> <span class="n">msto_mag</span><span class="p">,</span> <span class="s1">&#39;bD&#39;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;MSTO Observado</span><span class="se">\n</span><span class="s1">(</span><span class="si">{</span><span class="n">edad_analitica_gyr</span><span class="si">:</span><span class="s1">.1f</span><span class="si">}</span><span class="s1"> Gyr Analíticos)&#39;</span><span class="p">)</span>
+
+<span class="c1"># Trazado PARSEC ordenado</span>
+<span class="n">iso_optima</span> <span class="o">=</span> <span class="n">iso_optima</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;Mini&#39;</span><span class="p">)</span>
+<span class="n">iso_col</span> <span class="o">=</span> <span class="p">(</span><span class="n">iso_optima</span><span class="p">[</span><span class="s1">&#39;G_BPmag&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">iso_optima</span><span class="p">[</span><span class="s1">&#39;G_RPmag&#39;</span><span class="p">])</span> <span class="o">+</span> <span class="mf">0.04</span>
+<span class="n">iso_mag_teo</span> <span class="o">=</span> <span class="n">iso_optima</span><span class="p">[</span><span class="s1">&#39;Gmag&#39;</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">iso_col</span><span class="p">,</span> <span class="n">iso_mag_teo</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">3.0</span><span class="p">,</span>
+         <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Mejor Fit PARSEC</span><span class="se">\n</span><span class="s1">(</span><span class="si">{</span><span class="p">(</span><span class="mi">10</span><span class="o">**</span><span class="n">edad_log</span><span class="p">)</span><span class="o">/</span><span class="mf">1e9</span><span class="si">:</span><span class="s1">.1f</span><span class="si">}</span><span class="s1"> Gyr, $Z_</span><span class="se">{{</span><span class="s1">ini</span><span class="se">}}</span><span class="s1">$=</span><span class="si">{</span><span class="n">zini_optimo</span><span class="si">:</span><span class="s1">.4f</span><span class="si">}</span><span class="s1">)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Color $G_</span><span class="si">{BP}</span><span class="s1"> - G_</span><span class="si">{RP}</span><span class="s1">$ (mag)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Magnitud Absoluta $M_G$ (mag)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mf">8.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+<span class="c1">#plt.invert_yaxis()</span>
+<span class="c1">#plt.invert_yaxis()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Ajuste Topológico del Turn-Off en M67&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">frameon</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;lower left&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Descargando astrometría de M67 (Gaia DR3)...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Optimizando por Topología del MSTO...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>=== REPORTE DE ERRORES (TOP 5 AJUSTES) ===
+ Age_Gyr     Zini    Error
+5.371184 0.008250 0.018861
+5.496295 0.008206 0.026836
+5.248921 0.008293 0.040835
+5.129441 0.008261 0.049491
+5.624320 0.008162 0.051814
+</pre></div>
+</div>
+<img alt="_images/e405e5ddf65cbd8952ae9abc7c086c1a455216f5faf99b397c796ed29c9ed14f.png" src="_images/e405e5ddf65cbd8952ae9abc7c086c1a455216f5faf99b397c796ed29c9ed14f.png" />
+</div>
+</div>
+</section>
+<section id="literatura-relevante-recomendada-estado-del-arte">
+<h2>5. Literatura Relevante Recomendada (Estado del Arte)<a class="headerlink" href="#literatura-relevante-recomendada-estado-del-arte" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Kippenhahn, R., Weigert, A., &amp; Weiss, A. (2012).</strong> <em>“Stellar Structure and Evolution”</em>. Springer.</p>
+<ul class="simple">
+<li><p><strong>Importancia:</strong> El texto fundacional e indiscutible sobre ecuaciones de transporte radiativo, opacidad de Kramers y relaciones masa-luminosidad. Vital para entender la termodinámica detrás del Diagrama HR.</p></li>
+</ul>
+</li>
+<li><p><strong>Sandage, A. R. (1953).</strong> <em>“The color-magnitude diagram for the globular cluster M3”</em>. The Astronomical Journal, 58, 61.</p>
+<ul class="simple">
+<li><p><strong>Importancia:</strong> Un documento histórico. Es el primer artículo donde se observó el “Turn-Off” de un cúmulo globular y se conectó con la edad de la población estelar, fundando la cronometría cósmica empírica.</p></li>
+</ul>
+</li>
+<li><p><strong>Bressan, A., et al. (2012).</strong> <em>“PARSEC: stellar tracks and isochrones with the PAdova and TRieste Stellar Evolution Code”</em>. MNRAS, 427(1), 127-145.</p>
+<ul class="simple">
+<li><p><strong>Importancia:</strong> Describe cómo se construyen las isocronas teóricas modernas. Muestra cómo pequeñas variaciones en la metalicidad <span class="math notranslate nohighlight">\(Z\)</span> y el enriquecimiento de Helio desplazan el MSTO, indispensable para estudios poblacionales con Gaia.</p></li>
+</ul>
+</li>
+<li><p><strong>Ivezic, Z., et al. (2008).</strong> <em>“The Milky Way Tomography with SDSS. II. Stellar Metallicity”</em>. The Astrophysical Journal, 684(1), 287.</p>
+<ul class="simple">
+<li><p><strong>Importancia:</strong> Demuestra de manera concluyente el uso fotométrico del <em>Line Blanketing</em>. Explica matemáticamente cómo el color <span class="math notranslate nohighlight">\(u-g\)</span> del SDSS es una herramienta directa para estimar la metalicidad [Fe/H] en ausencia de datos espectroscópicos.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="ejercicios-propuestos-y-solucionario">
+<h2>6. Ejercicios Propuestos y Solucionario<a class="headerlink" href="#ejercicios-propuestos-y-solucionario" title="Link to this heading">#</a></h2>
+<p><strong>Ejercicio 1 (Analítico - El Límite de Edad del Universo):</strong>
+El cúmulo globular NGC 104 (47 Tucanae) tiene una magnitud absoluta de Turn-Off observada en el filtro V de <span class="math notranslate nohighlight">\(M_V \approx 4.15\)</span>. Asumiendo que la corrección bolométrica es despreciable y utilizando la fórmula derivada en clase <span class="math notranslate nohighlight">\(t \approx 10 \text{ Gyr} (L_{TO}/L_\odot)^{-5/7}\)</span>, calcule la edad del cúmulo. Si las mediciones del satélite Planck estiman la edad del Universo en <span class="math notranslate nohighlight">\(13.8 \text{ Gyr}\)</span>, discuta la viabilidad física del resultado y las limitaciones de la aproximación masa-luminosidad <span class="math notranslate nohighlight">\(L \propto M^{3.5}\)</span>.</p>
+<p><strong>Ejercicio 2 (Conceptual - Degeneración):</strong>
+Usted observa dos cúmulos abiertos en el disco galáctico. El Cúmulo A tiene un Turn-Off en un color observacional mucho más rojo que el Cúmulo B. Un colega concluye inmediatamente que el Cúmulo A es mucho más antiguo. Argumente por qué su colega podría estar equivocado utilizando el concepto de “Degeneración Edad-Metalicidad” y opacidad térmica.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Escriba aquí su solución</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Clase_05_DinamicaInterna2.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Clase 5: Dinámica Interna 2</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objetivos">Objetivos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#el-diagrama-hr-el-espacio-de-fase-de-la-evolucion-estelar">1. El Diagrama HR: El Espacio de Fase de la Evolución Estelar</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#el-plano-teorico-log-l-vs-log-t-eff">1.1 El Plano Teórico (<span class="math notranslate nohighlight">\(\log L\)</span> vs. <span class="math notranslate nohighlight">\(\log T_{eff}\)</span>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#el-plano-observacional-m-v-vs-indice-de-color">1.2 El Plano Observacional (<span class="math notranslate nohighlight">\(M_V\)</span> vs. Índice de Color)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#el-rol-de-la-metalicidad-z-y-la-opacidad">2. El Rol de la Metalicidad (<span class="math notranslate nohighlight">\(Z\)</span>) y la Opacidad</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#la-ecuacion-de-transporte-radiativo">2.1 La Ecuación de Transporte Radiativo</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#line-blanketing-y-el-efecto-observacional-de-z">2.2 Line Blanketing y el Efecto Observacional de <span class="math notranslate nohighlight">\(Z\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comparacion-de-z-con-el-telescopio-espacial-hubble-hst-y-sdss">2.3 Comparación de <span class="math notranslate nohighlight">\(Z\)</span> con el Telescopio Espacial Hubble (HST) y SDSS</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cronometria-estelar-el-main-sequence-turn-off-msto">3. Cronometría Estelar: El Main Sequence Turn-Off (MSTO)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivacion-de-la-edad-de-la-secuencia-principal">3.1 Derivación de la Edad de la Secuencia Principal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#el-punto-de-quiebre-msto">3.2 El Punto de Quiebre (MSTO)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relacion-directa-edad-vs-luminosidad-del-msto">3.3 Relación Directa: Edad vs. Luminosidad del MSTO</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#taller-computacional-extraccion-multi-base-gaia-sdss">4. Taller Computacional: Extracción Multi-Base (Gaia + SDSS)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#literatura-relevante-recomendada-estado-del-arte">5. Literatura Relevante Recomendada (Estado del Arte)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicios-propuestos-y-solucionario">6. Ejercicios Propuestos y Solucionario</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Esteban Silva Villa
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
