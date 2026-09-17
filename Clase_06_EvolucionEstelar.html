@@ -438,11 +438,13 @@
 Para graficar el diagrama observacional intrínseco, debemos corregir las magnitudes aparentes (<span class="math notranslate nohighlight">\(m_\lambda\)</span>) midiendo la distancia (<span class="math notranslate nohighlight">\(d\)</span> en parsecs) mediante el <strong>módulo de distancia</strong> y corrigiendo la extinción interestelar (<span class="math notranslate nohighlight">\(A_\lambda\)</span>) producida por el polvo en la línea de visión:</p>
 <div class="math notranslate nohighlight">
 \[M_\lambda = m_\lambda - 5 \log_{10}(d) + 5 - A_\lambda\]</div>
-<p>El color intrínseco se corrige por el <strong>enrojecimiento</strong> (<span class="math notranslate nohighlight">\(E\)</span>):
-$<span class="math notranslate nohighlight">\((B-V)_0 = (B-V)_{obs} - E(B-V)\)</span>$</p>
+<p>El color intrínseco se corrige por el <strong>enrojecimiento</strong> (<span class="math notranslate nohighlight">\(E\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[(B-V)_0 = (B-V)_{obs} - E(B-V)\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">subprocess</span>
+
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">urllib.parse</span>
@@ -472,7 +474,7 @@ $<span class="math notranslate nohighlight">\((B-V)_0 = (B-V)_{obs} - E(B-V)\)</
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Descargando fotometría de M4...
 </pre></div>
 </div>
-<img alt="_images/a937caaf867616c09af7dfa534816ca4a48360771163651c7a21a8771d2c1013.png" src="_images/a937caaf867616c09af7dfa534816ca4a48360771163651c7a21a8771d2c1013.png" />
+<img alt="_images/1d8187e4952cebdec54ca0cb05354c2cc5bdf622eb59c40154c5c5c219871628.png" src="_images/1d8187e4952cebdec54ca0cb05354c2cc5bdf622eb59c40154c5c5c219871628.png" />
 </div>
 </div>
 </section>
@@ -596,7 +598,7 @@ Descargando miembros limpios para 47tuc_clean...
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Descargando miembros limpios para ngc6397_clean...
 </pre></div>
 </div>
-<img alt="_images/b3297b8be8407749d18285d04eeae2597964850e7041196efb64636f3e26b667.png" src="_images/b3297b8be8407749d18285d04eeae2597964850e7041196efb64636f3e26b667.png" />
+<img alt="_images/e8fe1922477b8cafd612d0d2850236f343a82fa82f962d5024762573f87e25fa.png" src="_images/e8fe1922477b8cafd612d0d2850236f343a82fa82f962d5024762573f87e25fa.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- Conclusión Física ---
 Al fijar los módulos de distancia y limpiar el campo con movimientos propios,
 se aprecia claramente que NGC 6397 (azul) se desplaza hacia la izquierda en color
@@ -809,7 +811,7 @@ Error Mediano Est.      : 0.0815
 RMSE Global             : 0.2021
 </pre></div>
 </div>
-<img alt="_images/a0fdf252c17d1f7cdcb742ee35b03538fa4f5c56a9f729c292ab06b5a2f9efb2.png" src="_images/a0fdf252c17d1f7cdcb742ee35b03538fa4f5c56a9f729c292ab06b5a2f9efb2.png" />
+<img alt="_images/3c0cb28fe3069c77fab5f57a0bf86b2ce4617109eb62acc2639faf1ddc7fbf3c.png" src="_images/3c0cb28fe3069c77fab5f57a0bf86b2ce4617109eb62acc2639faf1ddc7fbf3c.png" />
 </div>
 </div>
 </section>
@@ -845,7 +847,6 @@ RMSE Global             : 0.2021
 <span class="sd">    y busca la isocrona cuyo MSTO teórico minimice la distancia euclidiana hacia él.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># 1. IDENTIFICACIÓN DEL MSTO EMPÍRICO ROBUSTO</span>
-    <span class="c1"># Buscamos en la franja de magnitud donde ocurre el Turn-Off</span>
     <span class="n">mask_msto</span> <span class="o">=</span> <span class="p">(</span><span class="n">df_obs</span><span class="p">[</span><span class="s1">&#39;M_G&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">2.5</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df_obs</span><span class="p">[</span><span class="s1">&#39;M_G&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mf">4.0</span><span class="p">)</span>
     <span class="n">df_msto</span> <span class="o">=</span> <span class="n">df_obs</span><span class="p">[</span><span class="n">mask_msto</span><span class="p">]</span>
 
@@ -856,14 +857,14 @@ RMSE Global             : 0.2021
     <span class="n">estrellas_en_codo</span> <span class="o">=</span> <span class="n">df_msto</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">df_msto</span><span class="p">[</span><span class="s1">&#39;bp_rp&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">msto_color_emp</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mf">0.05</span><span class="p">]</span>
     <span class="n">msto_mag_emp</span> <span class="o">=</span> <span class="n">estrellas_en_codo</span><span class="p">[</span><span class="s1">&#39;M_G&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
 
-    <span class="c1"># 2. MATCHING TEÓRICO</span>
-    <span class="c1"># Filtramos enanas blancas y remanentes</span>
+    <span class="c1"># 2. MATCHING TEÓRICO (Filtramos enanas blancas y remanentes)</span>
     <span class="n">df_iso_clean</span> <span class="o">=</span> <span class="n">df_iso</span><span class="p">[</span><span class="n">df_iso</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 
     <span class="n">resultados_fit</span> <span class="o">=</span> <span class="p">[]</span>
 
-    <span class="k">for</span> <span class="n">z_val</span> <span class="ow">in</span> <span class="n">df_iso_clean</span><span class="p">[</span><span class="s1">&#39;Z&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">():</span>
-        <span class="n">df_iso_z</span> <span class="o">=</span> <span class="n">df_iso_clean</span><span class="p">[</span><span class="n">df_iso_clean</span><span class="p">[</span><span class="s1">&#39;Z&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">z_val</span><span class="p">]</span>
+    <span class="c1"># Corrección: Iterar sobre Zini (Metalidad Inicial) en lugar de Z superficial</span>
+    <span class="k">for</span> <span class="n">z_val</span> <span class="ow">in</span> <span class="n">df_iso_clean</span><span class="p">[</span><span class="s1">&#39;Zini&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">():</span>
+        <span class="n">df_iso_z</span> <span class="o">=</span> <span class="n">df_iso_clean</span><span class="p">[</span><span class="n">df_iso_clean</span><span class="p">[</span><span class="s1">&#39;Zini&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">z_val</span><span class="p">]</span>
         <span class="k">for</span> <span class="n">edad</span> <span class="ow">in</span> <span class="n">df_iso_z</span><span class="p">[</span><span class="s1">&#39;logAge&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">():</span>
             <span class="n">iso_edad</span> <span class="o">=</span> <span class="n">df_iso_z</span><span class="p">[</span><span class="n">df_iso_z</span><span class="p">[</span><span class="s1">&#39;logAge&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">edad</span><span class="p">]</span>
 
@@ -933,15 +934,16 @@ RMSE Global             : 0.2021
 <span class="n">iso_optima</span> <span class="o">=</span> <span class="n">iso_optima</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;Mini&#39;</span><span class="p">)</span>
 <span class="n">iso_col</span> <span class="o">=</span> <span class="p">(</span><span class="n">iso_optima</span><span class="p">[</span><span class="s1">&#39;G_BPmag&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">iso_optima</span><span class="p">[</span><span class="s1">&#39;G_RPmag&#39;</span><span class="p">])</span> <span class="o">+</span> <span class="mf">0.04</span>
 <span class="n">iso_mag_teo</span> <span class="o">=</span> <span class="n">iso_optima</span><span class="p">[</span><span class="s1">&#39;Gmag&#39;</span><span class="p">]</span>
+
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">iso_col</span><span class="p">,</span> <span class="n">iso_mag_teo</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">3.0</span><span class="p">,</span>
          <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Mejor Fit PARSEC</span><span class="se">\n</span><span class="s1">(</span><span class="si">{</span><span class="p">(</span><span class="mi">10</span><span class="o">**</span><span class="n">edad_log</span><span class="p">)</span><span class="o">/</span><span class="mf">1e9</span><span class="si">:</span><span class="s1">.1f</span><span class="si">}</span><span class="s1"> Gyr, $Z_</span><span class="se">{{</span><span class="s1">ini</span><span class="se">}}</span><span class="s1">$=</span><span class="si">{</span><span class="n">zini_optimo</span><span class="si">:</span><span class="s1">.4f</span><span class="si">}</span><span class="s1">)&#39;</span><span class="p">)</span>
+
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Color $G_</span><span class="si">{BP}</span><span class="s1"> - G_</span><span class="si">{RP}</span><span class="s1">$ (mag)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Magnitud Absoluta $M_G$ (mag)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mf">8.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
-<span class="c1">#plt.invert_yaxis()</span>
-<span class="c1">#plt.invert_yaxis()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Ajuste Topológico del Turn-Off en M67&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mf">8.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Ajuste del Turn-Off en M67&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">frameon</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;lower left&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
@@ -957,15 +959,15 @@ RMSE Global             : 0.2021
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>=== REPORTE DE ERRORES (TOP 5 AJUSTES) ===
- Age_Gyr     Zini    Error
-5.371184 0.008250 0.018861
-5.496295 0.008206 0.026836
-5.248921 0.008293 0.040835
-5.129441 0.008261 0.049491
-5.624320 0.008162 0.051814
+ Age_Gyr  Zini    Error
+5.129441  0.01 0.049491
+5.248921  0.01 0.054533
+5.012680  0.01 0.059371
+5.371184  0.01 0.071698
+5.496295  0.01 0.088514
 </pre></div>
 </div>
-<img alt="_images/6f55b263e4150e9900b08ee3361c875d3371cfb2bd4a4af17a4f14d7b205b2ca.png" src="_images/6f55b263e4150e9900b08ee3361c875d3371cfb2bd4a4af17a4f14d7b205b2ca.png" />
+<img alt="_images/e0f418cc3fd60aec38472d957c72da671e80f205cdc330cd659c944354bf1bcd.png" src="_images/e0f418cc3fd60aec38472d957c72da671e80f205cdc330cd659c944354bf1bcd.png" />
 </div>
 </div>
 </section>
