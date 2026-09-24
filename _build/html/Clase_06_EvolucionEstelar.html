@@ -65,6 +65,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'Clase_06_EvolucionEstelar';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Clase 7: Etapas finales de la Evolución" href="Clase_07_EtapasFinalesEvolutivas.html" />
     <link rel="prev" title="Clase 5: Dinámica Interna 2" href="Clase_05_DinamicaInterna2.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -177,6 +178,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Clase_05_DinamicaInterna2.html">Clase 5: Dinámica Interna 2</a></li>
 
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Clase 6: Evolución Estelar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Clase_07_EtapasFinalesEvolutivas.html">Clase 7: Etapas finales de la Evolución</a></li>
 </ul>
 
     </div>
@@ -474,7 +476,65 @@ Para graficar el diagrama observacional intrínseco, debemos corregir las magnit
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Descargando fotometría de M4...
 </pre></div>
 </div>
-<img alt="_images/1d8187e4952cebdec54ca0cb05354c2cc5bdf622eb59c40154c5c5c219871628.png" src="_images/1d8187e4952cebdec54ca0cb05354c2cc5bdf622eb59c40154c5c5c219871628.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">EmptyDataError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
+<span class="nn">Input In [1],</span> in <span class="ni">&lt;cell line: 14&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Descargando fotometría de M4...&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s2">&quot;wget&quot;</span><span class="p">,</span> <span class="s2">&quot;--post-data&quot;</span><span class="p">,</span> <span class="n">urllib</span><span class="o">.</span><span class="n">parse</span><span class="o">.</span><span class="n">urlencode</span><span class="p">(</span><span class="n">payload</span><span class="p">),</span> <span class="s2">&quot;-O&quot;</span><span class="p">,</span> <span class="s2">&quot;m4_cmd.csv&quot;</span><span class="p">,</span> <span class="n">url_tap</span><span class="p">,</span> <span class="s2">&quot;-q&quot;</span><span class="p">])</span>
+<span class="ne">---&gt; </span><span class="mi">14</span> <span class="n">df_m4</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;m4_cmd.csv&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">16</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<span class="g g-Whitespace">     </span><span class="mi">17</span> <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">df_m4</span><span class="p">[</span><span class="s1">&#39;bp_rp&#39;</span><span class="p">],</span> <span class="n">df_m4</span><span class="p">[</span><span class="s1">&#39;phot_g_mean_mag&#39;</span><span class="p">],</span> <span class="n">s</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+
+<span class="nn">File ~/anaconda3/lib/python3.9/site-packages/pandas/util/_decorators.py:311,</span> in <span class="ni">deprecate_nonkeyword_arguments.&lt;locals&gt;.decorate.&lt;locals&gt;.wrapper</span><span class="nt">(*args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">305</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">num_allow_args</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">306</span>     <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">307</span>         <span class="n">msg</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">arguments</span><span class="o">=</span><span class="n">arguments</span><span class="p">),</span>
+<span class="g g-Whitespace">    </span><span class="mi">308</span>         <span class="ne">FutureWarning</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">309</span>         <span class="n">stacklevel</span><span class="o">=</span><span class="n">stacklevel</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">310</span>     <span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">311</span> <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">File ~/anaconda3/lib/python3.9/site-packages/pandas/io/parsers/readers.py:680,</span> in <span class="ni">read_csv</span><span class="nt">(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, squeeze, prefix, mangle_dupe_cols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, error_bad_lines, warn_bad_lines, on_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options)</span>
+<span class="g g-Whitespace">    </span><span class="mi">665</span> <span class="n">kwds_defaults</span> <span class="o">=</span> <span class="n">_refine_defaults_read</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">666</span>     <span class="n">dialect</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">667</span>     <span class="n">delimiter</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">676</span>     <span class="n">defaults</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;delimiter&quot;</span><span class="p">:</span> <span class="s2">&quot;,&quot;</span><span class="p">},</span>
+<span class="g g-Whitespace">    </span><span class="mi">677</span> <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">678</span> <span class="n">kwds</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwds_defaults</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">680</span> <span class="k">return</span> <span class="n">_read</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="n">kwds</span><span class="p">)</span>
+
+<span class="nn">File ~/anaconda3/lib/python3.9/site-packages/pandas/io/parsers/readers.py:575,</span> in <span class="ni">_read</span><span class="nt">(filepath_or_buffer, kwds)</span>
+<span class="g g-Whitespace">    </span><span class="mi">572</span> <span class="n">_validate_names</span><span class="p">(</span><span class="n">kwds</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;names&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span>
+<span class="g g-Whitespace">    </span><span class="mi">574</span> <span class="c1"># Create the parser.</span>
+<span class="ne">--&gt; </span><span class="mi">575</span> <span class="n">parser</span> <span class="o">=</span> <span class="n">TextFileReader</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">577</span> <span class="k">if</span> <span class="n">chunksize</span> <span class="ow">or</span> <span class="n">iterator</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">578</span>     <span class="k">return</span> <span class="n">parser</span>
+
+<span class="nn">File ~/anaconda3/lib/python3.9/site-packages/pandas/io/parsers/readers.py:933,</span> in <span class="ni">TextFileReader.__init__</span><span class="nt">(self, f, engine, **kwds)</span>
+<span class="g g-Whitespace">    </span><span class="mi">930</span>     <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwds</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span>
+<span class="g g-Whitespace">    </span><span class="mi">932</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span><span class="p">:</span> <span class="n">IOHandles</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="ne">--&gt; </span><span class="mi">933</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_engine</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">engine</span><span class="p">)</span>
+
+<span class="nn">File ~/anaconda3/lib/python3.9/site-packages/pandas/io/parsers/readers.py:1235,</span> in <span class="ni">TextFileReader._make_engine</span><span class="nt">(self, f, engine)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1232</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1234</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1235</span>     <span class="k">return</span> <span class="n">mapping</span><span class="p">[</span><span class="n">engine</span><span class="p">](</span><span class="n">f</span><span class="p">,</span> <span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1236</span> <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1237</span>     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+
+<span class="nn">File ~/anaconda3/lib/python3.9/site-packages/pandas/io/parsers/c_parser_wrapper.py:75,</span> in <span class="ni">CParserWrapper.__init__</span><span class="nt">(self, src, **kwds)</span>
+<span class="g g-Whitespace">     </span><span class="mi">72</span>     <span class="n">kwds</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">74</span> <span class="n">kwds</span><span class="p">[</span><span class="s2">&quot;dtype&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ensure_dtype_objs</span><span class="p">(</span><span class="n">kwds</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;dtype&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span>
+<span class="ne">---&gt; </span><span class="mi">75</span> <span class="bp">self</span><span class="o">.</span><span class="n">_reader</span> <span class="o">=</span> <span class="n">parsers</span><span class="o">.</span><span class="n">TextReader</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">77</span> <span class="bp">self</span><span class="o">.</span><span class="n">unnamed_cols</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_reader</span><span class="o">.</span><span class="n">unnamed_cols</span>
+<span class="g g-Whitespace">     </span><span class="mi">79</span> <span class="c1"># error: Cannot determine type of &#39;names&#39;</span>
+
+<span class="nn">File ~/anaconda3/lib/python3.9/site-packages/pandas/_libs/parsers.pyx:551,</span> in <span class="ni">pandas._libs.parsers.TextReader.__cinit__</span><span class="nt">()</span>
+
+<span class="ne">EmptyDataError</span>: No columns to parse from file
+</pre></div>
+</div>
 </div>
 </div>
 </section>
@@ -506,16 +566,16 @@ Para graficar el diagrama observacional intrínseco, debemos corregir las magnit
 Ambos tienen edades similares (<span class="math notranslate nohighlight">\(\sim12-13\)</span> Gyr), aislando el efecto puro de la metalicidad.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">subprocess</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>astroquery
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">urllib.parse</span>
+<span class="kn">from</span> <span class="nn">astroquery.gaia</span> <span class="kn">import</span> <span class="n">Gaia</span>
 
-<span class="k">def</span> <span class="nf">fetch_cluster_clean</span><span class="p">(</span><span class="n">ra</span><span class="p">,</span> <span class="n">dec</span><span class="p">,</span> <span class="n">radius</span><span class="p">,</span> <span class="n">plx_center</span><span class="p">,</span> <span class="n">plx_tol</span><span class="p">,</span> <span class="n">pmra_val</span><span class="p">,</span> <span class="n">pmdec_val</span><span class="p">,</span> <span class="n">pm_tol</span><span class="p">,</span> <span class="n">dm</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">fetch_cluster_dereddened</span><span class="p">(</span><span class="n">ra</span><span class="p">,</span> <span class="n">dec</span><span class="p">,</span> <span class="n">radius</span><span class="p">,</span> <span class="n">plx_center</span><span class="p">,</span> <span class="n">plx_tol</span><span class="p">,</span> <span class="n">pmra_val</span><span class="p">,</span> <span class="n">pmdec_val</span><span class="p">,</span> <span class="n">pm_tol</span><span class="p">,</span> <span class="n">dm</span><span class="p">,</span> <span class="n">ebv</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Descarga segura filtrando estrictamente por movimiento propio y aplicando</span>
-<span class="sd">    un Módulo de Distancia (DM) fijo para evitar la dispersión por errores de paralaje individual.</span>
+<span class="sd">    Extrae datos de Gaia DR3 vía Astroquery y aplica la corrección individual</span>
+<span class="sd">    por extinción (A_G) y enrojecimiento (E_BP_RP) según el medio interestelar de cada cúmulo.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">query</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">    SELECT phot_g_mean_mag, bp_rp</span>
@@ -526,36 +586,43 @@ Ambos tienen edades similares (<span class="math notranslate nohighlight">\(\sim
 <span class="s2">      AND pmdec BETWEEN </span><span class="si">{</span><span class="n">pmdec_val</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">pm_tol</span><span class="si">}</span><span class="s2"> AND </span><span class="si">{</span><span class="n">pmdec_val</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">pm_tol</span><span class="si">}</span>
 <span class="s2">      AND phot_g_mean_mag &lt; 20.0</span>
 <span class="s2">    &quot;&quot;&quot;</span>
-    <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://gea.esac.esa.int/tap-server/tap/sync&quot;</span>
-    <span class="n">payload</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;request&#39;</span><span class="p">:</span> <span class="s1">&#39;doQuery&#39;</span><span class="p">,</span> <span class="s1">&#39;lang&#39;</span><span class="p">:</span> <span class="s1">&#39;adql&#39;</span><span class="p">,</span> <span class="s1">&#39;format&#39;</span><span class="p">:</span> <span class="s1">&#39;csv&#39;</span><span class="p">,</span> <span class="s1">&#39;query&#39;</span><span class="p">:</span> <span class="n">query</span><span class="p">}</span>
-    <span class="n">fname</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">.csv&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Descargando datos limpios para </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> vía Astroquery...&quot;</span><span class="p">)</span>
+    <span class="n">job</span> <span class="o">=</span> <span class="n">Gaia</span><span class="o">.</span><span class="n">launch_job</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">job</span><span class="o">.</span><span class="n">get_results</span><span class="p">()</span><span class="o">.</span><span class="n">to_pandas</span><span class="p">()</span>
 
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Descargando miembros limpios para </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">...&quot;</span><span class="p">)</span>
-    <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s2">&quot;wget&quot;</span><span class="p">,</span> <span class="s2">&quot;--post-data&quot;</span><span class="p">,</span> <span class="n">urllib</span><span class="o">.</span><span class="n">parse</span><span class="o">.</span><span class="n">urlencode</span><span class="p">(</span><span class="n">payload</span><span class="p">),</span> <span class="s2">&quot;-O&quot;</span><span class="p">,</span> <span class="n">fname</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="s2">&quot;-q&quot;</span><span class="p">])</span>
-    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span>
+    <span class="c1"># Limpieza de nulos</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;phot_g_mean_mag&#39;</span><span class="p">,</span> <span class="s1">&#39;bp_rp&#39;</span><span class="p">])</span>
 
-    <span class="c1"># Conversión a Magnitud Absoluta usando Módulo de Distancia fijo (DM = 5*log(d) - 5)</span>
-    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;M_G&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;phot_g_mean_mag&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">dm</span>
+    <span class="c1"># Coeficientes estándar de extinción para Gaia DR3:</span>
+    <span class="c1"># A_G / E(B-V) ≈ 2.74</span>
+    <span class="c1"># E(BP-RP) / E(B-V) ≈ 1.30</span>
+    <span class="n">a_g</span> <span class="o">=</span> <span class="mf">2.74</span> <span class="o">*</span> <span class="n">ebv</span>
+    <span class="n">e_bprp</span> <span class="o">=</span> <span class="mf">1.30</span> <span class="o">*</span> <span class="n">ebv</span>
+
+    <span class="c1"># Conversión rigurosa a Magnitud Absoluta y Color Intrínseco (Dereddened)</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;M_G_0&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;phot_g_mean_mag&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">dm</span> <span class="o">-</span> <span class="n">a_g</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Color_0&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;bp_rp&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">e_bprp</span>
+
     <span class="k">return</span> <span class="n">df</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;--- Extracción de Cúmulos Globulares con Filtro Cinemático Estricto ---&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;--- Extracción y Corrección Física de Cúmulos Globulares ---&quot;</span><span class="p">)</span>
 
-<span class="c1"># 1. 47 Tucanae (NGC 104): [M/H] ~ -0.7 (Más metálica), Distancia ~ 4.5 kpc (DM ~ 13.27)</span>
-<span class="c1"># Centro: RA=6.023, Dec=-72.081 | Plx ~ 0.22 mas | PMra ~ 5.2, PMdec ~ -2.5</span>
-<span class="n">df_47tuc</span> <span class="o">=</span> <span class="n">fetch_cluster_clean</span><span class="p">(</span>
-    <span class="n">ra</span><span class="o">=</span><span class="mf">6.023</span><span class="p">,</span> <span class="n">dec</span><span class="o">=-</span><span class="mf">72.081</span><span class="p">,</span> <span class="n">radius</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span>
-    <span class="n">plx_center</span><span class="o">=</span><span class="mf">0.22</span><span class="p">,</span> <span class="n">plx_tol</span><span class="o">=</span><span class="mf">0.08</span><span class="p">,</span>
-    <span class="n">pmra_val</span><span class="o">=</span><span class="mf">5.2</span><span class="p">,</span> <span class="n">pmdec_val</span><span class="o">=-</span><span class="mf">2.5</span><span class="p">,</span> <span class="n">pm_tol</span><span class="o">=</span><span class="mf">1.2</span><span class="p">,</span>
-    <span class="n">dm</span><span class="o">=</span><span class="mf">13.27</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;47tuc_clean&quot;</span>
-<span class="p">)</span>
-
-<span class="c1"># 2. NGC 6397: [M/H] ~ -2.0 (Pobre en metales / Subenanas), Distancia ~ 2.3 kpc (DM ~ 11.82)</span>
-<span class="c1"># Centro: RA=265.18, Dec=-53.67 | Plx ~ 0.43 mas | PMra ~ 3.3, PMdec ~ -17.6</span>
-<span class="n">df_n6397</span> <span class="o">=</span> <span class="n">fetch_cluster_clean</span><span class="p">(</span>
+<span class="c1"># 1. NGC 6397: Baja metalicidad ([M/H] ~ -2.0)</span>
+<span class="c1"># DM = 11.82, E(B-V) ~ 0.18</span>
+<span class="n">df_n6397</span> <span class="o">=</span> <span class="n">fetch_cluster_dereddened</span><span class="p">(</span>
     <span class="n">ra</span><span class="o">=</span><span class="mf">265.18</span><span class="p">,</span> <span class="n">dec</span><span class="o">=-</span><span class="mf">53.67</span><span class="p">,</span> <span class="n">radius</span><span class="o">=</span><span class="mf">0.25</span><span class="p">,</span>
     <span class="n">plx_center</span><span class="o">=</span><span class="mf">0.43</span><span class="p">,</span> <span class="n">plx_tol</span><span class="o">=</span><span class="mf">0.10</span><span class="p">,</span>
     <span class="n">pmra_val</span><span class="o">=</span><span class="mf">3.3</span><span class="p">,</span> <span class="n">pmdec_val</span><span class="o">=-</span><span class="mf">17.6</span><span class="p">,</span> <span class="n">pm_tol</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span>
-    <span class="n">dm</span><span class="o">=</span><span class="mf">11.82</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;ngc6397_clean&quot;</span>
+    <span class="n">dm</span><span class="o">=</span><span class="mf">11.82</span><span class="p">,</span> <span class="n">ebv</span><span class="o">=</span><span class="mf">0.18</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;NGC 6397&quot;</span>
+<span class="p">)</span>
+
+<span class="c1"># 2. 47 Tucanae (NGC 104): Alta metalicidad ([M/H] ~ -0.7)</span>
+<span class="c1"># DM = 13.27, E(B-V) ~ 0.04</span>
+<span class="n">df_47tuc</span> <span class="o">=</span> <span class="n">fetch_cluster_dereddened</span><span class="p">(</span>
+    <span class="n">ra</span><span class="o">=</span><span class="mf">6.023</span><span class="p">,</span> <span class="n">dec</span><span class="o">=-</span><span class="mf">72.081</span><span class="p">,</span> <span class="n">radius</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span>
+    <span class="n">plx_center</span><span class="o">=</span><span class="mf">0.22</span><span class="p">,</span> <span class="n">plx_tol</span><span class="o">=</span><span class="mf">0.08</span><span class="p">,</span>
+    <span class="n">pmra_val</span><span class="o">=</span><span class="mf">5.2</span><span class="p">,</span> <span class="n">pmdec_val</span><span class="o">=-</span><span class="mf">2.5</span><span class="p">,</span> <span class="n">pm_tol</span><span class="o">=</span><span class="mf">1.2</span><span class="p">,</span>
+    <span class="n">dm</span><span class="o">=</span><span class="mf">13.27</span><span class="p">,</span> <span class="n">ebv</span><span class="o">=</span><span class="mf">0.04</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;47 Tucanae&quot;</span>
 <span class="p">)</span>
 
 <span class="c1"># ==========================================</span>
@@ -563,49 +630,71 @@ Ambos tienen edades similares (<span class="math notranslate nohighlight">\(\sim
 <span class="c1"># ==========================================</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
 
-<span class="c1"># NGC 6397 (Baja metalicidad) debe quedar a la izquierda (más azul)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">df_n6397</span><span class="p">[</span><span class="s1">&#39;bp_rp&#39;</span><span class="p">],</span> <span class="n">df_n6397</span><span class="p">[</span><span class="s1">&#39;M_G&#39;</span><span class="p">],</span> <span class="n">s</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span>
-            <span class="n">label</span><span class="o">=</span><span class="s1">&#39;NGC 6397 (Baja Metalicidad, [M/H] ~ -2.0)&#39;</span><span class="p">)</span>
+<span class="c1"># NGC 6397 (Baja metalicidad / Menor opacidad -&gt; Más caliente -&gt; Izquierda / Azul)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">df_n6397</span><span class="p">[</span><span class="s1">&#39;Color_0&#39;</span><span class="p">],</span> <span class="n">df_n6397</span><span class="p">[</span><span class="s1">&#39;M_G_0&#39;</span><span class="p">],</span> <span class="n">s</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;dodgerblue&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span>
+            <span class="n">label</span><span class="o">=</span><span class="s1">&#39;NGC 6397 (Baja Metalicidad, $[M/H] </span><span class="se">\\</span><span class="s1">approx -2.0$)&#39;</span><span class="p">)</span>
 
-<span class="c1"># 47 Tucanae (Alta metalicidad) debe quedar a la derecha (más roja)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">df_47tuc</span><span class="p">[</span><span class="s1">&#39;bp_rp&#39;</span><span class="p">],</span> <span class="n">df_47tuc</span><span class="p">[</span><span class="s1">&#39;M_G&#39;</span><span class="p">],</span> <span class="n">s</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
-            <span class="n">label</span><span class="o">=</span><span class="s1">&#39;47 Tucanae (Alta Metalicidad, [M/H] ~ -0.7)&#39;</span><span class="p">)</span>
+<span class="c1"># 47 Tucanae (Alta metalicidad / Mayor opacidad -&gt; Más frío/rojo -&gt; Derecha)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">df_47tuc</span><span class="p">[</span><span class="s1">&#39;Color_0&#39;</span><span class="p">],</span> <span class="n">df_47tuc</span><span class="p">[</span><span class="s1">&#39;M_G_0&#39;</span><span class="p">],</span> <span class="n">s</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;crimson&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+            <span class="n">label</span><span class="o">=</span><span class="s1">&#39;47 Tucanae (Alta Metalicidad, $[M/H] </span><span class="se">\\</span><span class="s1">approx -0.7$)&#39;</span><span class="p">)</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">invert_yaxis</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Color Intrínseco $G_</span><span class="si">{BP}</span><span class="s1"> - G_</span><span class="si">{RP}</span><span class="s1">$ (mag)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Magnitud Absoluta $M_G$ (mag)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Efecto de la Opacidad Metálica: Secuencia Principal y Subenanas&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Color Intrínseco Dereddenizado $(G_</span><span class="si">{BP}</span><span class="s1"> - G_</span><span class="si">{RP}</span><span class="s1">)_0$ (mag)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Magnitud Absoluta Intrínseca $M_{G,0}$ (mag)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Efecto Físico de la Opacidad Metálica (Secuencias Corregidas)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">11</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper left&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="o">-</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mf">10.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">3.0</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Conclusión Física ---&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Al fijar los módulos de distancia y limpiar el campo con movimientos propios,&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;se aprecia claramente que NGC 6397 (azul) se desplaza hacia la izquierda en color&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;debido a su baja opacidad atmosférica (menor bloqueo de fotones),&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;formando la clásica secuencia de subenanas por debajo de 47 Tuc (roja).&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- Extracción de Cúmulos Globulares con Filtro Cinemático Estricto ---
-Descargando miembros limpios para 47tuc_clean...
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting astroquery
+  Downloading astroquery-0.4.11-py3-none-any.whl.metadata (6.5 kB)
+Requirement already satisfied: numpy&gt;=1.20 in /usr/local/lib/python3.13/dist-packages (from astroquery) (2.1.3)
+Requirement already satisfied: astropy&gt;=5.0 in /usr/local/lib/python3.13/dist-packages (from astroquery) (7.2.2)
+Requirement already satisfied: requests&gt;=2.19 in /usr/local/lib/python3.13/dist-packages (from astroquery) (2.32.4)
+Requirement already satisfied: beautifulsoup4&gt;=4.8 in /usr/local/lib/python3.13/dist-packages (from astroquery) (4.13.5)
+Requirement already satisfied: html5lib&gt;=0.999 in /usr/local/lib/python3.13/dist-packages (from astroquery) (1.1)
+Requirement already satisfied: keyring&gt;=15.0 in /usr/local/lib/python3.13/dist-packages (from astroquery) (25.7.0)
+Collecting pyvo&gt;=1.5 (from astroquery)
+  Downloading pyvo-1.9.1-py3-none-any.whl.metadata (4.2 kB)
+Requirement already satisfied: astropy-iers-data&gt;=0.2026.6.22.1.23.34 in /usr/local/lib/python3.13/dist-packages (from astropy&gt;=5.0-&gt;astroquery) (0.2026.8.31.0.57.9)
+Requirement already satisfied: packaging&gt;=22.0.0 in /usr/local/lib/python3.13/dist-packages (from astropy&gt;=5.0-&gt;astroquery) (26.3)
+Requirement already satisfied: pyerfa&gt;=2.0.1.1 in /usr/local/lib/python3.13/dist-packages (from astropy&gt;=5.0-&gt;astroquery) (2.0.1.5)
+Requirement already satisfied: PyYAML&gt;=6.0.0 in /usr/local/lib/python3.13/dist-packages (from astropy&gt;=5.0-&gt;astroquery) (6.0.3)
+Requirement already satisfied: soupsieve&gt;1.2 in /usr/local/lib/python3.13/dist-packages (from beautifulsoup4&gt;=4.8-&gt;astroquery) (2.9.2)
+Requirement already satisfied: typing-extensions&gt;=4.0.0 in /usr/local/lib/python3.13/dist-packages (from beautifulsoup4&gt;=4.8-&gt;astroquery) (4.16.0)
+Requirement already satisfied: six&gt;=1.9 in /usr/local/lib/python3.13/dist-packages (from html5lib&gt;=0.999-&gt;astroquery) (1.17.0)
+Requirement already satisfied: webencodings in /usr/local/lib/python3.13/dist-packages (from html5lib&gt;=0.999-&gt;astroquery) (0.6.1)
+Requirement already satisfied: SecretStorage&gt;=3.2 in /usr/local/lib/python3.13/dist-packages (from keyring&gt;=15.0-&gt;astroquery) (3.5.0)
+Requirement already satisfied: jeepney&gt;=0.4.2 in /usr/local/lib/python3.13/dist-packages (from keyring&gt;=15.0-&gt;astroquery) (0.9.0)
+Requirement already satisfied: jaraco.classes in /usr/local/lib/python3.13/dist-packages (from keyring&gt;=15.0-&gt;astroquery) (3.4.0)
+Requirement already satisfied: jaraco.functools in /usr/local/lib/python3.13/dist-packages (from keyring&gt;=15.0-&gt;astroquery) (4.6.0)
+Requirement already satisfied: jaraco.context in /usr/local/lib/python3.13/dist-packages (from keyring&gt;=15.0-&gt;astroquery) (6.1.2)
+Requirement already satisfied: charset_normalizer&lt;4,&gt;=2 in /usr/local/lib/python3.13/dist-packages (from requests&gt;=2.19-&gt;astroquery) (3.4.9)
+Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.13/dist-packages (from requests&gt;=2.19-&gt;astroquery) (3.19)
+Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in /usr/local/lib/python3.13/dist-packages (from requests&gt;=2.19-&gt;astroquery) (2.5.0)
+Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.13/dist-packages (from requests&gt;=2.19-&gt;astroquery) (2026.7.22)
+Requirement already satisfied: cryptography&gt;=2.0 in /usr/local/lib/python3.13/dist-packages (from SecretStorage&gt;=3.2-&gt;keyring&gt;=15.0-&gt;astroquery) (50.0.1)
+Requirement already satisfied: more-itertools in /usr/local/lib/python3.13/dist-packages (from jaraco.classes-&gt;keyring&gt;=15.0-&gt;astroquery) (10.8.0)
+Requirement already satisfied: cffi&gt;=2.0.0 in /usr/local/lib/python3.13/dist-packages (from cryptography&gt;=2.0-&gt;SecretStorage&gt;=3.2-&gt;keyring&gt;=15.0-&gt;astroquery) (2.1.1)
+Requirement already satisfied: pycparser in /usr/local/lib/python3.13/dist-packages (from cffi&gt;=2.0.0-&gt;cryptography&gt;=2.0-&gt;SecretStorage&gt;=3.2-&gt;keyring&gt;=15.0-&gt;astroquery) (3.0)
+Downloading astroquery-0.4.11-py3-none-any.whl (11.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">11.1/11.1 MB</span> <span class=" -Color -Color-Red">97.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hDownloading pyvo-1.9.1-py3-none-any.whl (1.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">1.2/1.2 MB</span> <span class=" -Color -Color-Red">67.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hInstalling collected packages: pyvo, astroquery
+Successfully installed astroquery-0.4.11 pyvo-1.9.1
+--- Extracción y Corrección Física de Cúmulos Globulares ---
+Descargando datos limpios para NGC 6397 vía Astroquery...
+Descargando datos limpios para 47 Tucanae vía Astroquery...
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Descargando miembros limpios para ngc6397_clean...
-</pre></div>
-</div>
-<img alt="_images/e8fe1922477b8cafd612d0d2850236f343a82fa82f962d5024762573f87e25fa.png" src="_images/e8fe1922477b8cafd612d0d2850236f343a82fa82f962d5024762573f87e25fa.png" />
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- Conclusión Física ---
-Al fijar los módulos de distancia y limpiar el campo con movimientos propios,
-se aprecia claramente que NGC 6397 (azul) se desplaza hacia la izquierda en color
-debido a su baja opacidad atmosférica (menor bloqueo de fotones),
-formando la clásica secuencia de subenanas por debajo de 47 Tuc (roja).
-</pre></div>
-</div>
+<img alt="_images/b28482c40a8e48ff35ba2b1fce6c4bce234ca6ecbc31166bcf8a19bb645f0ab8.png" src="_images/b28482c40a8e48ff35ba2b1fce6c4bce234ca6ecbc31166bcf8a19bb645f0ab8.png" />
 </div>
 </div>
 </section>
@@ -799,19 +888,16 @@ La edad del cúmulo es <strong>exactamente</strong> igual al <span class="math n
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Descargando datos limpios para pleiades desde Gaia DR3...
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Optimizando sobre 3263 metalicidades...
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- RESULTADOS DEL AJUSTE ---
+Optimizando sobre 3263 metalicidades...
+
+--- RESULTADOS DEL AJUSTE ---
 Metalicidad Z óptima: 0.01
 log(Age/yr) óptima      : 7.70 (~50.1 millones de años)
 Error Mediano Est.      : 0.0815
 RMSE Global             : 0.2021
 </pre></div>
 </div>
-<img alt="_images/3c0cb28fe3069c77fab5f57a0bf86b2ce4617109eb62acc2639faf1ddc7fbf3c.png" src="_images/3c0cb28fe3069c77fab5f57a0bf86b2ce4617109eb62acc2639faf1ddc7fbf3c.png" />
+<img alt="_images/c33f576875a0545c34be2548f881046071a9b5b34ad032c52ee769adcdde0270.png" src="_images/c33f576875a0545c34be2548f881046071a9b5b34ad032c52ee769adcdde0270.png" />
 </div>
 </div>
 </section>
@@ -943,7 +1029,7 @@ RMSE Global             : 0.2021
 <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mf">8.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Ajuste del Turn-Off en M67&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Ajuste del Turn-Off en M67:&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">frameon</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;lower left&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
@@ -953,12 +1039,9 @@ RMSE Global             : 0.2021
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Descargando astrometría de M67 (Gaia DR3)...
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Optimizando por Topología del MSTO...
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>=== REPORTE DE ERRORES (TOP 5 AJUSTES) ===
+Optimizando por Topología del MSTO...
+
+=== REPORTE DE ERRORES (TOP 5 AJUSTES) ===
  Age_Gyr  Zini    Error
 5.129441  0.01 0.049491
 5.248921  0.01 0.054533
@@ -967,7 +1050,7 @@ RMSE Global             : 0.2021
 5.496295  0.01 0.088514
 </pre></div>
 </div>
-<img alt="_images/e0f418cc3fd60aec38472d957c72da671e80f205cdc330cd659c944354bf1bcd.png" src="_images/e0f418cc3fd60aec38472d957c72da671e80f205cdc330cd659c944354bf1bcd.png" />
+<img alt="_images/5e68afa7400ccaf658ae33312b7fa3b040bba8b265a8b0de581f62ac859182fd.png" src="_images/5e68afa7400ccaf658ae33312b7fa3b040bba8b265a8b0de581f62ac859182fd.png" />
 </div>
 </div>
 </section>
@@ -1050,6 +1133,15 @@ Usted observa dos cúmulos abiertos en el disco galáctico. El Cúmulo A tiene u
         <p class="prev-next-subtitle">previous</p>
         <p class="prev-next-title">Clase 5: Dinámica Interna 2</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="Clase_07_EtapasFinalesEvolutivas.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Clase 7: Etapas finales de la Evolución</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>

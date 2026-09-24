@@ -48,8 +48,9 @@ A continuación se presenta la hoja de ruta temática estructurada para los dos 
 
 ### Semana 7: Cronometría de Cúmulos y Retos Modernos.
 * El paradigma roto: Evidencia observacional del problema de las múltiples poblaciones en cúmulos globulares (anomalías químicas y fotométricas).
+* Destino final y observaciones.
 * Astrometría de precisión en la era de Gaia.
 * Detección de corrientes estelares y colas de marea.
 
-### Semana 8: Destino Final y Observaciones.
+### Semana 8: Evaluación
 * Evaluación del curso
