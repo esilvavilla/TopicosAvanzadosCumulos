@@ -41,12 +41,12 @@ A continuación se presenta la hoja de ruta temática estructurada para los dos 
 * Segregación de masa y evaporación estelar.
 * Catástrofe gravitacional: El colapso del núcleo (core collapse) y el rol de las estrellas binarias.
 
-### Semana 6: Estructura Estelar y el Diagrama HR.
+### Semana 6: Estructura Estelar, el Diagrama HR y Cronometría de Cúmulos.
 * Construcción e interpretación del Diagrama HR (teórico vs. observacional).
 * El rol de la metalicidad (Z) en la evolución y opacidad.
 * Estimación de edades: Isocronas y el Main Sequence Turn-Off (MSTO).
 
-### Semana 7: Cronometría de Cúmulos y Retos Modernos.
+### Semana 7: Etapas finales de evolución y Retos Modernos.
 * El paradigma roto: Evidencia observacional del problema de las múltiples poblaciones en cúmulos globulares (anomalías químicas y fotométricas).
 * Destino final y observaciones.
 * Astrometría de precisión en la era de Gaia.
